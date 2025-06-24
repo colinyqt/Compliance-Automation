@@ -1,0 +1,110 @@
+﻿ParameterID,CategoryID,ParameterName,ParameterDataType
+101,1,IP Protection - Display,String
+102,1,IP Protection - Body,String
+103,1,IP Protection - Connectors,String
+104,1,Mounting Position,String
+105,1,Display Type,String
+106,1,Display Backlight,String
+107,1,Display Viewable Area,String
+108,1,Weight,Numeric
+109,1,Dimensions (W x H x D),String
+110,1,Protrusion from Cabinet,Numeric
+111,1,Panel Thickness (Max),Numeric
+112,1,Enclosure Rating - Display,String
+113,1,Mounting Options,List
+114,1,Keypad,String
+115,1,Impact Rating (IK),String
+201,2,Measurement Type,String
+202,2,Sampling Rate,Numeric
+203,2,Accuracy - Active Energy,Numeric
+204,2,Accuracy - Reactive Energy,Numeric
+205,2,Accuracy - Apparent Energy,Numeric
+206,2,Accuracy - Active Power,Numeric
+207,2,Accuracy - Reactive Power,Numeric
+208,2,Accuracy - Apparent Power,Numeric
+209,2,Accuracy - Current,Numeric
+210,2,Accuracy - Voltage,Numeric
+211,2,Accuracy - Frequency,Numeric
+212,2,Accuracy - Power Factor,Numeric
+213,2,Wiring Configuration,List
+301,3,Accuracy - Voltage Harmonics,Numeric
+302,3,Accuracy - Voltage THD,Numeric
+303,3,Accuracy - Current Harmonics,Numeric
+304,3,Accuracy - Current THD,Numeric
+305,3,Accuracy - Voltage Unbalance,Numeric
+306,3,Harmonics Measurement (Max Order),Numeric
+307,3,Waveform Capture,Boolean
+308,3,Disturbance Detection (Sag/Swell),Boolean
+309,3,Disturbance Direction Detection,Boolean
+401,4,Voltage Range (L-L),Range
+402,4,Voltage Range (L-N),Range
+403,4,Voltage Overload,Numeric
+404,4,Impedance - Voltage,Numeric
+405,4,Rated Impulse Voltage,Numeric
+406,4,Frequency Range (Measured),Range
+407,4,Frequency (Nominal),List
+408,4,Burden - Voltage,Numeric
+409,4,VT/PT Primary (Max),Numeric
+410,4,Measurement Category,String
+501,5,CT Secondary (Nominal),List
+502,5,Current Range (Measured),Range
+503,5,Current (Starting),Numeric
+504,5,Current (Withstand),String
+505,5,Impedance - Current,Numeric
+506,5,Burden - Current,Numeric
+507,5,CT Primary (Max),Numeric
+601,6,Control Power (AC),Range
+602,6,Control Power (DC),Range
+603,6,Control Power (Low Voltage DC),Range
+604,6,Burden - Control Power,String
+605,6,Ride-Through Time,String
+606,6,Installation Category - Control Power,String
+701,7,Communication Protocol,List
+702,7,Communication Port,List
+703,7,Baud Rate,List
+704,7,Parity,List
+705,7,Isolation - Communication,String
+706,7,Max Cable Length,Numeric
+707,7,Max Devices on Bus,Numeric
+708,7,Ethernet Data Rate,Numeric
+709,7,Ethernet Gateway,Boolean
+710,7,Web Server (HTTP/HTTPS),Boolean
+711,7,File Transfer (FTP/FTPS),Boolean
+712,7,Time Sync Protocol,List
+801,8,Digital Inputs (Number),Numeric
+802,8,Digital Outputs (Number),Numeric
+803,8,Relay Outputs (Number),Numeric
+804,8,Analog Inputs (Number),Numeric
+805,8,Analog Outputs (Number),Numeric
+806,8,Pulse Output (Number),Numeric
+807,8,Digital Input - Voltage ON,Range
+808,8,Digital Input - Voltage OFF,Range
+809,8,Digital Output - Max Load Voltage,Numeric
+810,8,Digital Output - Max Load Current,Numeric
+811,8,Relay Output - Switching Capacity,String
+812,8,Pulse Output - Meter Constant,String
+813,8,Pulse Output - Type,String
+901,9,Operating Temperature,Range
+902,9,Storage Temperature,Range
+903,9,Relative Humidity,Range
+904,9,Pollution Degree,Numeric
+905,9,Operating Altitude,Numeric
+906,9,Location Type,String
+907,9,Product Life Expectancy,Numeric
+1001,10,Safety Standards,List
+1002,10,EMC Standards,List
+1003,10,Performance Standard (PMD),String
+1004,10,Protective Class,String
+1101,11,Memory Capacity,Numeric
+1102,11,Data Logging,Boolean
+1103,11,Alarm Support,Boolean
+1104,11,Multi-Tariff,Boolean
+1105,11,Conformal Coating,Boolean
+1201,12,Clock Drift,Numeric
+1202,12,Battery Backup Time,Numeric
+1301,13,Heartbeat LED,String
+1302,13,Alarm/Energy Pulsing LED,String
+1303,13,Communication Activity LED,String
+1401,14,MID - Applicable Standards,List
+1402,14,MID - Mechanical Environment Class,String
+1403,14,MID - EMC Environment Class,String

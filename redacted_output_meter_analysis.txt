@@ -1,0 +1,207 @@
+# METER SELECTION AND COMPLIANCE ANALYSIS
+
+## 1. Clause 1.20: Multi-Function Meter Requirements
+
+### Tender Requirements
+- Accuracy Class 0.5
+- IEC 60051, IEC 61010, IEC 60529 Compliance
+- Direct Reading kWh Meter
+- Scale of length 90 degrees with external zero adjustment
+- Integrating meters comply with BS 5685
+- Flush pattern with square escutcheon plates finished matt black
+- Removable or hinged covers with dust exclusion gaskets
+- Protective instruments with locking provision for unauthorized adjustments
+- Vibration absorbing material to prevent malfunctioning of devices
+- Voltmeters with selector switches for phase-to-phase and phase-to-neutral voltage indication
+- Ammeters with selector switches for all phase currents
+
+### Selected Meter: PM5560
+
+**Description**: From PM5000_Series
+
+### Compliance Analysis
+
+**Overall Assessment**: The selected meter appears to meet the technical requirements with the following considerations:
+
+- The PM5560 offers a balance of accuracy and features, meeting the requirement for an Accuracy Class 0.5 meter with IEC compliance.
+- It also includes direct reading capabilities, which is essential for this application.
+- Value assessment: Balanced technical capability and cost-effectiveness for basic requirements.
+
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 2. Clause 1.20.4: Multi-Function Electronic Meter Requirements
+
+### Tender Requirements
+- True RMS Current: ±0.5%
+- Real Power (kW): ±0.5%
+- Apparent Power (kVA): ±0.5%
+- Reactive Power (kVAr): ±0.5%
+- Total Power Factor: ±0.5%
+- Frequency (Hz): ±0.5%
+- Maximum Demand Current (Id): ±0.5%
+- Real Power Demand (kWd): ±0.5%
+- Apparent Power Demand (kVAd): ±0.5%
+- Reactive Power Demand (kVArd): ±0.5%
+- Real Energy (kWh): ±0.5%
+- Total Harmonic Distortion (THD): ±1%
+- Operation at 400V/230V, 50Hz
+- Current Inputs from standard measuring current transformers with rated secondary current of 5A
+- Operating Temperature up to 50°C
+- Overcurrent Withstand Rating of 100A for 1 second
+- Trending every 15 minutes (hourly, daily, monthly, and annual data)
+- Built-in memory capable of maintaining all data collected for a minimum of 36 months
+- Communication port using RS485, RJ45 or similar socket and plug
+- Flush mounted with protection to not less than IP2X at front face
+- Compliance with IEC 61010-1, BS EN 61000-6-4/IEC 61000-6-2 for electromagnetic emission and immunity
+
+### Selected Meter: PM8240
+
+**Description**: Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| True RMS Current: ±0.5% | Not specified | ❓ Unknown |  |
+| Real Power (kW): ±0.5% | Not specified | ❓ Unknown |  |
+| Apparent Power (kVA): ±0.5% | Not specified | ❓ Unknown |  |
+| Reactive Power (kVAr): ±0.5% | Not specified | ❓ Unknown |  |
+| Total Power Factor: ±0.5% | Not specified | ❓ Unknown |  |
+| Frequency (Hz): ±0.5% | Not specified | ❓ Unknown |  |
+| Maximum Demand Current (Id): ±0.5% | Not specified | ❓ Unknown |  |
+| Real Power Demand (kWd): ±0.5% | Not specified | ❓ Unknown |  |
+| Apparent Power Demand (kVAd): ±0.5% | Not specified | ❓ Unknown |  |
+| Reactive Power Demand (kVArd): ±0.5% | Not specified | ❓ Unknown |  |
+| Real Energy (kWh): ±0.5% | Not specified | ❓ Unknown |  |
+| Total Harmonic Distortion (THD): ±1% | Not specified | ❓ Unknown |  |
+| Operation at 400V/230V, 50Hz | Not specified | ❌ Non-compliant | ? Needs verification |
+| Current Inputs from standard measuring current transformers with rated secondary current of 5A | Not specified | ❌ Non-compliant | ? Needs verification |
+| Operating Temperature up to 50°C | Not specified | ❌ Non-compliant | ? Needs verification |
+| Overcurrent Withstand Rating of 100A for 1 second | Not specified | ❌ Non-compliant | ? Needs verification |
+| Trending every 15 minutes (hourly, daily, monthly, and annual data) | Not specified | ❌ Non-compliant | ? Needs verification |
+| Built-in memory capable of maintaining all data collected for a minimum of 36 months | Not specified | ✅ Compliant | ✓ Fully supported |
+| Communication port using RS485, RJ45 or similar socket and plug | Not specified | ❌ Non-compliant | ? Needs verification |
+| Flush mounted with protection to not less than IP2X at front face | Not specified | ❌ Non-compliant | ? Needs verification |
+| Compliance with IEC 61010-1, BS EN 61000-6-4/IEC 61000-6-2 for electromagnetic emission and immunity | Not specified | ❌ Non-compliant | ? Needs verification |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 3. Clause 1.20.5: Power Quality Meter Requirements
+
+### Tender Requirements
+- True RMS voltage (Line to Line Voltage)
+- Frequency
+- Line and system currents
+- System power (active, apparent and reactive)
+- Peak average demand, kVA and kW
+- Harmonics, Vthd and Ithd and harmonic spectrum up to 50th harmonic
+- Power factor
+- Accuracy through a LCD display: minimum of 0.5%
+
+### Selected Meter: PM8340
+
+**Description**: Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| True RMS voltage (Line to Line Voltage) | Not specified | ❓ Unknown |  |
+| Frequency | Not specified | ❓ Unknown |  |
+| Line and system currents | Not specified | ❓ Unknown |  |
+| System power (active, apparent and reactive) | Not specified | ❓ Unknown |  |
+| Peak average demand, kVA and kW | Not specified | ❓ Unknown |  |
+| Harmonics, Vthd and Ithd and harmonic spectrum up to 50th harmonic | Not specified | ❓ Unknown |  |
+| Power factor | Not specified | ❓ Unknown |  |
+| Accuracy through a LCD display: minimum of 0.5% | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 4. Clause 1.20.6: Power Quality Meter Requirements
+
+### Tender Requirements
+- Disturbance Monitoring
+- Waveform Capture on Voltage and Current
+- Minimum Storage Capacity: 100 Waveforms with 1024 samples/cycle
+- On-board Memory Up to 8 GB
+- Programmable Recordings with Different Start and Stop Time
+- Event Recording, Waveform Display, Phasor Diagrams, Historical Trending, Time-of-Use
+- Records Individual Orders for Even and Odd Harmonics of Voltage and Current up to 50th Order
+- RS485 and/or TCP/IP Communication Interface
+- IEC 60255 & 61000 Pt 4 & 6 Compliance
+- Cross Triggering: All Channels Recorded on Disturbances
+- Triggering on Line-to-Neutral and Line-to-Line Channels
+- RMS Disturbance Monitoring with IEC 61000-4-30 Compliance
+- Waveform Recording During Disturbance
+- Trend Plot Storage for RMS Voltage During Disturbance
+
+### Selected Meter: PM8340
+
+**Description**: Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| Disturbance Monitoring | Not specified | ❓ Unknown |  |
+| Waveform Capture on Voltage and Current | Not specified | ❓ Unknown |  |
+| Minimum Storage Capacity: 100 Waveforms with 1024 samples/cycle | Not specified | ❓ Unknown |  |
+| On-board Memory Up to 8 GB | Not specified | ❓ Unknown |  |
+| Programmable Recordings with Different Start and Stop Time | Not specified | ❓ Unknown |  |
+| Event Recording, Waveform Display, Phasor Diagrams, Historical Trending, Time-of-Use | Not specified | ❓ Unknown |  |
+| Records Individual Orders for Even and Odd Harmonics of Voltage and Current up to 50th Order | Not specified | ❓ Unknown |  |
+| RS485 and/or TCP/IP Communication Interface | Not specified | ❓ Unknown |  |
+| IEC 60255 & 61000 Pt 4 & 6 Compliance | Not specified | ❓ Unknown |  |
+| Cross Triggering: All Channels Recorded on Disturbances | Not specified | ❓ Unknown |  |
+| Triggering on Line-to-Neutral and Line-to-Line Channels | Not specified | ❓ Unknown |  |
+| RMS Disturbance Monitoring with IEC 61000-4-30 Compliance | Not specified | ❓ Unknown |  |
+| Waveform Recording During Disturbance | Not specified | ❓ Unknown |  |
+| Trend Plot Storage for RMS Voltage During Disturbance | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 5. Clause 1.20.7: Power Quality Meter Requirements
+
+### Tender Requirements
+- Voltage Accuracy ±0.5%
+- Current Accuracy ±1%
+- Power Factor Measurement
+- kW Power Measurement
+- kVAR Power Measurement
+- Energy Measurement
+- Daily Trend Recording for Voltage and Current
+- Min, Max, and Average RMS Values per Interval
+- Alarmable Violations of Sustained RMS Voltage Regulation
+- Frequency Envelopes (min, max, and average) Time Trends
+
+### Selected Meter: PM5560
+
+**Description**: From PM5000_Series
+
+### Compliance Analysis
+
+**Overall Assessment**: The selected meter appears to meet the technical requirements with the following considerations:
+
+- The PM5560 offers basic power quality monitoring features including voltage and current accuracy, as well as power factor measurement.
+- It provides a good balance between technical capability and cost-effectiveness.
+- Value assessment: The PM5560 offers a good balance of basic power quality measurement features at a reasonable cost, making it suitable for the specified requirements..
+
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+

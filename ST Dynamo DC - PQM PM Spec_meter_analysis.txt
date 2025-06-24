@@ -1,0 +1,255 @@
+# METER SELECTION AND COMPLIANCE ANALYSIS
+
+## 1. Clause 6.1: Advanced Power Quality Meter Requirements
+
+### Tender Requirements
+- Fault recording function
+- Remote-control function for High voltage circuit breaker
+
+### Selected Meter: PM5560
+
+**Description**: From PM5000_Series
+
+### Compliance Analysis
+
+**Overall Assessment**: The selected meter appears to meet the technical requirements with the following considerations:
+
+- The PM5560 offers advanced monitoring capabilities, including fault recording and remote control for high-voltage circuit breakers.
+- It provides a good balance between technical features and cost-effectiveness.
+- Value assessment: The PM5560 offers a good balance of technical capabilities and cost, meeting the basic requirements without being over-specified..
+
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 2. Clause 6.2: Power Quality Meter Requirements
+
+### Tender Requirements
+- High-precision meter
+- Power Quality Meter
+- Automatic switching device on low-voltage busbar connected to two sections
+
+### Selected Meter: PM8340
+
+**Description**: Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| High-precision meter | Not specified | ❓ Unknown |  |
+| Power Quality Meter | Not specified | ❓ Unknown |  |
+| Automatic switching device on low-voltage busbar connected to two sections | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 3. Clause 6.3: Power Quality Meter Requirements
+
+### Tender Requirements
+- Accuracy: Voltage ±0.1%, Current ±0.1%, Power Factor ±0.5%
+- Communication: Modbus TCP/IP
+- Monitoring: DIN EN 50160 standard, IEC62053-22 Cl 0.2S
+- Input Capacity: Up to 690VAC Line-to-Line, 5A nominal current inputs
+- Special Features: Web server analysis tools for power quality monitoring, SNTP time synchronization, built-in Modbus TCP/IP communication
+- Environmental Conditions: Operating temperature -10°C to +55°C, IP52 at front; IP30 at side and back
+
+### Selected Meter: PM5560
+
+**Description**: From PM5000_Series
+
+### Compliance Analysis
+
+**Overall Assessment**: The selected meter appears to meet the technical requirements with the following considerations:
+
+- The PM5560 offers a balance between technical capability and cost-effectiveness.
+- It meets the accuracy requirements for voltage, current, and power factor, as well as the communication protocol (Modbus TCP/IP).
+- The DIN EN 50160 standard and IEC62053-22 Cl 0.2S monitoring capabilities are also supported.
+- Value assessment: Meets basic requirements with good technical fit and reasonable cost.
+
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 4. Clause 8.0: Digital Power Meter Requirements
+
+### Tender Requirements
+- Voltage Accuracy ±0.1%
+- Current Accuracy ±0.1%
+- Frequency Accuracy ±0.005Hz
+- Modbus RTU/TCP IP communication protocol
+- IEC62053 class 0.5S or SAC-SINGLAS certification with passed accuracy class of 0.2 standard
+
+### Selected Meter: PM5560
+
+**Description**: From PM5000_Series
+
+### Compliance Analysis
+
+**Overall Assessment**: The selected meter appears to meet the technical requirements with the following considerations:
+
+- The PM5560 offers high accuracy in voltage, current, and frequency with a balance between performance and cost.
+- Value assessment: Moderate technical fit and good value for money.
+
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 5. Clause 8.1: Energy Meter Requirements
+
+### Tender Requirements
+- Measurement accuracy according to IEC62053-22 Cl 0.5S
+- Instantaneous values (L-N voltage, L-L voltage, frequency, power, power factor)
+- Harmonics up to 63rd order
+- Memory recording for energy, demand, max demand & max/min records
+- Real-time clock
+- Built-in Modbus RTU communication
+- 6.4kHz sampling (128 Samples/cycle)
+- Operating temperature range -25°C to +55°C
+
+### Selected Meter: PM8140
+
+**Description**: Essential power quality meter with 64MB memory and 128 samples/cycle waveform capture.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| Measurement accuracy according to IEC62053-22 Cl 0.5S | Not specified | ❓ Unknown |  |
+| Instantaneous values (L-N voltage, L-L voltage, frequency, power, power factor) | Not specified | ❓ Unknown |  |
+| Harmonics up to 63rd order | Not specified | ❓ Unknown |  |
+| Memory recording for energy, demand, max demand & max/min records | Not specified | ❓ Unknown |  |
+| Real-time clock | Not specified | ❓ Unknown |  |
+| Built-in Modbus RTU communication | Not specified | ❓ Unknown |  |
+| 6.4kHz sampling (128 Samples/cycle) | Not specified | ❓ Unknown |  |
+| Operating temperature range -25°C to +55°C | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 6. Clause 8.2: Power Meter Requirements
+
+### Tender Requirements
+- Apparent Power Accuracy ±0.5%
+- Reactive Power Accuracy ±1%
+- Power Factor Accuracy ±0.01
+- Active Energy IEC 62053-22 Class 0.5S
+- Active Energy IEC 61557-12 Class 0.5
+- Total Harmonic Distortion (THD) ≤1%
+- Voltage VL-N Accuracy ±0.2%
+- Current Accuracy ±0.2%
+- Frequency Accuracy ±0.1%
+
+### Selected Meter: PM8240
+
+**Description**: Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| Apparent Power Accuracy ±0.5% | Not specified | ❓ Unknown |  |
+| Reactive Power Accuracy ±1% | Not specified | ❓ Unknown |  |
+| Power Factor Accuracy ±0.01 | Not specified | ❓ Unknown |  |
+| Active Energy IEC 62053-22 Class 0.5S | Not specified | ❓ Unknown |  |
+| Active Energy IEC 61557-12 Class 0.5 | Not specified | ❓ Unknown |  |
+| Total Harmonic Distortion (THD) ≤1% | Not specified | ❓ Unknown |  |
+| Voltage VL-N Accuracy ±0.2% | Not specified | ❓ Unknown |  |
+| Current Accuracy ±0.2% | Not specified | ❓ Unknown |  |
+| Frequency Accuracy ±0.1% | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 7. Clause 8.3: Electrical Meter Requirements
+
+### Tender Requirements
+- Compliance with IEC62053-22 Class 0.5
+- IEC 61000-4-2 Electrostatic Discharge immunity
+- IEC 61000-4-3 Immunity to radiated fields (EN55011 Class A)
+- IEC 61000-4-4 Immunity to fast transients
+- IEC 61000-4-5 Immunity to impulse waves
+- IEC 61000-4-6 Conducted immunity
+- IEC 61000-4-8 Immunity to magnetic fields
+- IEC 61000-4-11 Immunity to voltage dips
+- EN55011 Class A Conducted Emissions
+- IEC 61000-3-2 Harmonics
+
+### Selected Meter: PM8240
+
+**Description**: Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| Compliance with IEC62053-22 Class 0.5 | Not specified | ❓ Unknown |  |
+| IEC 61000-4-2 Electrostatic Discharge immunity | Not specified | ❓ Unknown |  |
+| IEC 61000-4-3 Immunity to radiated fields (EN55011 Class A) | Not specified | ❓ Unknown |  |
+| IEC 61000-4-4 Immunity to fast transients | Not specified | ❓ Unknown |  |
+| IEC 61000-4-5 Immunity to impulse waves | Not specified | ❓ Unknown |  |
+| IEC 61000-4-6 Conducted immunity | Not specified | ❓ Unknown |  |
+| IEC 61000-4-8 Immunity to magnetic fields | Not specified | ❓ Unknown |  |
+| IEC 61000-4-11 Immunity to voltage dips | Not specified | ❓ Unknown |  |
+| EN55011 Class A Conducted Emissions | Not specified | ❓ Unknown |  |
+| IEC 61000-3-2 Harmonics | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 8. Clause 9.2: Power Quality Meter Requirements
+
+### Tender Requirements
+- High voltage input side equipped with an advanced power quality meter
+- Low-voltage input side requires high-precision meters and power quality monitoring
+- Automatic switching device on the low-voltage busbar connected to two sections
+- Power distribution system to all outgoing loads: switch status, current, voltage, active power, power factor, harmonic content, IT power consumption, data center power consumption (to derive PUE)
+- Power distribution cabinet with monitoring and recording of the maximum current of the previous day
+- Diesel generator system, parallel system, and control panel equipped with dual power supplies, at least one path must be UPS power supply
+- Redundant PLC for diesel engine parallel & fuel automatic control: realizing dual redundant configuration of PLC, touch screen, and communication module
+- Fuel tank oil level or oil quantity display on diesel generators
+- Monitoring of air valve sampling points between diesel generators
+- Input and output power, voltage, frequency, current, power factor, load rate for UPS systems
+- Battery input voltage, current, capacity; synchronous/non-synchronous state; uninterrupted voltage system/bypass power supply state; mains failure; UPS power supply system failure status
+- Cell voltage, cluster-level voltage, and current of lead-acid batteries uploaded to the monitoring system through a convergence module
+
+### Selected Meter: PM8340
+
+**Description**: Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| High voltage input side equipped with an advanced power quality meter | Not specified | ❓ Unknown |  |
+| Low-voltage input side requires high-precision meters and power quality monitoring | Not specified | ❓ Unknown |  |
+| Automatic switching device on the low-voltage busbar connected to two sections | Not specified | ❓ Unknown |  |
+| Power distribution system to all outgoing loads: switch status, current, voltage, active power, power factor, harmonic content, IT power consumption, data center power consumption (to derive PUE) | Not specified | ❓ Unknown |  |
+| Power distribution cabinet with monitoring and recording of the maximum current of the previous day | Not specified | ❓ Unknown |  |
+| Diesel generator system, parallel system, and control panel equipped with dual power supplies, at least one path must be UPS power supply | Not specified | ❓ Unknown |  |
+| Redundant PLC for diesel engine parallel & fuel automatic control: realizing dual redundant configuration of PLC, touch screen, and communication module | Not specified | ❓ Unknown |  |
+| Fuel tank oil level or oil quantity display on diesel generators | Not specified | ❓ Unknown |  |
+| Monitoring of air valve sampling points between diesel generators | Not specified | ❓ Unknown |  |
+| Input and output power, voltage, frequency, current, power factor, load rate for UPS systems | Not specified | ❓ Unknown |  |
+| Battery input voltage, current, capacity; synchronous/non-synchronous state; uninterrupted voltage system/bypass power supply state; mains failure; UPS power supply system failure status | Not specified | ❓ Unknown |  |
+| Cell voltage, cluster-level voltage, and current of lead-acid batteries uploaded to the monitoring system through a convergence module | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+

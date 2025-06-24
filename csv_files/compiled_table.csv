@@ -1,0 +1,134 @@
+FamilyName,SeriesName,ModelNumber,ModelAlias,ProductDescription,MID_Certified,CategoryName,ParameterName,Value_Text,Value_Numeric,Value_Min,Value_Max,Unit,Is_Class,Notes
+Acti9,iEM3100 Series,iEM3100,A9MEM3100,Basic 63A direct-connect energy meter for DIN rail mounting.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 1,1,NULL,NULL,%,TRUE,As per IEC 62053-21
+Acti9,iEM3100 Series,iEM3100,A9MEM3100,Basic 63A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,Dimensions (W x H x D),90 x 95 x 69,NULL,NULL,NULL,mm,FALSE,
+Acti9,iEM3100 Series,iEM3100,A9MEM3100,Basic 63A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,IP Protection - Body,IP20,NULL,NULL,NULL,NULL,FALSE,Body
+Acti9,iEM3100 Series,iEM3100,A9MEM3100,Basic 63A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,IP Protection - Display,IP40,NULL,NULL,NULL,NULL,FALSE,Front panel
+Acti9,iEM3100 Series,iEM3100,A9MEM3100,Basic 63A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,Weight,NULL,260,NULL,NULL,g,FALSE,
+Acti9,iEM3100 Series,iEM3110,A9MEM3110,Adds a pulse output and MID certification to the iEM3100.,TRUE,,,,,,,,,
+Acti9,iEM3100 Series,iEM3115,A9MEM3115,Adds multi-tariff capability controlled by digital input or internal clock.,TRUE,,,,,,,,,
+Acti9,iEM3100 Series,iEM3135,A9MEM3135,Adds M-Bus communication and digital I/O to the multi-tariff feature set.,TRUE,,,,,,,,,
+Acti9,iEM3100 Series,iEM3150,A9MEM3150,Adds Modbus communication to the base model for remote monitoring.,FALSE,,,,,,,,,
+Acti9,iEM3100 Series,iEM3155,A9MEM3155,"Adds digital I/O and multi-tariff support to the Modbus model, with MID certification.",TRUE,Communications,Communication Protocol,Modbus,NULL,NULL,NULL,NULL,FALSE,
+Acti9,iEM3100 Series,iEM3155,A9MEM3155,"Adds digital I/O and multi-tariff support to the Modbus model, with MID certification.",TRUE,Inputs and Outputs,Digital Inputs (Number),NULL,1,NULL,NULL,count,FALSE,
+Acti9,iEM3100 Series,iEM3155,A9MEM3155,"Adds digital I/O and multi-tariff support to the Modbus model, with MID certification.",TRUE,Inputs and Outputs,Digital Outputs (Number),NULL,1,NULL,NULL,count,FALSE,
+Acti9,iEM3100 Series,iEM3165,A9MEM3165,"Provides BACnet communication with digital I/O and multi-tariff support, MID certified.",TRUE,,,,,,,,,
+Acti9,iEM3100 Series,iEM3175,A9MEM3175,"Provides LonWorks communication with digital input and multi-tariff support, MID certified.",TRUE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3200,A9MEM3200,Basic energy meter for use with current transformers (CT).,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+Acti9,iEM3200 Series,iEM3200,A9MEM3200,Basic energy meter for use with current transformers (CT).,FALSE,Mechanical Characteristics,Dimensions (W x H x D),90 x 95 x 69,NULL,NULL,NULL,mm,FALSE,
+Acti9,iEM3200 Series,iEM3200,A9MEM3200,Basic energy meter for use with current transformers (CT).,FALSE,Mechanical Characteristics,IP Protection - Body,IP20,NULL,NULL,NULL,NULL,FALSE,Body
+Acti9,iEM3200 Series,iEM3200,A9MEM3200,Basic energy meter for use with current transformers (CT).,FALSE,Mechanical Characteristics,IP Protection - Display,IP40,NULL,NULL,NULL,NULL,FALSE,Front panel
+Acti9,iEM3200 Series,iEM3200,A9MEM3200,Basic energy meter for use with current transformers (CT).,FALSE,Mechanical Characteristics,Weight,NULL,260,NULL,NULL,g,FALSE,
+Acti9,iEM3200 Series,iEM3210,A9MEM3210,Adds a pulse output and MID certification to the iEM3200.,TRUE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3215,A9MEM3215,Adds multi-tariff capability controlled by digital input or internal clock to the CT meter.,TRUE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3235,A9MEM3235,Adds M-Bus communication and digital I/O to the multi-tariff CT meter.,TRUE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3250,A9MEM3250,Adds Modbus communication to the base CT meter model.,FALSE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3255,A9MEM3255,"Adds digital I/O and multi-tariff support to the Modbus CT model, with MID certification.",TRUE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3265,A9MEM3265,"Provides BACnet communication with digital I/O and multi-tariff support for CTs, MID certified.",TRUE,,,,,,,,,
+Acti9,iEM3200 Series,iEM3275,A9MEM3275,"Provides LonWorks communication with digital input and multi-tariff support for CTs, MID certified.",TRUE,,,,,,,,,
+Acti9,iEM3300 Series,iEM3300,A9MEM3300,Basic 125A direct-connect energy meter for DIN rail mounting.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 1,1,NULL,NULL,%,TRUE,As per IEC 62053-21
+Acti9,iEM3300 Series,iEM3300,A9MEM3300,Basic 125A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,Dimensions (W x H x D),126 x 103 x 69,NULL,NULL,NULL,mm,FALSE,
+Acti9,iEM3300 Series,iEM3300,A9MEM3300,Basic 125A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,IP Protection - Body,IP20,NULL,NULL,NULL,NULL,FALSE,Body
+Acti9,iEM3300 Series,iEM3300,A9MEM3300,Basic 125A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,IP Protection - Display,IP40,NULL,NULL,NULL,NULL,FALSE,Front panel
+Acti9,iEM3300 Series,iEM3300,A9MEM3300,Basic 125A direct-connect energy meter for DIN rail mounting.,FALSE,Mechanical Characteristics,Weight,NULL,260,NULL,NULL,g,FALSE,
+Acti9,iEM3300 Series,iEM3310,A9MEM3310,Adds a pulse output and MID certification to the iEM3300.,TRUE,,,,,,,,,
+Acti9,iEM3300 Series,iEM3335,A9MEM3335,Adds M-Bus communication and digital I/O to the 125A multi-tariff meter.,TRUE,,,,,,,,,
+Acti9,iEM3300 Series,iEM3350,A9MEM3350,Adds Modbus communication to the 125A base model.,FALSE,,,,,,,,,
+Acti9,iEM3300 Series,iEM3355,A9MEM3355,"Adds digital I/O and multi-tariff support to the 125A Modbus model, with MID certification.",TRUE,,,,,,,,,
+Acti9,iEM3300 Series,iEM3365,A9MEM3365,"Provides BACnet communication with digital I/O and multi-tariff support for 125A meters, MID certified.",TRUE,,,,,,,,,
+Acti9,iEM3300 Series,iEM3375,A9MEM3375,"Provides LonWorks communication with digital input and multi-tariff support for 125A meters, MID certified.",TRUE,,,,,,,,,
+Acti9,iEM3400 Series,iEM3455,A9MEM3455,"Energy meter for LVCTs with Modbus, digital I/O, and multi-tariff support.",FALSE,,,,,,,,,
+Acti9,iEM3400 Series,iEM3465,A9MEM3465,"Energy meter for LVCTs with BACnet, digital I/O, and multi-tariff support.",FALSE,,,,,,,,,
+Acti9,iEM3500 Series,iEM3555,A9MEM3555,"Energy meter for Rogowski coils with Modbus, digital I/O, and multi-tariff support.",FALSE,,,,,,,,,
+Acti9,iEM3500 Series,iEM3565,A9MEM3565,"Energy meter for Rogowski coils with BACnet, digital I/O, and multi-tariff support.",FALSE,,,,,,,,,
+EasyLogic,PM2100 Series,PM2110,METSEPM2110,"Basic power & energy meter with LED display and pulse output, Class 1 accuracy.",FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 1,1,NULL,NULL,%,TRUE,As per IEC 62053-22
+EasyLogic,PM2100 Series,PM2120,METSEPM2120,Adds RS-485 Modbus communication to the PM2110 feature set.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 1,1,NULL,NULL,%,TRUE,As per IEC 62053-22
+EasyLogic,PM2100 Series,PM2130,METSEPM2130,Upgrades accuracy to Class 0.5S and adds I/O capabilities to the PM2100 series.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+EasyLogic,PM2200 Series,PM2210,METSEPM2210,"Basic power & energy meter with LCD display and pulse output, Class 1 accuracy.",FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 1,1,NULL,NULL,%,TRUE,As per IEC 62053-22
+EasyLogic,PM2200 Series,PM2220,METSEPM2220,Adds RS-485 Modbus communication to the PM2210 feature set.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 1,1,NULL,NULL,%,TRUE,As per IEC 62053-22
+EasyLogic,PM2200 Series,PM2230,METSEPM2230,Upgrades accuracy to Class 0.5S and adds I/O capabilities to the PM2200 series.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,ION9000 Series,ION92040,METSEION92040,"High-end power quality instrument with DIN mount, 192mm remote display, and Class 0.1S accuracy.",FALSE,,,,,,,,,
+PowerLogic,ION9000 Series,METSERD192,METSERD192,Remote 192mm color touchscreen display for ION9000 series meters.,FALSE,,,,,,,,,
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Communications,Communication Protocol,Pulse Output,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Inputs and Outputs,Pulse Output (Number),NULL,1,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,Depth from housing mounting flange
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Mechanical Characteristics,IP Protection - Display,IP54,NULL,NULL,NULL,NULL,FALSE,Upgradeable to IP65 with optional accessory kit METSEIP65OP96X96FF
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Mechanical Characteristics,Weight,NULL,380,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5100,METSEPM5100,"Base model power meter with pulse output only, for monitoring up to the 15th harmonic.",FALSE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,15,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Communications,Communication Port,RS-485,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Communications,Communication Protocol,"Modbus RTU,Modbus ASCII,JBUS",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Inputs and Outputs,Pulse Output (Number),NULL,1,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Mechanical Characteristics,IP Protection - Display,IP52,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Mechanical Characteristics,Weight,NULL,380,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5110,METSEPM5110,Adds an RS-485 port for Modbus RTU/ASCII communication to the base model features.,FALSE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,15,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Communications,Communication Port,RS-485,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Communications,Communication Protocol,"Modbus RTU,Modbus ASCII,JBUS",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Inputs and Outputs,Pulse Output (Number),NULL,1,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Mechanical Characteristics,IP Protection - Display,IP52,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Mechanical Characteristics,Weight,NULL,380,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5111,METSEPM5111,Adds MID/MIR compliance for billing applications to the PM5110 feature set.,TRUE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,15,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Communications,Communication Port,RS-485,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Communications,Communication Protocol,"Modbus RTU,Modbus ASCII,JBUS",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Inputs and Outputs,Digital Inputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Inputs and Outputs,Digital Outputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Mechanical Characteristics,IP Protection - Display,IP52,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Mechanical Characteristics,Weight,NULL,430,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5310,METSEPM5310,An advanced power meter with RS-485 Modbus communication and basic I/O capabilities.,FALSE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,31,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Communications,Communication Port,Ethernet RJ45,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Communications,Communication Protocol,"Modbus TCP/IP,BACnet/IP",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Inputs and Outputs,Digital Inputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Inputs and Outputs,Digital Outputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Mechanical Characteristics,IP Protection - Display,IP54,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Mechanical Characteristics,Weight,NULL,430,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5320,METSEPM5320,"A power meter with Ethernet communication, supporting Modbus TCP and BACnet/IP protocols.",FALSE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,31,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Communications,Communication Port,RS-485,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Communications,Communication Protocol,"Modbus RTU,Modbus ASCII,JBUS",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Inputs and Outputs,Digital Inputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Inputs and Outputs,Digital Outputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Inputs and Outputs,Relay Outputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,IP Protection - Display,IP52,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,Weight,NULL,430,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5330,METSEPM5330,A power meter with RS-485 Modbus communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,31,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5331,METSEPM5331,Adds MID/MIR compliance for billing applications to the PM5330 feature set.,TRUE,,,,,,,,,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Communications,Communication Port,Ethernet RJ45,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Communications,Communication Protocol,"Modbus TCP/IP,BACnet/IP",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.5S,0.5,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Inputs and Outputs,Digital Inputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Inputs and Outputs,Digital Outputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Inputs and Outputs,Relay Outputs (Number),NULL,2,NULL,NULL,count,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 72,NULL,NULL,NULL,mm,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,IP Protection - Display,IP51,NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Mechanical Characteristics,Weight,NULL,430,NULL,NULL,g,FALSE,
+PowerLogic,PM5000 Series,PM5340,METSEPM5340,A power meter with Ethernet communication and expanded I/O (Digital Inputs/Outputs).,FALSE,Power Quality Accuracy,Harmonics Measurement (Max Order),NULL,31,NULL,NULL,NULL,FALSE,
+PowerLogic,PM5000 Series,PM5341,METSEPM5341,Adds MID/MIR compliance for billing applications to the PM5340 feature set.,TRUE,,,,,,,,,
+PowerLogic,PM5500 Series,PM5560,METSEPM5560,"Advanced power meter with dual Ethernet ports, extensive data logging, and power quality analysis up to the 63rd harmonic.",FALSE,,,,,,,,,
+PowerLogic,PM5500 Series,PM5561,METSEPM5561,Adds MID/MIR compliance for billing applications to the PM5560 feature set.,TRUE,,,,,,,,,
+PowerLogic,PM5500 Series,PM5563,METSEPM5563,"A DIN rail mounted version of the PM5560, offering the same advanced features for applications where panel mounting is not suitable.",FALSE,,,,,,,,,
+PowerLogic,PM8000 Series,PM8140,METSEPM8140,Essential power quality meter with 64MB memory and 128 samples/cycle waveform capture.,FALSE,,,,,,,,,
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Communications,Communication Protocol,"Modbus,ION,DNP3,IEC 61850,HTTPS,FTP,SNMP,SMTP,RSTP,NTP,PTP,DHCP",NULL,NULL,NULL,NULL,FALSE,
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Electrical Characteristics,Accuracy - Active Energy,Class 0.2S,0.2,NULL,NULL,%,TRUE,As per IEC 62053-22
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Inputs and Outputs,Analog Outputs (Number),NULL,8,NULL,NULL,count,FALSE,Maximum via optional modules
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Inputs and Outputs,Digital Inputs (Number),NULL,27,NULL,NULL,count,FALSE,Maximum via optional modules
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Inputs and Outputs,Relay Outputs (Number),NULL,8,NULL,NULL,count,FALSE,Maximum via optional modules
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Mechanical Characteristics,Dimensions (W x H x D),96 x 96 x 77.5,NULL,NULL,NULL,mm,FALSE,Panel mount model
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Mechanical Characteristics,IP Protection - Body,IP30,NULL,NULL,NULL,NULL,FALSE,Rear of panel mount
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Mechanical Characteristics,IP Protection - Display,IP54,NULL,NULL,NULL,NULL,FALSE,Front of panel mount and remote display
+PowerLogic,PM8000 Series,PM8240,METSEPM8240,"Standard power quality meter with integrated display, 512 MB memory, and 256 samples/cycle.",FALSE,Mechanical Characteristics,Weight,NULL,581,NULL,NULL,g,FALSE,Integrated Display Model
+PowerLogic,PM8000 Series,PM8340,METSEPM8340,"Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.",FALSE,,,,,,,,,

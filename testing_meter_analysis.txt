@@ -1,0 +1,172 @@
+# METER SELECTION AND COMPLIANCE ANALYSIS
+
+## 1. Clause 7.0: Power Quality Meter Requirements
+
+### Tender Requirements
+- LCD graphical display
+- Voltage measurement up to 690 VAC Line to Line
+- Current input: 5 A nominal
+- IEC62053 class 0.2S or SAC-SINGLAS certification with accuracy class of 0.2 standard
+- Modbus TCP/IP communication
+- Web server analysis monitoring tools for power quality analysis
+- Weekly analysis report
+- Transient / Sags/ Swells events download
+- Export event information into COMTRADE format
+- Viewing harmonics up to at least 63rd order
+- Flickering and rapid voltage changes analysis
+- Automatic weekly EN50160 report generation
+- Class A Power Analyser
+- Monitoring in accordance with DIN EN 50160
+- Measurement accuracy according to IEC62053-22 Cl 0.2S
+- Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+- Support for IEC61850
+- Internal Memory: 8GB
+- SNTP Time sync available
+- Digital Inputs (DI): 8
+- Relay Outputs (RO): 4
+- Digital Outputs (DO): 2
+- Operating temperature range -10°C to +55°C
+- IP rating: IP52 at front; IP30 at Side and Back
+- Linkage of circuit breaker status to PQM for status monitoring
+- THD and TDD up to 63rd order
+- EN50160 statistic function
+- Unbalance Voltage-, current- and zero sequence
+- Voltage/Freq. Deviation Setpoint alarm and record
+- Rapid Voltage Alteration Trigger DO point, waveform record
+- High resolution failure record with 1024 points / cycle
+- Support up to 1024 PQ Records with time resolution of 1ms
+- Voltage Sag / Swell Waveform record available
+- Transient disturbance record resolution: 20µs
+- Configurable waveform recording mode options
+- Sag Source Location analysis
+- ITIC Curve/SEMI F47/SARFI Index analysis
+- Voltage accuracy ±0.1%
+- Current accuracy ±0.5%
+- Frequency accuracy ±0.005Hz
+- Harmonic Class A
+
+### Selected Meter: PM8340
+
+**Description**: Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| LCD graphical display | Not specified | ❓ Unknown |  |
+| Voltage measurement up to 690 VAC Line to Line | Not specified | ❓ Unknown |  |
+| Current input: 5 A nominal | Not specified | ❓ Unknown |  |
+| IEC62053 class 0.2S or SAC-SINGLAS certification with accuracy class of 0.2 standard | Not specified | ❓ Unknown |  |
+| Modbus TCP/IP communication | Not specified | ❓ Unknown |  |
+| Web server analysis monitoring tools for power quality analysis | Not specified | ❓ Unknown |  |
+| Weekly analysis report | Not specified | ❓ Unknown |  |
+| Transient / Sags/ Swells events download | Not specified | ❓ Unknown |  |
+| Export event information into COMTRADE format | Not specified | ❓ Unknown |  |
+| Viewing harmonics up to at least 63rd order | Not specified | ❓ Unknown |  |
+| Flickering and rapid voltage changes analysis | Not specified | ❓ Unknown |  |
+| Automatic weekly EN50160 report generation | Not specified | ❓ Unknown |  |
+| Class A Power Analyser | Not specified | ❓ Unknown |  |
+| Monitoring in accordance with DIN EN 50160 | Not specified | ❓ Unknown |  |
+| Measurement accuracy according to IEC62053-22 Cl 0.2S | Not specified | ❓ Unknown |  |
+| Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI | Not specified | ❓ Unknown |  |
+| Support for IEC61850 | Not specified | ❓ Unknown |  |
+| Internal Memory: 8GB | Not specified | ❓ Unknown |  |
+| SNTP Time sync available | Not specified | ❓ Unknown |  |
+| Digital Inputs (DI): 8 | Not specified | ❓ Unknown |  |
+| Relay Outputs (RO): 4 | Not specified | ❓ Unknown |  |
+| Digital Outputs (DO): 2 | Not specified | ❓ Unknown |  |
+| Operating temperature range -10°C to +55°C | Not specified | ❓ Unknown |  |
+| IP rating: IP52 at front; IP30 at Side and Back | Not specified | ❓ Unknown |  |
+| Linkage of circuit breaker status to PQM for status monitoring | Not specified | ❓ Unknown |  |
+| THD and TDD up to 63rd order | Not specified | ❓ Unknown |  |
+| EN50160 statistic function | Not specified | ❓ Unknown |  |
+| Unbalance Voltage-, current- and zero sequence | Not specified | ❓ Unknown |  |
+| Voltage/Freq. Deviation Setpoint alarm and record | Not specified | ❓ Unknown |  |
+| Rapid Voltage Alteration Trigger DO point, waveform record | Not specified | ❓ Unknown |  |
+| High resolution failure record with 1024 points / cycle | Not specified | ❓ Unknown |  |
+| Support up to 1024 PQ Records with time resolution of 1ms | Not specified | ❓ Unknown |  |
+| Voltage Sag / Swell Waveform record available | Not specified | ❓ Unknown |  |
+| Transient disturbance record resolution: 20µs | Not specified | ❓ Unknown |  |
+| Configurable waveform recording mode options | Not specified | ❓ Unknown |  |
+| Sag Source Location analysis | Not specified | ❓ Unknown |  |
+| ITIC Curve/SEMI F47/SARFI Index analysis | Not specified | ❓ Unknown |  |
+| Voltage accuracy ±0.1% | Not specified | ❓ Unknown |  |
+| Current accuracy ±0.5% | Not specified | ❓ Unknown |  |
+| Frequency accuracy ±0.005Hz | Not specified | ❓ Unknown |  |
+| Harmonic Class A | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+
+## 2. Clause 8.0: Digital Power Meter Requirements
+
+### Tender Requirements
+- Measurement accuracy according to IEC62053-22 Cl 0.5S
+- Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+- Harmonics up to 63rd order
+- Memory Recording for energy, demand, max demand & max/min record
+- Real time clock
+- Built-in Modbus RTU communication
+- 6.4kHz sampling (128 Samples/cycle)
+- Operating temperature -25°C to +55°C
+- Apparent power accuracy ±0.5%
+- Reactive power accuracy ±1%
+- Power factor accuracy ±0.01
+- Active energy IEC62053-22 Class 0.5S
+- Active energy IEC 61557-12 Class 0.5
+- THD accuracy ±1%
+- Voltage VL-N accuracy ±0.2%
+- Current accuracy ±0.2%
+- Frequency accuracy ±0.1%
+- Electrostatic Discharge compliance with IEC 61000-4-2
+- Immunity to Radiated Fields compliance with IEC 61000-4-3
+- Immunity to Fast Transients compliance with IEC 61000-4-4
+- Immunity to Impulse Waves compliance with IEC 61000-4-5
+- Conducted Immunity compliance with IEC 61000-4-6
+- Immunity to Voltage Dips compliance with IEC 61000-4-11
+- Radiated Emissions Class A compliance with EN55011
+- Harmonics compliance with IEC 61000-3-2
+- Certifications: SACSINGLAS, third party lab certifications
+
+### Selected Meter: PM8340
+
+**Description**: Advanced power quality meter with Class A compliance, 512MB memory, and 512 samples/cycle.
+
+### Compliance Analysis
+
+| Tender Requirement | Meter Specification | Compliance | Notes |
+|-------------------|---------------------|------------|-------|
+| Measurement accuracy according to IEC62053-22 Cl 0.5S | Not specified | ❌ Non-compliant | ? Needs verification - The meter description does not specify the measurement accuracy for each parameter, only that it is Class A compliant. |
+| Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI | Not specified | ✅ Compliant | ✓ Fully supported - The meter should be capable of measuring these parameters based on its description. |
+| Harmonics up to 63rd order | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant and may support harmonics, there is no specific mention of a harmonic analysis capability up to 63rd order in the description. |
+| Memory Recording for energy, demand, max demand & max/min record | Not specified | ✅ Compliant | ✓ Fully supported - The meter has a 512MB memory capacity, which should be sufficient for recording energy, demand, and max/min records. |
+| Real time clock | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes a real-time clock feature. |
+| Built-in Modbus RTU communication | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant, it does not explicitly state that it has built-in Modbus RTU communication capability. |
+| 6.4kHz sampling (128 Samples/cycle) | Not specified | ❌ Non-compliant | ? Needs verification - The meter description mentions 512 samples per cycle, but there is no information on the sampling rate. |
+| Operating temperature -25°C to +55°C | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance includes operating within this temperature range. |
+| Apparent power accuracy ±0.5% | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant, it does not specify apparent power accuracy in the description. |
+| Reactive power accuracy ±1% | Not specified | ❌ Non-compliant | ? Needs verification - The meter's power factor accuracy is specified as ±0.01, which is more stringent than the requested ±1%. Additionally, there is no mention of reactive power accuracy. |
+| Power factor accuracy ±0.01 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes a power factor measurement accuracy of ±0.01. |
+| Active energy IEC62053-22 Class 0.5S | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant, it does not explicitly state that it meets the specific active energy accuracy requirements of IEC62053-22 Class 0.5S. |
+| Active energy IEC 61557-12 Class 0.5 | Not specified | ❌ Non-compliant | ? Needs verification - The meter's accuracy in terms of active energy measurement is not specified, and there is no mention of compliance with IEC 61557-12 Class 0.5. |
+| THD accuracy ±1% | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant, it does not specify THD accuracy in the description. |
+| Voltage VL-N accuracy ±0.2% | Not specified | ❌ Non-compliant | ? Needs verification - The meter's voltage measurement accuracy is not specified in the description. |
+| Current accuracy ±0.2% | Not specified | ❌ Non-compliant | ? Needs verification - There is no mention of current accuracy in the meter's description. |
+| Frequency accuracy ±0.1% | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant, it does not specify frequency accuracy in the description. |
+| Electrostatic Discharge compliance with IEC 61000-4-2 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes ESD protection. |
+| Immunity to Radiated Fields compliance with IEC 61000-4-3 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes immunity to radiated fields. |
+| Immunity to Fast Transients compliance with IEC 61000-4-4 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes immunity to fast transients. |
+| Immunity to Impulse Waves compliance with IEC 61000-4-5 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes immunity to impulse waves. |
+| Conducted Immunity compliance with IEC 61000-4-6 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes conducted immunity. |
+| Immunity to Voltage Dips compliance with IEC 61000-4-11 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes immunity to voltage dips. |
+| Radiated Emissions Class A compliance with EN55011 | Not specified | ✅ Compliant | ✓ Fully supported - Class A compliance typically includes radiated emissions performance. |
+| Harmonics compliance with IEC 61000-3-2 | Not specified | ❌ Non-compliant | ? Needs verification - While the meter is Class A compliant, it does not explicitly state that it complies with the harmonic emission requirements of IEC 61000-3-2. |
+| Certifications: SACSINGLAS, third party lab certifications | Not specified | ❓ Unknown |  |
+### Potential Areas for Improvement
+
+- No immediate areas for improvement detected.
+
+--------------------------------------------------------------------------------
+

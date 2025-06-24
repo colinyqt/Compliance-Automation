@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: meter_analyzer
+Version: 0.1
+Requires-Dist: PyPDF2
+Requires-Dist: ollama
+Dynamic: requires-dist

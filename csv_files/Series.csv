@@ -1,0 +1,12 @@
+﻿SeriesID,FamilyID,SeriesName,SeriesDescription
+1,1,PM5000 Series,"A range of panel-mounted digital power meters for monitoring electrical installations, offering models with basic to advanced features including communication and I/O."
+2,1,PM5500 Series,"Advanced power meters with extensive data logging, superior power quality analysis up to the 63rd harmonic, and multiple communication protocols including dual Ethernet ports."
+3,1,PM8000 Series,"High-performance power quality meters with advanced analysis capabilities like waveform capture, disturbance direction detection, and compliance monitoring for critical applications."
+4,1,ION9000 Series,"Top-tier power quality instruments with high-precision measurement, certified for revenue applications and designed for advanced power system analysis with extensive I/O and communication options."
+5,2,PM2100 Series,"A series of cost-effective power meters with bright LED displays, designed for essential energy monitoring and management in commercial and industrial applications."
+6,2,PM2200 Series,"A series of cost-effective power meters with graphical LCD displays, offering more detailed on-device readings, data logging, and communication options for comprehensive energy management."
+7,3,iEM3100 Series,"DIN rail-mounted 63A direct-connect energy meters primarily for sub-billing and cost allocation, with models offering various communication protocols and I/O."
+8,3,iEM3200 Series,"DIN rail-mounted energy meters designed for use with 1A or 5A current transformers (CTs), suitable for monitoring higher current loads in sub-billing and energy management systems."
+9,3,iEM3300 Series,DIN rail-mounted 125A direct-connect energy meters for sub-billing and cost allocation in applications with higher load requirements than the iEM3100 series.
+10,3,iEM3400 Series,"DIN rail-mounted energy meters designed for use with low-voltage current transformers (LVCTs), offering flexibility for various circuit sizes."
+11,3,iEM3500 Series,"DIN rail-mounted energy meters designed for use with Rogowski coils, providing a flexible and easy-to-install solution for monitoring large or irregularly shaped conductors."
