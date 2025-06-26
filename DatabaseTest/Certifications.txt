@@ -1,0 +1,70 @@
+meter_id,certification
+1,CE
+1,cULus
+1,RCM
+2,CE
+2,cULus
+2,RCM
+3,CE
+3,cULus
+3,RCM
+4,CE
+4,cULus
+4,RCM
+5,CE
+5,cULus
+5,RCM
+6,CE conforming to IEC 61010-1
+6,cULus conforming to UL 61010-1
+6,cULus conforming to CSA C22.2 No 61010-1
+6,RCM
+6,EAC
+7,CE 
+7,cULus 
+8,CE 
+8,cULus 
+9,CE 
+9,cULus 
+9,MID 
+10,"cULus "
+11,"cULus "
+12,"cULus "
+13,"cULus "
+14,"cULus "
+15,"cULus "
+16,CE conforming to IEC 61010-1
+16,CULus conforming to UL 61010-1
+16,BTL
+17,CE conforming to IEC 61010-1
+17,CULus conforming to UL 61010-1
+17,BTL
+18,CE conforming to IEC 61010-1
+18,CULus conforming to UL 61010-1
+18,BTL
+19,CE
+19,CULus
+19,N998
+20,CE
+20,CULus
+20,N998
+21,CE
+21,CULus
+21,N998
+22,CE
+22,CULus
+22,N998
+23,CE
+23,CULus
+23,N998
+24,CE
+24,CULus
+24,N998
+25,CE
+25,CULus
+25,N998
+26,CE
+26,CULus
+26,N998
+27,CE
+27,CULus
+27,N998

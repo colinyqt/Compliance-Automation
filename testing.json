@@ -1,0 +1,4787 @@
+{
+  "pm2000_series_models": [
+{
+  "model_name": "EasyLogic PM2110",
+  "selection_blurb": "Choose the PM2110 for cost-effective, basic energy monitoring with a clear LED display. It is ideal for standalone applications where remote data access is not required beyond a simple pulse output for energy totalizing.",
+  "specifications": {
+    "Main": {
+      "Range": "EasyLogic",
+      "product_name": "EasyLogic PM2110",
+      "Product_or_component_type": "Power meter",
+      "Device_short_name": "PM2110"
+    },
+    "Complementary": {
+      "Device_application": [
+        "Power monitoring",
+        "Cost management"
+      ],
+      "Power_quality_analysis": "Total harmonic distortion",
+      "Type_of_measurement": [
+        "Current: per-phase, 3-phase average, and calculated neutral",
+        "Voltage: V L-N per-phase and 3-phase average, V L-L per-phase and 3-phase average",
+        "Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total",
+        "Power Factor: True PF - per phase and total",
+        "Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered and Received",
+        "Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - Last, Present, Predictive, Peak (no timestamp)",
+        "Frequency"
+      ],
+      "Accuracy_class": [
+        "Class 1 Active energy conforming to IEC 61557-12",
+        "Class 1 Active energy conforming to IEC 62053-22",
+        "Class 2 Reactive energy conforming to IEC 62053-24"
+      ],
+      "Measurement_accuracy": {
+        "Active_energy": "+/- 1 %",
+        "Reactive_energy": "+/- 1 %",
+        "Apparent_energy": "+/- 1 %",
+        "Active_power": "+/- 1 %",
+        "Reactive_power": "+/- 1 %",
+        "Apparent_power": "+/- 1 %",
+        "Voltage": "+/- 0.5 %",
+        "Current": "+/- 0.5 %",
+        "Frequency": "+/- 0.05 %",
+        "Power_factor": "+/- 0.01 Count",
+        "THD_and_individual_harmonics": "+/- 5 %"
+      },
+      "Measurement_current": "5 mA to 6 A",
+      "Measurement_voltage": [
+        "35…480 V AC L-L (CAT III)",
+        "20…277 V AC L-N (CAT III)",
+        "35…600 V AC L-L (CAT II)",
+        "20…347 V AC L-N (CAT II)"
+      ],
+      "Frequency_measurement_range": "50/60 Hz nominal ± 5%",
+      "Us_rated_supply_voltage": [
+        "44...277 V AC +/- 10 %",
+        "48...277 V DC +/- 10 %"
+      ],
+      "Network_frequency": "50 Hz / 60 Hz",
+      "Ride-through_time": [
+        "100 ms at 120 V AC",
+        "400 ms at 230 V AC",
+        "50 ms at 125 V DC"
+      ],
+      "In_rated_current": "1 A / 5 A",
+      "Maximum_power_consumption_in_VA": "< 6 VA at 277 V L-N",
+      "Maximum_power_consumption_in_W": "< 2 W at 277 V DC",
+      "input_impedance": {
+        "Current": "<= 0.3 mOhm",
+        "Voltage": ">= 5 MOhm"
+      },
+      "Tamperproof_of_settings": "Password protected",
+      "Display_type": "LED display-7 Segment",
+      "Display_colour": "Red",
+      "Control_type": "3 x button",
+      "Local_signalling": {
+        "Red_LED": "energy pulse output",
+        "Green_LED": "heartbeat"
+      },
+      "Number_of_outputs": "1 pulse output",
+      "Communication_port_protocol": "Pulse Output (POP)",
+      "Sampling_rate": "64 samples/cycle",
+      "Product_certifications": "CE, cULus, RCM",
+      "Mounting_mode": "Clip-on",
+      "Mounting_support": "Panel",
+      "Measurement_category": [
+        "CAT III up to 480 V L-L",
+        "CAT II up to 600 V L-L"
+      ],
+      "Electrical_insulation_class": "Class II, Double insulated",
+      "Flame_retardance": "V-0 conforming to UL 94",
+      "Connections_terminals": {
+        "Current_transformer": "screw connection 0.82-3.31 mm² (18-12 AWG)",
+        "Voltage_inputs": "screw connection 0.20-5.26 mm² (24-10 AWG)"
+      },
+      "Material": "Polycarbonate",
+      "Width": "96 mm",
+      "Depth": "73 mm max",
+      "Height": "96 mm",
+      "Product_weight": "300 gms",
+      "Compatibility_code": "PM2110"
+    },
+    "Environment": {
+      "IP_degree_of_protection": [
+        "IP54 front",
+        "IP30 body"
+      ],
+      "Relative_humidity": "5…95 % RH at 50 °C (non-condensing)",
+      "Pollution_degree": "2",
+      "Ambient_air_temperature_for_operation": "-25…70 °C",
+      "Ambient_air_temperature_for_storage": "-25…70 °C",
+      "Operating_altitude": "<= 2000 m (CAT-III) / 3000 m (CAT-II)",
+      "Overvoltage_category": "III",
+      "Electromagnetic_compatibility": [
+        "Electrostatic discharge conforming to IEC 61000-4-2",
+        "Immunity to radiated field conforming to IEC 61000-4-3",
+        "Immunity to fast transients conforming to IEC 61000-4-4",
+        "Immunity to impulse waves conforming to IEC 61000-4-5",
+        "Conducted immunity conforming to IEC 61000-4-6",
+        "Immunity to magnetic field conforming to IEC 61000-4-8",
+        "Immunity to voltage dips conforming to IEC 61000-4-11",
+        "Emissions conforming to CISPR 22 Class A / FCC Part 15 Class A"
+      ]
+    }
+  }
+},
+    {
+      "model_name": "EasyLogic PM2120",
+      "selection_blurb": "Select the PM2120 for applications that require integration into a networked system via RS-485 Modbus. It builds on the PM2110 by adding basic power quality analysis with up to 15th order harmonics and a real-time clock, making it suitable for remote monitoring with an economical LED display.",
+      "specifications": {
+        "Main": {
+          "Range": "EasyLogic",
+          "product_name": "EasyLogic PM2120",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM2120"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Power monitoring",
+            "Cost management"
+          ],
+          "Power_quality_analysis": [
+            "Total harmonic distortion (THD)",
+            "Individual odd harmonics up to 15th order"
+          ],
+          "Type_of_measurement": [
+            "Current: per-phase, 3-phase average, and calculated neutral",
+            "Voltage: V L-N per-phase and 3-phase average, V L-L per-phase and 3-phase average",
+            "Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total",
+            "Power Factor: True PF & Displacement PF - per phase and total",
+            "Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered and Received",
+            "Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - Last, Present, Predictive, Peak (with timestamp)",
+            "Frequency",
+            "Real-time clock (RTC)",
+            "3 Phase unbalance: Current"
+          ],
+          "Accuracy_class": [
+            "Class 1 Active energy conforming to IEC 61557-12",
+            "Class 1 Active energy conforming to IEC 62053-22",
+            "Class 2 Reactive energy conforming to IEC 62053-24"
+          ],
+          "Measurement_accuracy": {
+            "Active_energy": "+/- 1 %",
+            "Reactive_energy": "+/- 1 %",
+            "Apparent_energy": "+/- 1 %",
+            "Active_power": "+/- 1 %",
+            "Reactive_power": "+/- 1 %",
+            "Apparent_power": "+/- 1 %",
+            "Voltage": "+/- 0.5 %",
+            "Current": "+/- 0.5 %",
+            "Frequency": "+/- 0.05 %",
+            "Power_factor": "+/- 0.01 Count",
+            "THD_and_individual_harmonics": "+/- 5 %"
+          },
+          "Measurement_current": "5 mA to 6 A",
+          "Measurement_voltage": [
+            "35…480 V AC L-L (CAT III)",
+            "20…277 V AC L-N (CAT III)",
+            "35…600 V AC L-L (CAT II)",
+            "20…347 V AC L-N (CAT II)"
+          ],
+          "Frequency_measurement_range": "50/60 Hz nominal ± 5%",
+          "Us_rated_supply_voltage": [
+            "44...277 V AC +/- 10 %",
+            "48...277 V DC +/- 10 %"
+          ],
+          "Network_frequency": "50 Hz / 60 Hz",
+          "Ride-through_time": [
+            "100 ms at 120 V AC",
+            "400 ms at 230 V AC",
+            "50 ms at 125 V DC"
+          ],
+          "In_rated_current": "1 A / 5 A",
+          "Maximum_power_consumption_in_VA": "< 6 VA at 277 V L-N",
+          "Maximum_power_consumption_in_W": "< 2 W at 277 V DC",
+          "input_impedance": {
+            "Current": "<= 0.3 mOhm",
+            "Voltage": ">= 5 MOhm"
+          },
+          "Tamperproof_of_settings": "Password protected",
+          "Display_type": "LED display-7 Segment",
+          "Display_colour": "Red",
+          "Control_type": "3 x button",
+          "Local_signalling": {
+            "Red_LED": "alarm / energy pulse output",
+            "Green_LED": "heartbeat / serial communications activity"
+          },
+          "Communication_port_protocol": "Modbus RTU",
+          "Communication_port_support": "RS485",
+          "Data_recording": "Min/Max values (available via communication)",
+          "Function_available": "Real time clock",
+          "Sampling_rate": "64 samples/cycle",
+          "Cybersecurity": "Enable/disable RS-485 communication port",
+          "Product_certifications": "CE, cULus, RCM",
+          "Mounting_mode": "Clip-on",
+          "Mounting_support": "Panel",
+          "Measurement_category": [
+            "CAT III up to 480 V L-L",
+            "CAT II up to 600 V L-L"
+          ],
+          "Electrical_insulation_class": "Class II, Double insulated",
+          "Flame_retardance": "V-0 conforming to UL 94",
+          "Connections_terminals": {
+            "Current_transformer": "screw connection 0.82-3.31 mm² (18-12 AWG)",
+            "Voltage_inputs": "screw connection 0.20-5.26 mm² (24-10 AWG)"
+          },
+          "Material": "Polycarbonate",
+          "Width": "96 mm",
+          "Depth": "73 mm max",
+          "Height": "96 mm",
+          "Product_weight": "300 gms",
+          "Compatibility_code": "PM2120"
+        },
+        "Environment": {
+          "IP_degree_of_protection": [
+            "IP54 front",
+            "IP30 body"
+          ],
+          "Relative_humidity": "5…95 % RH at 50 °C (non-condensing)",
+          "Pollution_degree": "2",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-25…70 °C",
+          "Operating_altitude": "<= 2000 m (CAT-III) / 3000 m (CAT-II)",
+          "Overvoltage_category": "III",
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Immunity to radiated field conforming to IEC 61000-4-3",
+            "Immunity to fast transients conforming to IEC 61000-4-4",
+            "Immunity to impulse waves conforming to IEC 61000-4-5",
+            "Conducted immunity conforming to IEC 61000-4-6",
+            "Immunity to magnetic field conforming to IEC 61000-4-8",
+            "Immunity to voltage dips conforming to IEC 61000-4-11",
+            "Emissions conforming to CISPR 22 Class A / FCC Part 15 Class A"
+          ]
+        }
+      }
+    },
+    {
+      "model_name": "EasyLogic PM2130",
+      "selection_blurb": "The PM2130 is the premium LED display model, designed for applications needing higher Class 0.5S accuracy. It offers advanced power quality analysis with up to 31st order harmonics , data logging, alarms, and expandability with I/O modules, making it suitable for more critical monitoring and control tasks.",
+      "specifications": {
+        "Main": {
+          "Range": "EasyLogic",
+          "product_name": "EasyLogic PM2130",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM2130"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Power monitoring",
+            "Cost management",
+            "WAGES monitoring (with IO modules)"
+          ],
+          "Power_quality_analysis": [
+            "Total harmonic distortion (THD)",
+            "Individual odd harmonics up to 31st order"
+          ],
+          "Type_of_measurement": [
+            "Current: per-phase, 3-phase average, and calculated neutral",
+            "Voltage: V L-N per-phase and 3-phase average, V L-L per-phase and 3-phase average",
+            "Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total",
+            "Power Factor: True PF & Displacement PF - per phase and total",
+            "Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered, Received, Total, Net, Last cleared",
+            "Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - Last, Present, Predictive, Peak (with timestamp)",
+            "Frequency",
+            "Real-time clock (RTC)",
+            "3 Phase unbalance: Current and Voltage",
+            "Min/Max with timestamp for average/total V L-L, V L-N, Current, Frequency, Active/Apparent/Reactive Power, Power Factor"
+          ],
+          "Accuracy_class": [
+            "Class 0.5S Active energy conforming to IEC 61557-12",
+            "Class 0.5S Active energy conforming to IEC 62053-22",
+            "Class 2 Reactive energy conforming to IEC 62053-24"
+          ],
+          "Measurement_accuracy": {
+            "Active_energy": "+/- 0.5 %",
+            "Reactive_energy": "+/- 1 %",
+            "Apparent_energy": "+/- 0.5 %",
+            "Active_power": "+/- 0.5 %",
+            "Reactive_power": "+/- 1 %",
+            "Apparent_power": "+/- 0.5 %",
+            "Voltage": "+/- 0.2 %",
+            "Current": "+/- 0.2 %",
+            "Frequency": "+/- 0.05 %",
+            "Power_factor": "+/- 0.01 Count",
+            "THD_and_individual_harmonics": "+/- 5 %"
+          },
+          "Measurement_current": "5 mA to 6 A",
+          "Measurement_voltage": [
+            "35…480 V AC L-L (CAT III)",
+            "20…277 V AC L-N (CAT III)",
+            "35…600 V AC L-L (CAT II)",
+            "20…347 V AC L-N (CAT II)"
+          ],
+          "Frequency_measurement_range": "50/60 Hz nominal ± 5%",
+          "Us_rated_supply_voltage": [
+            "80...277 V AC +/- 10 %",
+            "100...277 V DC +/- 10 %"
+          ],
+          "Network_frequency": "50 Hz / 60 Hz",
+          "Ride-through_time": [
+            "100 ms at 120 V AC (standalone), 50 ms with IO modules",
+            "400 ms at 230 V AC (standalone), 250 ms with IO modules",
+            "100 ms at 125 V DC (standalone), 50 ms with IO modules"
+          ],
+          "In_rated_current": "1 A / 5 A",
+          "Maximum_power_consumption_in_VA": "< 8 VA at 277 V L-N",
+          "Maximum_power_consumption_in_W": "< 3.3 W at 277 V DC",
+          "input_impedance": {
+            "Current": "<= 0.3 mOhm",
+            "Voltage": ">= 5 MOhm"
+          },
+          "Tamperproof_of_settings": "Password protected",
+          "Display_type": "LED display-7 Segment",
+          "Display_colour": "Red",
+          "Control_type": "3 x button",
+          "Local_signalling": {
+            "Red_LED": "alarm / energy pulse output",
+            "Green_LED": "heartbeat / serial communications activity"
+          },
+          "Number_of_inputs_outputs": "Expandable with optional I/O modules (Digital, Analog, Relay)",
+          "Communication_port_protocol": "Modbus RTU",
+          "Communication_port_support": "RS485",
+          "Data_recording": [
+            "Data logging (Energy, Power, Demand)",
+            "Alarm log (40 records)"
+          ],
+          "Function_available": [
+            "Real time clock",
+            "Alarms (Unary, Digital, Standard)"
+          ],
+          "Sampling_rate": "64 samples/cycle",
+          "Cybersecurity": "Enable/disable RS-485 communication port",
+          "Product_certifications": "CE, cULus, RCM",
+          "Mounting_mode": "Clip-on",
+          "Mounting_support": "Panel",
+          "Measurement_category": [
+            "CAT III up to 480 V L-L",
+            "CAT II up to 600 V L-L"
+          ],
+          "Electrical_insulation_class": "Class II, Double insulated",
+          "Flame_retardance": "V-0 conforming to UL 94",
+          "Connections_terminals": {
+            "Current_transformer": "screw connection 0.82-3.31 mm² (18-12 AWG)",
+            "Voltage_inputs": "screw connection 0.20-5.26 mm² (24-10 AWG)"
+          },
+          "Material": "Polycarbonate",
+          "Width": "96 mm",
+          "Depth": "73 mm max (74 mm with I/O module)",
+          "Height": "96 mm",
+          "Product_weight": "300 gms",
+          "Compatibility_code": "PM2130"
+        },
+        "Environment": {
+          "IP_degree_of_protection": [
+            "IP54 front",
+            "IP30 body"
+          ],
+          "Relative_humidity": "5…95 % RH at 50 °C (non-condensing)",
+          "Pollution_degree": "2",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-25…70 °C",
+          "Operating_altitude": "<= 2000 m (CAT-III) / 3000 m (CAT-II)",
+          "Overvoltage_category": "III",
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Immunity to radiated field conforming to IEC 61000-4-3",
+            "Immunity to fast transients conforming to IEC 61000-4-4",
+            "Immunity to impulse waves conforming to IEC 61000-4-5",
+            "Conducted immunity conforming to IEC 61000-4-6",
+            "Immunity to magnetic field conforming to IEC 61000-4-8",
+            "Immunity to voltage dips conforming to IEC 61000-4-11",
+            "Emissions conforming to CISPR 22 Class A / FCC Part 15 Class A"
+          ]
+        }
+      }
+    },
+    {
+      "model_name": "EasyLogic PM2210",
+      "selection_blurb": "Select the PM2210 for applications where the enhanced readability of a graphical LCD display is preferred for local monitoring. It serves as the entry-level LCD model, offering basic measurements and a pulse output without advanced communication features.",
+      "specifications": {
+        "Main": {
+          "Range": "EasyLogic",
+          "product_name": "EasyLogic PM2210",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM2210"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Power monitoring",
+            "Cost management"
+          ],
+          "Power_quality_analysis": "Total harmonic distortion (THD)",
+          "Type_of_measurement": [
+            "Current: per-phase, 3-phase average, and calculated neutral",
+            "Voltage: V L-N and V L-L per-phase and 3-phase average",
+            "Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total",
+            "Power Factor: True PF",
+            "Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered, Received, Total, Net, Non-resettable",
+            "Demand: Peak demand (no timestamp)",
+            "Frequency"
+          ],
+          "Accuracy_class": [
+            "Class 1 Active energy conforming to IEC 61557-12",
+            "Class 1 Active energy conforming to IEC 62053-22",
+            "Class 2 Reactive energy conforming to IEC 62053-24"
+          ],
+          "Measurement_accuracy": {
+            "Active_energy": "+/- 1 %",
+            "Voltage": "+/- 0.5 %",
+            "Current": "+/- 0.5 %",
+            "Frequency": "+/- 0.05 %"
+          },
+          "Measurement_current": "5 mA to 6 A",
+          "Measurement_voltage": [
+            "35…480 V AC L-L (CAT III)",
+            "20…277 V AC L-N (CAT III)",
+            "35…600 V AC L-L (CAT II)",
+            "20…347 V AC L-N (CAT II)"
+          ],
+          "Frequency_measurement_range": "50/60 Hz nominal ± 5%",
+          "Us_rated_supply_voltage": [
+            "44...277 V AC +/- 10 %",
+            "48...277 V DC +/- 10 %"
+          ],
+          "Network_frequency": "50 Hz / 60 Hz",
+          "Ride-through_time": [
+            "100 ms at 120 V AC",
+            "400 ms at 230 V AC",
+            "50 ms at 125 V DC"
+          ],
+          "In_rated_current": "1 A / 5 A",
+          "Maximum_power_consumption_in_VA": "< 6 VA at 277 V L-N",
+          "Maximum_power_consumption_in_W": "< 2 W at 277 V DC",
+          "input_impedance": {
+            "Current": "<= 0.3 mOhm",
+            "Voltage": "> 5 MOhm"
+          },
+          "Tamperproof_of_settings": "Protected by access code",
+          "Display_type": "Backlit LCD, Monochrome",
+          "Display_resolution": "128 x 128 pixels",
+          "Control_type": "4 x button",
+          "Local_signalling": {
+            "Amber_LED": "energy pulse output",
+            "Green_LED": "heartbeat"
+          },
+          "Number_of_outputs": "1 pulse output",
+          "Communication_port_protocol": "Pulse Output (POP)",
+          "Function_available": "Non-resettable energy counter",
+          "Sampling_rate": "64 samples/cycle",
+          "User_language": "English, French, Spanish, German, Portuguese, Russian, Chinese, Turkish",
+          "Product_certifications": "CE, cULus, RCM",
+          "Mounting_mode": "Clip-on",
+          "Mounting_support": "Panel",
+          "Measurement_category": [
+            "CAT III up to 480 V L-L",
+            "CAT II up to 600 V L-L"
+          ],
+          "Electrical_insulation_class": "Class II, Double insulated",
+          "Width": "96 mm",
+          "Depth": "73 mm max",
+          "Height": "96 mm",
+          "Product_weight": "300 g",
+          "Compatibility_code": "PM2210"
+        },
+        "Environment": {
+          "IP_degree_of_protection": [
+            "IP54 front",
+            "IP30 body"
+          ],
+          "Relative_humidity": "5…95 % at 50 °C",
+          "Pollution_degree": "2",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-25…70 °C",
+          "Operating_altitude": "<= 2000 m",
+          "Overvoltage_category": "III",
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Immunity to radiated field conforming to IEC 61000-4-3",
+            "Immunity to fast transients conforming to IEC 61000-4-4",
+            "Immunity to impulse waves conforming to IEC 61000-4-5",
+            "Conducted immunity conforming to IEC 61000-4-6",
+            "Immunity to magnetic field conforming to IEC 61000-4-8",
+            "Immunity to voltage dips conforming to IEC 61000-4-11",
+            "Emissions conforming to FCC Part 15 Class A/CE"
+          ]
+        }
+      }
+    },
+    {
+      "model_name": "EasyLogic PM2220",
+      "selection_blurb": "The PM2220 is a versatile meter that combines a graphical LCD display with RS-485 communication. It's an excellent choice for networked applications that benefit from enhanced local data visualization and require basic power quality insights, including up to 15th order harmonics and voltage unbalance monitoring.",
+      "specifications": {
+        "Main": {
+          "Range": "EasyLogic",
+          "product_name": "EasyLogic PM2220",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM2220"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Power monitoring",
+            "Cost management"
+          ],
+          "Power_quality_analysis": [
+            "Total harmonic distortion (THD)",
+            "Individual odd harmonics up to 15th order"
+          ],
+          "Type_of_measurement": [
+            "Current: per-phase, 3-phase average, and calculated neutral",
+            "Voltage: V L-N and V L-L per-phase and 3-phase average",
+            "Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total",
+            "Power Factor: True PF & Displacement PF",
+            "Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered, Received, Total, Net, Last cleared, Non-resettable",
+            "Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - with timestamp",
+            "3 Phase unbalance: Current and Voltage",
+            "Min/Max with timestamp",
+            "Frequency"
+          ],
+          "Accuracy_class": [
+            "Class 1 Active energy conforming to IEC 61557-12",
+            "Class 1 Active energy conforming to IEC 62053-22",
+            "Class 2 Reactive energy conforming to IEC 62053-24"
+          ],
+          "Measurement_accuracy": {
+            "Active_energy": "+/- 1 %",
+            "Voltage": "+/- 0.5 %",
+            "Current": "+/- 0.5 %",
+            "Frequency": "+/- 0.05 %"
+          },
+          "Measurement_current": "5 mA to 6 A",
+          "Measurement_voltage": [
+            "35…480 V AC L-L (CAT III)",
+            "20…277 V AC L-N (CAT III)",
+            "35…600 V AC L-L (CAT II)",
+            "20…347 V AC L-N (CAT II)"
+          ],
+          "Frequency_measurement_range": "50/60 Hz nominal ± 5%",
+          "Us_rated_supply_voltage": [
+            "44...277 V AC +/- 10 %",
+            "48...277 V DC +/- 10 %"
+          ],
+          "Network_frequency": "50 Hz / 60 Hz",
+          "Ride-through_time": [
+            "100 ms at 120 V AC",
+            "400 ms at 230 V AC",
+            "50 ms at 125 V DC"
+          ],
+          "In_rated_current": "1 A / 5 A",
+          "Maximum_power_consumption_in_VA": "< 6 VA at 277 V L-N",
+          "Maximum_power_consumption_in_W": "< 2 W at 277 V DC",
+          "input_impedance": {
+            "Current": "<= 0.3 mOhm",
+            "Voltage": "> 5 MOhm"
+          },
+          "Tamperproof_of_settings": "Protected by access code",
+          "Display_type": "Backlit LCD, Monochrome",
+          "Display_resolution": "128 x 128 pixels",
+          "Control_type": "4 x button",
+          "Local_signalling": {
+            "Amber_LED": "alarm / energy pulse output",
+            "Green_LED": "heartbeat / communications activity"
+          },
+          "Communication_port_protocol": "Modbus RTU",
+          "Communication_port_support": "RS485",
+          "Function_available": [
+            "Real time clock",
+            "SnapShot",
+            "Auto reset",
+            "Configurable favorite page",
+            "Retrofit register"
+          ],
+          "Sampling_rate": "64 samples/cycle",
+          "Cybersecurity": "Enable/disable communication ports",
+          "User_language": "English, French, Spanish, German, Portuguese, Russian, Chinese, Turkish",
+          "Product_certifications": "CE, cULus, RCM",
+          "Mounting_mode": "Clip-on",
+          "Mounting_support": "Panel",
+          "Measurement_category": [
+            "CAT III up to 480 V L-L",
+            "CAT II up to 600 V L-L"
+          ],
+          "Electrical_insulation_class": "Class II, Double insulated",
+          "Width": "96 mm",
+          "Depth": "73 mm max",
+          "Height": "96 mm",
+          "Product_weight": "300 g",
+          "Compatibility_code": "PM2220"
+        },
+        "Environment": {
+          "IP_degree_of_protection": [
+            "IP54 front",
+            "IP30 body"
+          ],
+          "Relative_humidity": "5…95 % at 50 °C",
+          "Pollution_degree": "2",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-25…70 °C",
+          "Operating_altitude": "<= 2000 m",
+          "Overvoltage_category": "III",
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Immunity to radiated field conforming to IEC 61000-4-3",
+            "Immunity to fast transients conforming to IEC 61000-4-4",
+            "Immunity to impulse waves conforming to IEC 61000-4-5",
+            "Conducted immunity conforming to IEC 61000-4-6",
+            "Immunity to magnetic field conforming to IEC 61000-4-8",
+            "Immunity to voltage dips conforming to IEC 61000-4-11",
+            "Emissions conforming to FCC Part 15 Class A/CE"
+          ]
+        }
+      }
+    },
+    {
+      "model_name": "EasyLogic PM2230",
+      "selection_blurb": "The PM2230 is the premium model in the series, ideal for critical applications such as sub-billing and advanced power quality analysis. It should be selected when the highest accuracy (Class 0.5S) , detailed harmonic analysis (up to 31st) , data logging, alarming, multi-tariff functions , and I/O expandability  are required.",
+      "specifications": {
+        "Main": {
+          "Range": "EasyLogic",
+          "product_name": "EasyLogic PM2200",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM2230"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Power monitoring",
+            "Sub billing",
+            "Power quality analysis"
+          ],
+          "Power_quality_analysis": [
+            "Total harmonic distortion",
+            "up to the 31st harmonic"
+          ],
+          "Type_of_measurement": [
+            "Apparent power min/max, total",
+            "Active and reactive power min/max, total",
+            "Current min/max, avg",
+            "Voltage min/max, avg",
+            "Frequency min/max, avg",
+            "Total current harmonic distortion THD (I) per phase",
+            "Total voltage harmonic distortion THD (U) per phase",
+            "Power factor min/max, avg",
+            "Apparent energy total",
+            "Active and reactive energy total"
+          ],
+          "Metering_type": [
+            "Calculated neutral current",
+            "Active power P, P1, P2, P3",
+            "Current I, I1, I2, I3",
+            "Peak demand power PM, QM, SM",
+            "Voltage U, U21, U32, U13, V, V1, V2, V3",
+            "Peak demand currents",
+            "Reactive power Q, Q1, Q2, Q3",
+            "Demand power P, Q, S",
+            "Unbalance current",
+            "Active, reactive, apparent energy (signed, four quadrant)",
+            "Apparent power S, S1, S2, S3"
+          ],
+          "Accuracy_class": [
+            "Class 2 reactive energy conforming to IEC 62053-24",
+            "Class 0.5S active energy conforming to IEC 62053-22",
+            "Class 5 harmonic distortion (I THD & U THD)"
+          ],
+          "Measurement_accuracy": {
+            "Apparent_power": "+/- 0.5 %",
+            "Active_energy": "+/- 0.5 %",
+            "Reactive_energy": "+/- 1 %",
+            "Active_power": "+/- 0.5 %",
+            "Voltage": "+/- 0.2 %",
+            "Power_factor": "+/- 0.01 Count",
+            "Current": "+/- 0.2 %",
+            "Frequency": "+/- 0.05 %"
+          },
+          "Measurement_current": "5…6000 mA",
+          "Measurement_voltage": [
+            "35…480 V AC 50/60 Hz between phases",
+            "20…277 V AC 50/60 Hz between phase and neutral"
+          ],
+          "Frequency_measurement_range": "45…65 Hz",
+          "Us_rated_supply_voltage": [
+            "80...277 V AC 45...65 Hz +/- 10 %",
+            "100...277 V DC +/- 10 %"
+          ],
+          "Network_frequency": [
+            "60 Hz",
+            "50 Hz"
+          ],
+          "Ride-through_time": [
+            "100 ms 120 V AC (standalone device)",
+            "50 ms 120 V AC with IO modules",
+            "100 ms 125 V DC (standalone device)",
+            "50 ms 125 V DC with IO modules"
+          ],
+          "In_rated_current": [
+            "5 A",
+            "1 A"
+          ],
+          "Maximum_power_consumption_in_VA": "< 8 VA at 277 V AC",
+          "Maximum_power_consumption_in_W": "< 3.3 W at 277 V DC",
+          "input_impedance": {
+            "Current": "impedance <= 0.3 mOhm",
+            "Voltage": "impedance > 5 MOhm"
+          },
+          "Tamperproof_of_settings": "Protected by access code",
+          "Display_type": "Backlit LCD",
+          "Display_colour": "Monochrome",
+          "Display_resolution": "128 x 128 pixels",
+          "Number_of_inputs": "Expandable with I/O module",
+          "Number_of_outputs": "Expandable with I/O module",
+          "Communication_port_protocol": "Modbus RTU at 4800, 9600, 19200, 38.4 Kbps",
+          "Communication_port_support": "Screw terminal block: RS485",
+          "Data_recording": [
+            "Data logging",
+            "Alarm log",
+            "Min/max of instantaneous values",
+            "diagnostics logs"
+          ],
+          "Function_available": [
+            "Real time clock",
+            "Alarms",
+            "Multi-tariff"
+          ],
+          "Sampling_rate": "64 samples/cycle",
+          "Cybersecurity": "Enable/disable communication ports",
+          "User_language": [
+            "Russian",
+            "French",
+            "Portuguese",
+            "English",
+            "Spanish",
+            "Chinese",
+            "German",
+            "Turkish"
+          ],
+          "Product_certifications": [
+            "CE conforming to IEC 61010-1",
+            "cULus conforming to UL 61010-1",
+            "cULus conforming to CSA C22.2 No 61010-1",
+            "RCM",
+            "EAC"
+          ],
+          "Mounting_mode": "Clip-on",
+          "Mounting_support": "Framework",
+          "Provided_equipment": "1 x installation guide",
+          "Measurement_category": [
+            "Category III up to 480 V",
+            "Category II 480…600 V"
+          ],
+          "Electrical_insulation_class": [
+            "Double insulation",
+            "Class II"
+          ],
+          "Width": "96 mm",
+          "Depth": "Total : 76.09 mm",
+          "Height": "96 mm",
+          "Product_weight": "300 g",
+          "Compatibility_code": "PM2230"
+        },
+        "Environment": {
+          "IP_degree_of_protection": [
+            "IP54 front: conforming to IEC 60529",
+            "IP30 body: conforming to IEC 60529"
+          ],
+          "Relative_humidity": "5…95 % at 50 °C",
+          "Pollution_degree": "2",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-25…70 °C",
+          "Operating_altitude": "<= 2000 m",
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Emission tests conforming to FCC part 15 class A"
+          ],
+          "Overvoltage_category": "III"
+        }
+      }
+    }
+  ],
+"pm5000_series_models": [
+    {
+      "model_name": "PowerLogic PM5100",
+      "selection_blurb": "The PM5100 is a panel-mounted power meter with a backlit LCD display, providing Class 0.5S accuracy for basic power and energy metering, including power quality analysis up to the 15th harmonic. It is suitable for applications that do not require serial communication but need a digital output for energy pulsing.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5100 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5100 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": [
+            "Total harmonic distortion (THD, thd) ",
+            "Individual odd harmonics up to 15th "
+          ],
+          "Type_of_measurement": [
+            "Current ",
+            "Voltage ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz L-N ",
+            "100...415 V AC 45...65 Hz L-L ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_outputs": "1 digital ",
+          "Measurement_accuracy": {
+            "Active_energy": "±0.5 % ",
+            "Reactive_energy": "±2 % ",
+            "Active_power": "±0.5 % ",
+            "Apparent_power": "±0.5 % ",
+            "Voltage": "±0.5 % ",
+            "Current": "±0.5 % ",
+            "Frequency": "±0.05 % ",
+            "Power_factor": "±0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "No communication port ",
+          "Data_recording": [
+            "Min/max of instantaneous values ",
+            "Alarm logs "
+          ],
+          "Connections_terminals": {
+            "Voltage_circuit": "screw terminal block ",
+            "Current_transformer": "screw terminal block ",
+            "Digital_output": "screw terminal block ",
+            "Control_circuit": "screw terminal block "
+          },
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": [
+            "IEC 61010-1 ",
+            "EN 50470-1 ",
+            "EN 50470-3 ",
+            "IEC 62052-11 ",
+            "IEC 62052-31 ",
+            "IEC 62053-22 ",
+            "IEC 62053-23 ",
+            "IEC 61557-12 ",
+            "UL 61010-1 "
+          ],
+          "Product_certifications": [
+            "CE ",
+            "cULus "
+          ],
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Radiated and conducted emissions class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "2000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5110",
+      "selection_blurb": "The PM5110 enhances the PM5100 by adding a serial communication port for Modbus protocol . It maintains Class 0.5S accuracy and provides detailed power and energy metering with up to 15th order harmonics , making it a solid choice for integration into basic energy management systems.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5110 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5110 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": [
+            "Total harmonic distortion (THD, thd) ",
+            "Individual odd harmonics up to 15th "
+          ],
+          "Type_of_measurement": [
+            "Current ",
+            "Voltage ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz L-N ",
+            "100...415 V AC 45...65 Hz L-L ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_outputs": "1 digital ",
+          "Measurement_accuracy": {
+            "Active_energy": "±0.5 % ",
+            "Reactive_energy": "±2 % ",
+            "Active_power": "±0.5 % ",
+            "Apparent_power": "±0.5 % ",
+            "Voltage": "±0.5 % ",
+            "Current": "±0.5 % ",
+            "Frequency": "±0.05 % ",
+            "Power_factor": "±0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus RTU, Modbus ASCII, JBUS ",
+          "Communication_port_support": "RS485 ",
+          "Data_recording": [
+            "Min/max of instantaneous values ",
+            "Alarm logs "
+          ],
+          "Connections_terminals": {
+            "Voltage_circuit": "screw terminal block ",
+            "Current_transformer": "screw terminal block ",
+            "Digital_output": "screw terminal block ",
+            "RS485_link": "screw terminal block ",
+            "Control_circuit": "screw terminal block "
+          },
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": [
+            "IEC 61010-1 ",
+            "EN 50470-1 ",
+            "EN 50470-3 ",
+            "IEC 62052-11 ",
+            "IEC 62052-31 ",
+            "IEC 62053-22 ",
+            "IEC 62053-23 ",
+            "IEC 61557-12 ",
+            "UL 61010-1 "
+          ],
+          "Product_certifications": [
+            "CE ",
+            "cULus "
+          ],
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Radiated and conducted emissions class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "2000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5111",
+      "selection_blurb": "The PM5111 is designed for revenue applications, offering the same features as the PM5110, including Class 0.5S accuracy and Modbus communication, with the addition of MID/MIR compliance . This makes it suitable for billing and sub-billing where regulatory standards must be met.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5111 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5111 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": [
+            "Total harmonic distortion (THD, thd) ",
+            "Individual odd harmonics up to 15th "
+          ],
+          "Type_of_measurement": [
+            "Current ",
+            "Voltage ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz L-N ",
+            "100...415 V AC 45...65 Hz L-L ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_outputs": "1 digital ",
+          "Measurement_accuracy": {
+            "Active_energy": "±0.5 % ",
+            "Reactive_energy": "±2 % ",
+            "Active_power": "±0.5 % ",
+            "Apparent_power": "±0.5 % ",
+            "Voltage": "±0.5 % ",
+            "Current": "±0.5 % ",
+            "Frequency": "±0.05 % ",
+            "Power_factor": "±0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus RTU, Modbus ASCII, JBUS ",
+          "Communication_port_support": "RS485 ",
+          "Data_recording": [
+            "Min/max of instantaneous values ",
+            "Alarm logs "
+          ],
+          "Connections_terminals": {
+            "Voltage_circuit": "screw terminal block ",
+            "Current_transformer": "screw terminal block ",
+            "Digital_output": "screw terminal block ",
+            "RS485_link": "screw terminal block ",
+            "Control_circuit": "screw terminal block "
+          },
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": [
+            "IEC 61010-1 ",
+            "EN 50470-1 ",
+            "EN 50470-3 ",
+            "IEC 62052-11 ",
+            "IEC 62052-31 ",
+            "IEC 62053-22 ",
+            "IEC 62053-23 ",
+            "IEC 61557-12 ",
+            "UL 61010-1 "
+          ],
+          "Product_certifications": [
+            "CE ",
+            "cULus ",
+            "MID "
+          ],
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Radiated and conducted emissions class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "2000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5310",
+      "selection_blurb": "The PM5310 offers Class 0.5S accuracy with a serial communication port and one digital output, making it a reliable choice for basic energy monitoring applications that require integration into a Modbus serial network.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5310 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5310 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": "Individual odd harmonics up to 31st ",
+          "Type_of_measurement": [
+            "Current (per phase and neutral) ",
+            "Voltage (total, per phase L-L and L-N) ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz ",
+            "100...415 V AC 45...65 Hz ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Measurement_current": "5...6000 mA ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_outputs": "1 digital (Form C relay) ",
+          "Measurement_accuracy": {
+            "Active_energy": "± 0.5 % ",
+            "Reactive_energy": "± 2 % ",
+            "Apparent_energy": "± 0.5 % ",
+            "Active_power": "± 0.5 % ",
+            "Reactive_power": "± 2 % ",
+            "Apparent_power": "± 0.5 % ",
+            "Current": "± 0.5 % ",
+            "Voltage": "± 0.5 % ",
+            "Frequency": "± 0.05 % ",
+            "Power_factor": "± 0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus serial ",
+          "Communication_port_support": "RS485 ",
+          "Data_recording": "Min/max of instantaneous values ",
+          "Connections_terminals": "screw terminal block ",
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": "UL 61010-1 ",
+          "Product_certifications": "cULus ",
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to damped oscillatory waves conforming to IEC 61000-4-12 ",
+            "Radiated and conducted emissions Class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "3000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5320",
+      "selection_blurb": "The PM5320 provides the same Class 0.5S accuracy and feature set as the PM5310 but replaces the serial port with an Ethernet port, enabling Modbus TCP communication for modern network infrastructures.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5320 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5320 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": "Individual odd harmonics up to 31st ",
+          "Type_of_measurement": [
+            "Current (per phase and neutral) ",
+            "Voltage (total, per phase L-L and L-N) ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz ",
+            "100...415 V AC 45...65 Hz ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Measurement_current": "5...6000 mA ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_outputs": "1 digital (Form C relay) ",
+          "Measurement_accuracy": {
+            "Active_energy": "± 0.5 % ",
+            "Reactive_energy": "± 2 % ",
+            "Apparent_energy": "± 0.5 % ",
+            "Active_power": "± 0.5 % ",
+            "Reactive_power": "± 2 % ",
+            "Apparent_power": "± 0.5 % ",
+            "Current": "± 0.5 % ",
+            "Voltage": "± 0.5 % ",
+            "Frequency": "± 0.05 % ",
+            "Power_factor": "± 0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus TCP/IP ",
+          "Communication_port_support": "Ethernet ",
+          "Data_recording": "Min/max of instantaneous values ",
+          "Connections_terminals": "screw terminal block ",
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": "UL 61010-1 ",
+          "Product_certifications": "cULus ",
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to damped oscillatory waves conforming to IEC 61000-4-12 ",
+            "Radiated and conducted emissions Class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "3000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5330",
+      "selection_blurb": "The PM5330 builds upon the PM5310 by offering expanded I/O capabilities, including 2 digital inputs and 2 digital outputs , along with a serial port. This makes it suitable for applications requiring basic control or status monitoring in addition to energy metering.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5330 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5330 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": "Individual odd harmonics up to 31st ",
+          "Type_of_measurement": [
+            "Current (per phase and neutral) ",
+            "Voltage (total, per phase L-L and L-N) ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz ",
+            "100...415 V AC 45...65 Hz ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Measurement_current": "5...6000 mA ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_inputs": "2 digital ",
+          "Number_of_outputs": "2 digital (Form C relays) ",
+          "Measurement_accuracy": {
+            "Active_energy": "± 0.5 % ",
+            "Reactive_energy": "± 2 % ",
+            "Apparent_energy": "± 0.5 % ",
+            "Active_power": "± 0.5 % ",
+            "Reactive_power": "± 2 % ",
+            "Apparent_power": "± 0.5 % ",
+            "Current": "± 0.5 % ",
+            "Voltage": "± 0.5 % ",
+            "Frequency": "± 0.05 % ",
+            "Power_factor": "± 0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus serial ",
+          "Communication_port_support": "RS485 ",
+          "Data_recording": "Min/max of instantaneous values ",
+          "Connections_terminals": "screw terminal block ",
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": "UL 61010-1 ",
+          "Product_certifications": "cULus ",
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to damped oscillatory waves conforming to IEC 61000-4-12 ",
+            "Radiated and conducted emissions Class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "3000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5331",
+      "selection_blurb": "The PM5331 is the revenue-certified version of the PM5330, adding MID/MIR compliance for billing applications . It combines Class 0.5S accuracy, expanded I/O (2 DI/2 DO), and serial communication, making it suitable for tenant billing and cost allocation that requires regulatory approval.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5331 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5331 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": "Individual odd harmonics up to 31st ",
+          "Type_of_measurement": [
+            "Current (per phase and neutral) ",
+            "Voltage (total, per phase L-L and L-N) ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz ",
+            "100...415 V AC 45...65 Hz ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Measurement_current": "5...6000 mA ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_inputs": "2 digital ",
+          "Number_of_outputs": "2 digital (Form C relays) ",
+          "Measurement_accuracy": {
+            "Active_energy": "± 0.5 % ",
+            "Reactive_energy": "± 2 % ",
+            "Apparent_energy": "± 0.5 % ",
+            "Active_power": "± 0.5 % ",
+            "Reactive_power": "± 2 % ",
+            "Apparent_power": "± 0.5 % ",
+            "Current": "± 0.5 % ",
+            "Voltage": "± 0.5 % ",
+            "Frequency": "± 0.05 % ",
+            "Power_factor": "± 0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus serial ",
+          "Communication_port_support": "RS485 ",
+          "Data_recording": "Min/max of instantaneous values ",
+          "MID_MIR_compliance": "Yes ",
+          "Connections_terminals": "screw terminal block ",
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": "UL 61010-1 ",
+          "Product_certifications": "cULus ",
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to damped oscillatory waves conforming to IEC 61000-4-12 ",
+            "Radiated and conducted emissions Class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "3000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5340",
+      "selection_blurb": "The PM5340 combines expanded I/O (2 DI/2 DO) with an Ethernet port for Modbus TCP communication . This model is ideal for integrated energy management systems that require status monitoring or basic control functions alongside high-accuracy power metering.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5340 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5340 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": "Individual odd harmonics up to 31st ",
+          "Type_of_measurement": [
+            "Current (per phase and neutral) ",
+            "Voltage (total, per phase L-L and L-N) ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz ",
+            "100...415 V AC 45...65 Hz ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Measurement_current": "5...6000 mA ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_inputs": "2 digital ",
+          "Number_of_outputs": "2 digital (Form C relays) ",
+          "Measurement_accuracy": {
+            "Active_energy": "± 0.5 % ",
+            "Reactive_energy": "± 2 % ",
+            "Apparent_energy": "± 0.5 % ",
+            "Active_power": "± 0.5 % ",
+            "Reactive_power": "± 2 % ",
+            "Apparent_power": "± 0.5 % ",
+            "Current": "± 0.5 % ",
+            "Voltage": "± 0.5 % ",
+            "Frequency": "± 0.05 % ",
+            "Power_factor": "± 0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus TCP/IP ",
+          "Communication_port_support": "Ethernet ",
+          "Data_recording": "Min/max of instantaneous values ",
+          "Connections_terminals": "screw terminal block ",
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": "UL 61010-1 ",
+          "Product_certifications": "cULus ",
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to damped oscillatory waves conforming to IEC 61000-4-12 ",
+            "Radiated and conducted emissions Class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "3000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5341",
+      "selection_blurb": "The PM5341 is the revenue-certified version of the PM5340, offering MID/MIR compliance for billing applications . It features Ethernet communication, expanded I/O (2 DI/2 DO), and Class 0.5S accuracy, making it suitable for advanced, networked sub-billing and cost allocation.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic ",
+          "product_name": "PowerLogic PM5341 ",
+          "Product_or_component_type": "Power meter ",
+          "Device_short_name": "PM5341 "
+        },
+        "Complementary": {
+          "Device_application": "Power monitoring ",
+          "Power_quality_analysis": "Individual odd harmonics up to 31st ",
+          "Type_of_measurement": [
+            "Current (per phase and neutral) ",
+            "Voltage (total, per phase L-L and L-N) ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...277 V AC 45...65 Hz ",
+            "100...415 V AC 45...65 Hz ",
+            "125...250 V DC "
+          ],
+          "Network_frequency": "50/60 Hz ",
+          "[In]_rated_current": "1 A / 5 A ",
+          "type_of_network": [
+            "1P + N",
+            "3P",
+            "3P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "< 5 VA at 415 V ",
+          "Ride-through_time": [
+            "80 ms 120 V AC typical ",
+            "100 ms 230 V AC typical ",
+            "50 ms 125 V DC typical "
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "64 samples/cycle ",
+          "Measurement_current": "5...6000 mA ",
+          "Analogue_input_type": [
+            "Current (impedance <= 0.3 mOhm) ",
+            "Voltage (impedance 5 MOhm) "
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral ",
+            "35…690 V AC 45...65 Hz between phases "
+          ],
+          "Frequency_measurement_range": "45…65 Hz ",
+          "Number_of_inputs": "2 digital ",
+          "Number_of_outputs": "2 digital (Form C relays) ",
+          "Measurement_accuracy": {
+            "Active_energy": "± 0.5 % ",
+            "Reactive_energy": "± 2 % ",
+            "Apparent_energy": "± 0.5 % ",
+            "Active_power": "± 0.5 % ",
+            "Reactive_power": "± 2 % ",
+            "Apparent_power": "± 0.5 % ",
+            "Current": "± 0.5 % ",
+            "Voltage": "± 0.5 % ",
+            "Frequency": "± 0.05 % ",
+            "Power_factor": "± 0.005 "
+          },
+          "Accuracy_class": "Class 0.5S active energy conforming to IEC 62053-22 ",
+          "Communication_port_protocol": "Modbus TCP/IP ",
+          "Communication_port_support": "Ethernet ",
+          "Data_recording": "Min/max of instantaneous values ",
+          "MID_MIR_compliance": "Yes ",
+          "Connections_terminals": "screw terminal block ",
+          "Mounting_mode": "Flush-mounted ",
+          "Mounting_support": "Framework ",
+          "Standards": "UL 61010-1 ",
+          "Product_certifications": "cULus ",
+          "Width": "96 mm ",
+          "Depth": "72 mm ",
+          "Height": "96 mm ",
+          "Product_weight": "380 g "
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Immunity to electrostatic discharge conforming to IEC 61000-4-2 ",
+            "Immunity to radiated fields conforming to IEC 61000-4-3 ",
+            "Immunity to fast transients conforming to IEC 61000-4-4 ",
+            "Immunity to surges conforming to IEC 61000-4-5 ",
+            "Immunity to conducted disturbances, 150 kHz to 80 MHz conforming to IEC 61000-4-6 ",
+            "Immunity to magnetic fields conforming to IEC 61000-4-8 ",
+            "Immunity to voltage dips and interruptions conforming to IEC 61000-4-11 ",
+            "Immunity to damped oscillatory waves conforming to IEC 61000-4-12 ",
+            "Radiated and conducted emissions Class B conforming to EN 55022 "
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529 IP30 rear: conforming to IEC 60529 ",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing ",
+          "Pollution_degree": "2 ",
+          "Ambient_air_temperature_for_operation": "-25…70 °C ",
+          "Ambient_air_temperature_for_storage": "-40…85 °C ",
+          "Operating_altitude": "3000 m "
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5560",
+      "selection_blurb": "The PM5560 is a high-accuracy power meter designed for comprehensive energy and cost management. It features a full range of measurements, including harmonics up to the 63rd, extensive data logging capabilities, and multiple communication protocols including Modbus TCP and BACnet/IP.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM5000",
+          "Device_short_name": "PM5560",
+          "Product_or_component_type": "Power meter"
+        },
+        "Complementary": {
+          "Power_quality_analysis": "up to the 63rd harmonic",
+          "Metering_type": [
+            "Measured neutral current",
+            "Calculated ground current"
+          ],
+          "Device_application": [
+            "Gateway",
+            "WAGES metering",
+            "Power monitoring",
+            "Multi-tariff"
+          ],
+          "Type_of_measurement": [
+            "Current",
+            "Voltage",
+            "Frequency",
+            "Power factor",
+            "Energy",
+            "Active and reactive power"
+          ],
+          "supply_voltage": [
+            "100...300 V DC",
+            "90...528 V AC 45...65 Hz"
+          ],
+          "Network_frequency": [
+            "60 Hz",
+            "50 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A"
+          ],
+          "type_of_network": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "16 VA at 480 V",
+          "Ride-through_time": [
+            "35 ms 120 V AC typical",
+            "129 ms 230 V AC typical",
+            "50 ms 125 V DC typical"
+          ],
+          "Display_type": "Backlit LCD",
+          "Display_resolution": "128 x 128 pixels",
+          "Sampling_rate": "128 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance <= 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral",
+            "20…828 V AC 45...65 Hz between phases"
+          ],
+          "Frequency_measurement_range": "45…65 Hz",
+          "Number_of_inputs": "4 digital",
+          "Number_of_outputs": "2 digital",
+          "Measurement_accuracy": {
+            "Apparent_power": "+/- 0.5 %",
+            "Frequency": "+/- 0.05 %",
+            "Active_energy": "+/- 0.2 %",
+            "Reactive_energy": "+/- 1 %",
+            "Active_power": "+/- 0.2 %",
+            "Voltage": "+/- 0.1 %",
+            "Power_factor": "+/- 0.005",
+            "Current": "+/- 0.15 %",
+            "Reactive_power": "+/- 1 %"
+          },
+          "Accuracy_class": "Class 0.2S active energy conforming to IEC 62053-22",
+          "Information_displayed": "Tariff (8)",
+          "Communication_port_protocol": [
+            "Modbus RTU and ASCII at 9.6, 19.2 and 38.4 kbauds even/odd or none - 2 wires, insulation 2500 V",
+            "JBUS",
+            "Modbus TCP/IP at 10/100 Mbit/s, insulation 2500 V",
+            "Ethernet Modbus TCP/IP daisy chain",
+            "BACnet IP",
+            "DNP3 over ethernet"
+          ],
+          "Communication_port_support": [
+            "RS485",
+            "ETHERNET"
+          ],
+          "Communication_gateway": "Ethernet/serial",
+          "Data_recording": [
+            "Event logs",
+            "Maintenance logs",
+            "Min/max of instantaneous values",
+            "Data logs",
+            "Alarm logs",
+            "Time stamping"
+          ],
+          "Memory_capacity": "1.1 MB",
+          "Web_services": [
+            "Alarm notification by e-mail",
+            "Diagnostic via predefined web pages",
+            "Web server",
+            "Real time viewing of data"
+          ],
+          "Ethernet_service": [
+            "SNTP client",
+            "SNMP-Traps"
+          ],
+          "Connections_-_terminals": {
+            "Voltage_circuit": "screw terminal block 4",
+            "Control_circuit": "screw terminal block 2",
+            "Current_transformer": "screw terminal block 6",
+            "RS485_link": "screw terminal block 4",
+            "Digital_input": "screw terminal block 8",
+            "Digital_output": "screw terminal block 4",
+            "Ethernet_network": "RJ45 connector 2"
+          },
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Standards": [
+            "EN 50470-3",
+            "IEC 61557-12:2015",
+            "IEC 62053-22:2020",
+            "IEC 62053-24",
+            "IEC 60529",
+            "EN 50470-1",
+            "UL 61010-1",
+            "ANSI C12.20",
+            "IEC 62053-23:2020",
+            "IEC 62052-11:2020",
+            "IEC 62052-31:2015"
+          ],
+          "Product_certifications": [
+            "CE conforming to IEC 61010-1",
+            "CULus conforming to UL 61010-1",
+            "BTL"
+          ],
+          "Width": "96 mm",
+          "Depth": "72 mm",
+          "Height": "96 mm",
+          "Product_weight": "450 g"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Limits for harmonic current emissions class A conforming to IEC 61000-3-2",
+            "Conducted RF disturbances level 3 conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency level 4 conforming to IEC 61000-4-8",
+            "Conducted and radiated emissions class B conforming to EN 55022",
+            "Limitation of voltage changes, voltage fluctuations and flicker in low-voltage conforming to IEC 61000-3-3",
+            "Electrostatic discharge - test level: 8 kV level 4 conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test level 4 conforming to IEC 61000-4-4",
+            "Surge immunity test level 4 conforming to IEC 61000-4-5",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11"
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529, IP30 rear: conforming to IEC 60529",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing",
+          "Pollution_degree": 2,
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "<= 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5650",
+      "selection_blurb": "The PM5650 builds on the PM5560 by adding advanced power quality functions, including sag/swell detection and waveform capture. This makes it suitable for applications where monitoring power quality disturbances is necessary in addition to energy management.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM5000",
+          "Device_short_name": "PM5650",
+          "Product_or_component_type": "Power meter"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "up to the 63rd harmonic",
+            "Sag/swell detection",
+            "Waveform capture"
+          ],
+          "Metering_type": [
+            "Measured neutral current",
+            "Calculated ground current"
+          ],
+          "Device_application": [
+            "Gateway",
+            "WAGES metering",
+            "Power monitoring",
+            "Multi-tariff"
+          ],
+          "Type_of_measurement": [
+            "Current",
+            "Voltage",
+            "Frequency",
+            "Power factor",
+            "Energy",
+            "Active and reactive power"
+          ],
+          "supply_voltage": [
+            "90...528 V AC 45...65 Hz",
+            "100...300 V DC"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A"
+          ],
+          "type_of_network": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "16 VA at 480 V",
+          "Ride-through_time": [
+            "35 ms 120 V AC typical",
+            "129 ms 230 V AC typical",
+            "50 ms 125 V DC typical"
+          ],
+          "Display_type": "Backlit LCD",
+          "Display_resolution": "128 x 128 pixels",
+          "Sampling_rate": "128 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance <= 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral",
+            "20…828 V AC 45...65 Hz between phases"
+          ],
+          "Frequency_measurement_range": "45…65 Hz",
+          "Number_of_inputs": "4 digital",
+          "Number_of_outputs": "2 digital",
+          "Measurement_accuracy": {
+            "Apparent_power": "+/- 0.5 %",
+            "Frequency": "+/- 0.05 %",
+            "Active_energy": "+/- 0.2 %",
+            "Reactive_energy": "+/- 1 %",
+            "Active_power": "+/- 0.2 %",
+            "Voltage": "+/- 0.1 %",
+            "Power_factor": "+/- 0.005",
+            "Current": "+/- 0.15 %",
+            "Reactive_power": "+/- 1 %"
+          },
+          "Accuracy_class": "Class 0.2S active energy conforming to IEC 62053-22",
+          "Information_displayed": "Tariff (8)",
+          "Communication_port_protocol": [
+            "Modbus RTU and ASCII at 9.6, 19.2 and 38.4 kbauds even/odd or none - 2 wires, insulation 2500 V",
+            "JBUS",
+            "Modbus TCP/IP at 10/100 Mbit/s, insulation 2500 V",
+            "Ethernet Modbus TCP/IP daisy chain",
+            "BACnet IP",
+            "DNP3 over ethernet"
+          ],
+          "Communication_port_support": [
+            "RS485",
+            "ETHERNET"
+          ],
+          "Communication_gateway": "Ethernet/serial",
+          "Data_recording": [
+            "Event logs",
+            "Maintenance logs",
+            "Min/max of instantaneous values",
+            "Data logs",
+            "Alarm logs",
+            "Time stamping",
+            "Waveform capture"
+          ],
+          "Memory_capacity": "1.1 MB",
+          "Web_services": [
+            "Alarm notification by e-mail",
+            "Diagnostic via predefined web pages",
+            "Web server",
+            "Real time viewing of data"
+          ],
+          "Ethernet_service": [
+            "SNTP client",
+            "SNMP-Traps"
+          ],
+          "Connections_-_terminals": {
+            "Voltage_circuit": "screw terminal block 4",
+            "Control_circuit": "screw terminal block 2",
+            "Current_transformer": "screw terminal block 6",
+            "RS485_link": "screw terminal block 4",
+            "Digital_input": "screw terminal block 8",
+            "Digital_output": "screw terminal block 4",
+            "Ethernet_network": "RJ45 connector 2"
+          },
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Standards": [
+            "EN 50470-3",
+            "IEC 61557-12:2015",
+            "IEC 62053-22:2020",
+            "IEC 62053-24",
+            "IEC 60529",
+            "EN 50470-1",
+            "UL 61010-1",
+            "ANSI C12.20",
+            "IEC 62053-23:2020",
+            "IEC 62052-11:2020",
+            "IEC 62052-31:2015"
+          ],
+          "Product_certifications": [
+            "CE conforming to IEC 61010-1",
+            "CULus conforming to UL 61010-1",
+            "BTL"
+          ],
+          "Width": "96 mm",
+          "Depth": "72 mm",
+          "Height": "96 mm",
+          "Product_weight": "450 g"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Limits for harmonic current emissions class A conforming to IEC 61000-3-2",
+            "Conducted RF disturbances level 3 conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency level 4 conforming to IEC 61000-4-8",
+            "Conducted and radiated emissions class B conforming to EN 55022",
+            "Limitation of voltage changes, voltage fluctuations and flicker in low-voltage conforming to IEC 61000-3-3",
+            "Electrostatic discharge - test level: 8 kV level 4 conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test level 4 conforming to IEC 61000-4-4",
+            "Surge immunity test level 4 conforming to IEC 61000-4-5",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11"
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529, IP30 rear: conforming to IEC 60529",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing",
+          "Pollution_degree": 2,
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "<= 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM5760",
+      "selection_blurb": "The PM5760 combines advanced power quality analysis with residual current measurement. It includes sag/swell detection, waveform capture, and two RCM inputs, providing a comprehensive solution for critical facilities that need to monitor both power quality and potential equipment insulation issues.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM5000",
+          "Device_short_name": "PM5760",
+          "Product_or_component_type": "Power meter"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "up to the 63rd harmonic ",
+            "Sag/swell detection ",
+            "Waveform capture "
+          ],
+          "Metering_type": [
+            "Measured neutral current ",
+            "Calculated ground current ",
+            "Residual Current Measurement (RCM)"
+          ],
+          "Device_application": [
+            "Gateway ",
+            "WAGES metering ",
+            "Power monitoring ",
+            "Multi-tariff "
+          ],
+          "Type_of_measurement": [
+            "Current ",
+            "Voltage ",
+            "Frequency ",
+            "Power factor ",
+            "Energy ",
+            "Active and reactive power "
+          ],
+          "supply_voltage": [
+            "100...300 V DC",
+            "90...528 V AC 45...65 Hz"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A"
+          ],
+          "type_of_network": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Maximum_power_consumption_in_VA": "16 VA at 480 V",
+          "Ride-through_time": [
+            "35 ms 120 V AC typical",
+            "129 ms 230 V AC typical",
+            "50 ms 125 V DC typical"
+          ],
+          "Display_type": "Backlit LCD ",
+          "Display_resolution": "128 x 128 pixels ",
+          "Sampling_rate": "128 samples/cycle ",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance <= 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "20…400 V AC 45...65 Hz between phase and neutral",
+            "20…828 V AC 45...65 Hz between phases"
+          ],
+          "Frequency_measurement_range": "45…65 Hz",
+          "Number_of_inputs": "2 digital, 2 RCM",
+          "Number_of_outputs": "2 digital ",
+          "Measurement_accuracy": {
+            "Apparent_power": "+/- 0.5 %",
+            "Frequency": "+/- 0.05 %",
+            "Active_energy": "+/- 0.2 %",
+            "Reactive_energy": "+/- 1 %",
+            "Active_power": "+/- 0.2 %",
+            "Voltage": "+/- 0.1 %",
+            "Power_factor": "+/- 0.005",
+            "Current": "+/- 0.15 %",
+            "Reactive_power": "+/- 1 %"
+          },
+          "Accuracy_class": "Class 0.2S active energy conforming to IEC 62053-22",
+          "Information_displayed": "Tariff (8)",
+          "Communication_port_protocol": [
+            "Modbus RTU and ASCII at 9.6, 19.2 and 38.4 kbauds even/odd or none - 2 wires, insulation 2500 V",
+            "JBUS",
+            "Modbus TCP/IP at 10/100 Mbit/s, insulation 2500 V",
+            "Ethernet Modbus TCP/IP daisy chain",
+            "BACnet IP",
+            "DNP3 over ethernet "
+          ],
+          "Communication_port_support": [
+            "RS485",
+            "ETHERNET"
+          ],
+          "Communication_gateway": "Ethernet/serial",
+          "Data_recording": [
+            "Event logs",
+            "Maintenance logs",
+            "Min/max of instantaneous values",
+            "Data logs",
+            "Alarm logs",
+            "Time stamping",
+            "Waveform capture"
+          ],
+          "Memory_capacity": "1.1 MB",
+          "Web_services": [
+            "Alarm notification by e-mail",
+            "Diagnostic via predefined web pages",
+            "Web server",
+            "Real time viewing of data"
+          ],
+          "Ethernet_service": [
+            "SNTP client",
+            "SNMP-Traps"
+          ],
+          "Connections_-_terminals": {
+            "Voltage_circuit": "screw terminal block 4",
+            "Control_circuit": "screw terminal block 2",
+            "Current_transformer": "screw terminal block 6",
+            "RS485_link": "screw terminal block 4",
+            "Digital_input": "screw terminal block 8",
+            "Digital_output": "screw terminal block 4",
+            "Ethernet_network": "RJ45 connector 2"
+          },
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Standards": [
+            "EN 50470-3",
+            "IEC 61557-12:2015",
+            "IEC 62053-22:2020",
+            "IEC 62053-24",
+            "IEC 60529",
+            "EN 50470-1",
+            "UL 61010-1",
+            "ANSI C12.20",
+            "IEC 62053-23:2020",
+            "IEC 62052-11:2020",
+            "IEC 62052-31:2015"
+          ],
+          "Product_certifications": [
+            "CE conforming to IEC 61010-1",
+            "CULus conforming to UL 61010-1",
+            "BTL"
+          ],
+          "Width": "96 mm",
+          "Depth": "72 mm",
+          "Height": "96 mm",
+          "Product_weight": "450 g"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Limits for harmonic current emissions class A conforming to IEC 61000-3-2",
+            "Conducted RF disturbances level 3 conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency level 4 conforming to IEC 61000-4-8",
+            "Conducted and radiated emissions class B conforming to EN 55022",
+            "Limitation of voltage changes, voltage fluctuations and flicker in low-voltage conforming to IEC 61000-3-3",
+            "Electrostatic discharge - test level: 8 kV level 4 conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test level 4 conforming to IEC 61000-4-4",
+            "Surge immunity test level 4 conforming to IEC 61000-4-5",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11"
+          ],
+          "IP_degree_of_protection": "IP54 display: conforming to IEC 60529, IP30 rear: conforming to IEC 60529",
+          "Relative_humidity": "5…95 % at 50 °C non-condensing",
+          "Pollution_degree": 2,
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "<= 3000 m"
+        }
+      }
+    }
+  ],
+"pm8000_series_models": [
+    {
+      "model_name": "PowerLogic PM8140",
+      "selection_blurb": "The PM8140 is a versatile power meter with a color TFT display, designed for power monitoring and WAGES metering applications. It features a broad range of measurements, including harmonic distortion analysis up to the 63rd harmonic and waveform capture capabilities.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8140",
+          "model_type": "Essential"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class A power quality measurement",
+            "up to the 63rd harmonic",
+            "conforming to IEC 61000-4-15 harmonic distortion",
+            "conforming to EN 50160: 2010 waveform capture",
+            "conforming to IEEE 519: 2014 voltage sag and swell detection",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "conforming to IEC 61000-4-15 flicker",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current per phase, rms",
+            "Voltage",
+            "Frequency total",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "90...415 V AC 45...65 Hz +/- 10 %",
+            "110...415 V DC +/- 10 %"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "Colour TFT LCD",
+          "Display_resolution": "320 x 240 pixels QVGA",
+          "Sampling_rate": "128 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57…400 V AC 42...69 Hz between phase and neutral",
+            "100…690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/- 0.1 %",
+            "Voltage": "+/- 0.1 %",
+            "Active_energy": "+/- 0.2 %"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "10 data recorders"
+          ],
+          "Memory_capacity": "64 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400…690 V conforming to IEC 61010-1:ed. 3",
+            "III400…690 V conforming to EN 61010-1:ed. 3",
+            "III347…600 V conforming to UL 61010-1:ed. 3",
+            "III347…600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions (2...150 Hz) conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5…95 %",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8240",
+      "selection_blurb": "The PM8240 is a standard power meter for comprehensive power quality analysis and monitoring. It enhances on the essential model with a higher sampling rate of 256 samples/cycle, significantly more memory (512 MB) for up to 50 data recorders, and Class S power quality measurement according to IEC 61000-4-30.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8240",
+          "model_type": "Standard"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class S power quality measurement",
+            "up to the 63rd harmonic",
+            "harmonic distortion",
+            "waveform capture",
+            "voltage sag and swell detection",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current",
+            "Voltage",
+            "Frequency",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "90...415 V AC 45...65 Hz +/- 10 %",
+            "110...415 V DC +/- 10 %"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "Colour TFT LCD",
+          "Display_resolution": "320 x 240 pixels QVGA",
+          "Sampling_rate": "256 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57…400 V AC 42...69 Hz between phase and neutral",
+            "100…690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/- 0.1 %",
+            "Voltage": "+/- 0.1 %",
+            "Active_energy": "+/- 0.2 %"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "50 data recorders"
+          ],
+          "Memory_capacity": "512 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400…690 V conforming to IEC 61010-1:ed. 3",
+            "III400…690 V conforming to EN 61010-1:ed. 3",
+            "III347…600 V conforming to UL 61010-1:ed. 3",
+            "III347…600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g",
+          "Compatibility_code": "PM8240"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5…95 %",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8340",
+      "selection_blurb": "The PM8340 is an advanced power quality meter featuring a high-resolution color display, 512 MB of memory, and a high sampling rate of 512 samples/cycle for detailed analysis. It provides Class A power quality measurement and is suitable for billing and network management in large buildings, data centers, and industrial settings.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8340",
+          "model_type": "Advanced"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class A power quality measurement",
+            "up to the 63rd harmonic",
+            "conforming to IEC 61000-4-15 harmonic distortion",
+            "conforming to EN 50160: 2010 waveform capture",
+            "conforming to IEEE 519: 2014 voltage sag and swell",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "conforming to IEC 61000-4-15 flicker",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current per phase, rms",
+            "Voltage",
+            "Frequency total",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "90...415 V AC 45...65 Hz +/- 10%",
+            "110...415 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "Colour TFT LCD",
+          "Display_resolution": "320x240 pixels QVGA",
+          "Sampling_rate": "512 samples/cycle",
+          "Measurement_current": "50...10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57...400 V AC 42...69 Hz between phase and neutral",
+            "100...690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/-0.1%",
+            "Voltage": "+/-0.1%",
+            "Active_energy": "+/-0.2%"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "64 data recorders"
+          ],
+          "Memory_capacity": "512 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400...690 V conforming to IEC 61010-1:ed. 3",
+            "III400...690 V conforming to EN 61010-1:ed. 3",
+            "III347...600 V conforming to UL 61010-1:ed. 3",
+            "III347...600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g",
+          "Compatibility_code": "PM8240"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions (2...150 Hz) conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5...95%",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8110",
+      "selection_blurb": "The PM8110 is the low-voltage DC variant of the Essential power meter. It provides the same versatile power monitoring and WAGES metering with a color TFT display, but is designed for systems with a 20-60 V DC control power supply.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8110",
+          "model_type": "Essential"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class A power quality measurement",
+            "up to the 63rd harmonic",
+            "conforming to IEC 61000-4-15 harmonic distortion",
+            "conforming to EN 50160: 2010 waveform capture",
+            "conforming to IEEE 519: 2014 voltage sag and swell detection",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "conforming to IEC 61000-4-15 flicker",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current per phase, rms",
+            "Voltage",
+            "Frequency total",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "20–60 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "Colour TFT LCD",
+          "Display_resolution": "320 x 240 pixels QVGA",
+          "Sampling_rate": "128 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57…400 V AC 42...69 Hz between phase and neutral",
+            "100…690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/- 0.1 %",
+            "Voltage": "+/- 0.1 %",
+            "Active_energy": "+/- 0.2 %"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "10 data recorders"
+          ],
+          "Memory_capacity": "64 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400…690 V conforming to IEC 61010-1:ed. 3",
+            "III400…690 V conforming to EN 61010-1:ed. 3",
+            "III347…600 V conforming to UL 61010-1:ed. 3",
+            "III347…600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions (2...150 Hz) conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5…95 %",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8210",
+      "selection_blurb": "The PM8210 is the low-voltage DC variant of the Standard power meter. It provides comprehensive power quality analysis with a higher sampling rate and more memory than the essential model, and is designed for systems with a 20-60 V DC control power supply.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8210",
+          "model_type": "Standard"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class S power quality measurement",
+            "up to the 63rd harmonic",
+            "harmonic distortion",
+            "waveform capture",
+            "voltage sag and swell detection",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current",
+            "Voltage",
+            "Frequency",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "20–60 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "Colour TFT LCD",
+          "Display_resolution": "320 x 240 pixels QVGA",
+          "Sampling_rate": "256 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57…400 V AC 42...69 Hz between phase and neutral",
+            "100…690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/- 0.1 %",
+            "Voltage": "+/- 0.1 %",
+            "Active_energy": "+/- 0.2 %"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "50 data recorders"
+          ],
+          "Memory_capacity": "512 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400…690 V conforming to IEC 61010-1:ed. 3",
+            "III400…690 V conforming to EN 61010-1:ed. 3",
+            "III347…600 V conforming to UL 61010-1:ed. 3",
+            "III347…600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g",
+          "Compatibility_code": "PM8240"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5…95 %",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8310",
+      "selection_blurb": "The PM8310 is the low-voltage DC variant of the Advanced power meter. It provides the highest sampling rate and Class A power quality analysis for critical applications, and is designed for systems with a 20-60 V DC control power supply.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8310",
+          "model_type": "Advanced"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class A power quality measurement",
+            "up to the 63rd harmonic",
+            "conforming to IEC 61000-4-15 harmonic distortion",
+            "conforming to EN 50160: 2010 waveform capture",
+            "conforming to IEEE 519: 2014 voltage sag and swell",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "conforming to IEC 61000-4-15 flicker",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current per phase, rms",
+            "Voltage",
+            "Frequency total",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "20–60 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "Colour TFT LCD",
+          "Display_resolution": "320x240 pixels QVGA",
+          "Sampling_rate": "512 samples/cycle",
+          "Measurement_current": "50...10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57...400 V AC 42...69 Hz between phase and neutral",
+            "100...690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/-0.1%",
+            "Voltage": "+/-0.1%",
+            "Active_energy": "+/-0.2%"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "64 data recorders"
+          ],
+          "Memory_capacity": "512 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "Flush-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400...690 V conforming to IEC 61010-1:ed. 3",
+            "III400...690 V conforming to EN 61010-1:ed. 3",
+            "III347...600 V conforming to UL 61010-1:ed. 3",
+            "III347...600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g",
+          "Compatibility_code": "PM8240"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions (2...150 Hz) conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5...95%",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8143",
+      "selection_blurb": "The PM8143 is the DIN rail-mounted version of the Essential feature set meter, designed for applications where an integrated display is not required. It offers the same core functionality as the PM8140 and can be connected to a remote display for local viewing.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8143",
+          "model_type": "Essential"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class A power quality measurement",
+            "up to the 63rd harmonic",
+            "conforming to IEC 61000-4-15 harmonic distortion",
+            "conforming to EN 50160: 2010 waveform capture",
+            "conforming to IEEE 519: 2014 voltage sag and swell detection",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "conforming to IEC 61000-4-15 flicker",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current per phase, rms",
+            "Voltage",
+            "Frequency total",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "90...415 V AC 45...65 Hz +/- 10 %",
+            "110...415 V DC +/- 10 %"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "None",
+          "Sampling_rate": "128 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57…400 V AC 42...69 Hz between phase and neutral",
+            "100…690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/- 0.1 %",
+            "Voltage": "+/- 0.1 %",
+            "Active_energy": "+/- 0.2 %"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "10 data recorders"
+          ],
+          "Memory_capacity": "64 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "DIN rail-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400…690 V conforming to IEC 61010-1:ed. 3",
+            "III400…690 V conforming to EN 61010-1:ed. 3",
+            "III347…600 V conforming to UL 61010-1:ed. 3",
+            "III347…600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions (2...150 Hz) conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5…95 %",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8243",
+      "selection_blurb": "The PM8243 is the DIN rail-mounted version of the Standard feature set meter, designed for applications where an integrated display is not required. It offers the same core functionality as the PM8240 and can be connected to a remote display for local viewing.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8243",
+          "model_type": "Standard"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class S power quality measurement",
+            "up to the 63rd harmonic",
+            "harmonic distortion",
+            "waveform capture",
+            "voltage sag and swell detection",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current",
+            "Voltage",
+            "Frequency",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "90...415 V AC 45...65 Hz +/- 10 %",
+            "110...415 V DC +/- 10 %"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "None",
+          "Sampling_rate": "256 samples/cycle",
+          "Measurement_current": "50…10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57…400 V AC 42...69 Hz between phase and neutral",
+            "100…690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/- 0.1 %",
+            "Voltage": "+/- 0.1 %",
+            "Active_energy": "+/- 0.2 %"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "50 data recorders"
+          ],
+          "Memory_capacity": "512 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "DIN rail-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400…690 V conforming to IEC 61010-1:ed. 3",
+            "III400…690 V conforming to EN 61010-1:ed. 3",
+            "III347…600 V conforming to UL 61010-1:ed. 3",
+            "III347…600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g",
+          "Compatibility_code": "PM8240"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5…95 %",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic PM8343",
+      "selection_blurb": "The PM8343 is the DIN rail-mounted version of the Advanced feature set meter, designed for applications where an integrated display is not required. It offers the same core functionality as the PM8340 and can be connected to a remote display for local viewing.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic PM8000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "PM8343",
+          "model_type": "Advanced"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "conforming to EN 50160: 2010 compliance report",
+            "conforming to IEEE 519: 2014 compliance report",
+            "conforming to IEC 61000-4-30: class A power quality measurement",
+            "up to the 63rd harmonic",
+            "conforming to IEC 61000-4-15 harmonic distortion",
+            "conforming to EN 50160: 2010 waveform capture",
+            "conforming to IEEE 519: 2014 voltage sag and swell",
+            "programmablity (logic and math functions)",
+            "conforming to IEC 62586 power quality monitoring",
+            "disturbance direction detection",
+            "conforming to IEC 61000-4-15 flicker",
+            "rapid voltage change"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "WAGES metering"
+          ],
+          "Type_of_measurement": [
+            "Current per phase, rms",
+            "Voltage",
+            "Frequency total",
+            "Active and reactive power total",
+            "Apparent power total",
+            "Power factor total",
+            "Active and reactive power per phase, rms",
+            "Apparent power per phase, rms",
+            "Power factor per phase, rms"
+          ],
+          "supply_voltage": [
+            "90...415 V AC 45...65 Hz +/- 10%",
+            "110...415 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": [
+            "1 A",
+            "5 A",
+            "10 A"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "16 VA at 230 V AC",
+          "Display_type": "None",
+          "Sampling_rate": "512 samples/cycle",
+          "Measurement_current": "50...10000 mA",
+          "Analogue_input_type": [
+            "Voltage (impedance 5 MOhm)",
+            "Current (impedance 0.3 mOhm)"
+          ],
+          "Measurement_voltage": [
+            "57...400 V AC 42...69 Hz between phase and neutral",
+            "100...690 V AC 42...69 Hz between phases"
+          ],
+          "Frequency_measurement_range": "42…69 Hz",
+          "Number_of_inputs": [
+            "3 digital 30 V AC",
+            "3 digital 60 V DC"
+          ],
+          "Measurement_accuracy": {
+            "Current": "+/-0.1%",
+            "Voltage": "+/-0.1%",
+            "Active_energy": "+/-0.2%"
+          },
+          "Accuracy_class": [
+            "Class 0.2S active energy conforming to IEC 62053-22",
+            "Class 0.2 active energy conforming to ANSI C12.20",
+            "Class 0.2 active power conforming to IEC 61557-12",
+            "Class 0.5S reactive energy conforming to IEC 62053-24",
+            "Class 0.5 power factor conforming to IEC 61557-12",
+            "Class 0.2 voltage conforming to IEC 61557-12",
+            "Class 0.2 current conforming to IEC 61557-12"
+          ],
+          "Number_of_outputs": "1 pulse",
+          "Information_displayed": [
+            "Voltage",
+            "Current",
+            "Frequency",
+            "Power",
+            "Energy consumption",
+            "Harmonic distortion"
+          ],
+          "Communication_port_protocol": [
+            "Modbus RTU at 115 kbauds - 2-wire",
+            "ION at 115 kbauds - 2-wire",
+            "DNP3",
+            "IEC 61850",
+            "Modbus TCP/IP",
+            "Ethernet Modbus TCP/IP daisy chain at 10/100 Mbit/s",
+            "RSTP 801.1d 2004"
+          ],
+          "Communication_port_support": [
+            "ETHERNET",
+            "Screw terminal block: RS485"
+          ],
+          "Communication_network_type": "IPv6 (internet protocol)",
+          "Data_recording": [
+            "Min/max of instantaneous values",
+            "Waveform logs",
+            "Sequence of event recording",
+            "Time stamping",
+            "Alarm logs",
+            "Trending/forecasting",
+            "Sag and swell logs",
+            "Harmonics logs",
+            "GPS synchronisation",
+            "Data logs",
+            "Event logs",
+            "64 data recorders"
+          ],
+          "Memory_capacity": "512 MB",
+          "Web_services": [
+            "Customizable home page",
+            "File upload/download via FTP",
+            "File upload/download via SFTP",
+            "Web server",
+            "Alarm notification by e-mail",
+            "Viewing of captured waveform (FTP)",
+            "Viewing of captured waveform (web)",
+            "HTTPS server"
+          ],
+          "Communication_service": [
+            "SMTP e-mail notification",
+            "RSTP support",
+            "NTP time synchronization",
+            "DHCP",
+            "PTP time synchronization"
+          ],
+          "Cybersecurity": [
+            "Enable/disable communication ports",
+            "Password protection",
+            "Syslog protocol support",
+            "Robust security logs",
+            "Port hardening"
+          ],
+          "Mounting_mode": "DIN rail-mounted",
+          "Mounting_support": "Framework",
+          "Installation_category": "III",
+          "Safety_Construction": [
+            "III400...690 V conforming to IEC 61010-1:ed. 3",
+            "III400...690 V conforming to EN 61010-1:ed. 3",
+            "III347...600 V conforming to UL 61010-1:ed. 3",
+            "III347...600 V conforming to CSA C22.2 No 61010-1:ed. 3"
+          ],
+          "Standards": [
+            "IEC 61557-12",
+            "IEC 62052-11",
+            "IEC 62053-24",
+            "IEC 62053-22",
+            "IEEE 1588",
+            "IEC 62586-2",
+            "IEC 61326-1"
+          ],
+          "Product_certifications": [
+            "CE",
+            "CULus",
+            "N998"
+          ],
+          "Width": "96 mm",
+          "Depth": "77.5 mm",
+          "Height": "96 mm",
+          "Product_weight": "581 g",
+          "Compatibility_code": "PM8240"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "Electrostatic discharge conforming to IEC 61000-4-2",
+            "Radiated radio-frequency electromagnetic field immunity test conforming to IEC 61000-4-3",
+            "Electrical fast transient/burst immunity test conforming to IEC 61000-4-4",
+            "Surge immunity test conforming to IEC 61000-4-5",
+            "Conducted RF disturbances conforming to IEC 61000-4-6",
+            "Magnetic field at power frequency conforming to IEC 61000-4-8",
+            "Voltage dips and interruptions immunity test conforming to IEC 61000-4-11",
+            "Immunity to impulse waves conforming to IEC 61000-4-12",
+            "Conducted and radiated emissions (2...150 Hz) conforming to EN 55022",
+            "Conducted and radiated emissions conforming to EN 55011",
+            "Conducted and radiated emissions conforming to FCC part 15",
+            "Conducted and radiated emissions conforming to ICES-003",
+            "Conducted RF disturbances (2...150 Hz) conforming to CLC/TR 50579",
+            "Surge withstand conforming to IEEE C37.90.1"
+          ],
+          "IP_degree_of_protection": "IP54 front: conforming to IEC 60529\nIP30 body: conforming to IEC 60529",
+          "Relative_humidity": "5...95%",
+          "Ambient_air_temperature_for_operation": "-25…70 °C",
+          "Ambient_air_temperature_for_storage": "-40…85 °C",
+          "Operating_altitude": "3000 m"
+        }
+      }
+    }
+  ],
+  "ion9000_series_models": [
+    {
+      "model_name": "PowerLogic ION9000",
+      "selection_blurb": "The PowerLogic ION9000 is a premium revenue and power quality meter offering Class 0.1S accuracy and certified Class A power quality analysis. It provides extensive data logging, root cause analysis features like disturbance direction detection, and robust cybersecurity protocols, making it ideal for critical power applications in large facilities and utilities.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic ION9000",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "ION9000",
+          "model_type": "Advanced Power Quality"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "IEC 61000-4-30 Class A Power Quality Instrument (PQI-A) certified",
+            "EN 50160 compliance monitoring, including flicker",
+            "IEEE 519 compliance monitoring",
+            "Disturbance Direction Detection",
+            "Extended waveform capture",
+            "Harmonics measurement up to the 63rd harmonic",
+            "Interharmonics measurement",
+            "Rapid voltage change monitoring"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "Network management",
+            "Cost management",
+            "Revenue metering"
+          ],
+          "Type_of_measurement": [
+            "Voltage (L-L, L-N, L-E)",
+            "Current (per phase, avg, I4, I5)",
+            "Active, reactive, and apparent power (per phase and total)",
+            "Power factor (per phase and total)",
+            "Frequency",
+            "Voltage and current unbalance",
+            "Phase reversal",
+            "Calculated residual current"
+          ],
+          "supply_voltage": [
+            "90–480 V AC (50/60 Hz) +/- 10%",
+            "90–120 V AC (400 Hz) +/- 10%",
+            "110–480 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50/60 Hz +/- 15%",
+            "400 Hz +/- 10%"
+          ],
+          "[In]_rated_current": [
+            "IEC: 1A/5A (Class 0.1 S)",
+            "ANSI: Current Class 2, 10, 20 (Accuracy Class 0.1)"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "Meter only: Max 38 VA @ 480 V | Fully optioned: Max 80 VA @ 480 V",
+          "Display_type": "None (Remote display compatible)",
+          "Display_resolution": "800 x 480 pixels WVGA (with optional remote display)",
+          "Sampling_rate": "1024 samples/cycle",
+          "Measurement_current": "10 mA – 20 A",
+          "Analogue_input_type": [
+            "Voltage (impedance > 5 MOhm)",
+            "Current (impedance 0.3 mOhm typical)"
+          ],
+          "Measurement_voltage": [
+            "57–400 V L-N / 100–690 V L-L (Wye)",
+            "100–600 V L-L (Delta or Wye with unearthed neutral)"
+          ],
+          "Frequency_measurement_range": "50/60 Hz ± 15% | 400 Hz ± 10%",
+          "Number_of_inputs": [
+            "8 digital"
+          ],
+          "Number_of_outputs": [
+            "4 Form A solid-state",
+            "2 Form C mechanical relay",
+            "2 kWh energy pulsing LEDs (visible and infrared)",
+            "2 kVARh energy pulsing LEDs (visible and infrared)"
+          ],
+          "Measurement_accuracy": {
+            "Active_energy": "IEC 62053-22 Class 0.1 S",
+            "Reactive_energy": "IEC 62053-24 Class 0.5 S",
+            "Active_power": "IEC 61557-12 Class 0.1",
+            "Apparent_power": "IEC 61557-12 Class 0.2",
+            "Current": "IEC 61557-12 Class 0.1",
+            "Voltage": "IEC 61557-12 Class 0.1",
+            "Frequency": "IEC 61557-12 Class 0.02"
+          },
+          "Communication_port_protocol": [
+            "ION",
+            "Secure ION (ION over TLS)",
+            "Modbus TCP",
+            "Modbus RTU",
+            "DNP 3.0",
+            "DLMS",
+            "IEC 61850",
+            "SNMP",
+            "SFTP",
+            "HTTPS"
+          ],
+          "Communication_port_support": [
+            "2 Ethernet (switched mode, RJ45)",
+            "2 RS-485",
+            "1 ANSI optical port",
+            "1 IEC optical port adapter",
+            "1 USB host (Type A)",
+            "1 USB device (Mini-B)"
+          ],
+          "Communication_network_type": "IPv4 / IPv6",
+          "Data_recording": [
+            "Up to 100 data recorders",
+            "Revenue Log",
+            "Historic data logs (Mean, High, Low)",
+            "Loss Log",
+            "Harmonics logs",
+            "Energy and Demand Log",
+            "Sag/swell Log",
+            "Transient Log",
+            "EN 50160, IEC 61000-4-30, IEEE 519 compliance logs",
+            "Event log (5,000 events)"
+          ],
+          "Memory_capacity": "2000 MB",
+          "Cybersecurity": [
+            "Multiple user accounts with configurable access levels",
+            "Secure webpages (HTTPS)",
+            "Protocol enable/disable and port control",
+            "Syslog support for remote event logging"
+          ],
+          "Mounting_mode": "DIN rail-mounted",
+          "Standards": [
+            "IEC 62053-22",
+            "IEC 62053-24",
+            "IEC 61557-12",
+            "IEC 62586-1/2",
+            "IEC 61000-4-30 Class A",
+            "EN 50160",
+            "IEEE 519"
+          ],
+          "Product_weight": "1.5 kg"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "IEC 61326-1",
+            "IEC 61000-6-5",
+            "IEC 61000-4-2 (Electrostatic discharge)",
+            "IEC 61000-4-3 (Radiated fields)",
+            "IEC 61000-4-4 (Fast transients)",
+            "IEC 61000-4-5 (Surges)",
+            "IEC 61000-4-6 (Conducted disturbances)",
+            "IEC 61000-4-8 (Power frequency magnetic fields)",
+            "IEC 61000-4-11 (Voltage dips and interruptions)",
+            "IEC 61000-4-12 (Ring waves)",
+            "IEEE/ANSI C37.90.1 (Surge withstand capability)"
+          ],
+          "IP_degree_of_protection": "IP30 (except connectors)",
+          "Relative_humidity": "5%–95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25°C to 70°C",
+          "Ambient_air_temperature_for_storage": "-40°C to 85°C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "PowerLogic ION9000T",
+      "selection_blurb": "The PowerLogic ION9000T extends the capabilities of the advanced ION9000 by adding high-speed transient capture. It detects sub-microsecond transients up to 10 kV with a 10 MHz sampling rate, providing unparalleled insight into transient events for mission-critical power systems.",
+      "specifications": {
+        "Main": {
+          "Range": "PowerLogic",
+          "product_name": "PowerLogic ION9000T",
+          "Product_or_component_type": "Power meter",
+          "Device_short_name": "ION9000T",
+          "model_type": "Advanced Power Quality with Transient Capture"
+        },
+        "Complementary": {
+          "Power_quality_analysis": [
+            "High-Speed Transient Capture (10 MHz sampling, up to 10 kV)",
+            "IEC 61000-4-30 Class A Power Quality Instrument (PQI-A) certified",
+            "EN 50160 compliance monitoring, including flicker",
+            "IEEE 519 compliance monitoring",
+            "Disturbance Direction Detection",
+            "Extended waveform capture",
+            "Harmonics measurement up to the 63rd harmonic",
+            "Interharmonics measurement",
+            "Rapid voltage change monitoring"
+          ],
+          "Device_application": [
+            "Power monitoring",
+            "Network management",
+            "Cost management",
+            "Revenue metering",
+            "Critical power analysis"
+          ],
+          "Type_of_measurement": [
+            "Voltage (L-L, L-N, L-E)",
+            "Current (per phase, avg, I4, I5)",
+            "Active, reactive, and apparent power (per phase and total)",
+            "Power factor (per phase and total)",
+            "Frequency",
+            "Voltage and current unbalance",
+            "Phase reversal",
+            "Calculated residual current"
+          ],
+          "supply_voltage": [
+            "90–480 V AC (50/60 Hz) +/- 10%",
+            "90–120 V AC (400 Hz) +/- 10%",
+            "110–480 V DC +/- 10%"
+          ],
+          "Network_frequency": [
+            "50/60 Hz +/- 15%",
+            "400 Hz +/- 10%"
+          ],
+          "[In]_rated_current": [
+            "IEC: 1A/5A (Class 0.1 S)",
+            "ANSI: Current Class 2, 10, 20 (Accuracy Class 0.1)"
+          ],
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "Meter only: Max 38 VA @ 480 V | Fully optioned: Max 80 VA @ 480 V",
+          "Display_type": "None (Remote display compatible)",
+          "Display_resolution": "800 x 480 pixels WVGA (with optional remote display)",
+          "Sampling_rate": "1024 samples/cycle",
+          "Measurement_current": "10 mA – 20 A",
+          "Analogue_input_type": [
+            "Voltage (impedance > 5 MOhm)",
+            "Current (impedance 0.3 mOhm typical)"
+          ],
+          "Measurement_voltage": [
+            "57–400 V L-N / 100–690 V L-L (Wye)",
+            "100–600 V L-L (Delta or Wye with unearthed neutral)"
+          ],
+          "Frequency_measurement_range": "50/60 Hz ± 15% | 400 Hz ± 10%",
+          "Number_of_inputs": [
+            "8 digital"
+          ],
+          "Number_of_outputs": [
+            "4 Form A solid-state",
+            "2 Form C mechanical relay",
+            "2 kWh energy pulsing LEDs (visible and infrared)",
+            "2 kVARh energy pulsing LEDs (visible and infrared)"
+          ],
+          "Measurement_accuracy": {
+            "Active_energy": "IEC 62053-22 Class 0.1 S",
+            "Reactive_energy": "IEC 62053-24 Class 0.5 S",
+            "Active_power": "IEC 61557-12 Class 0.1",
+            "Apparent_power": "IEC 61557-12 Class 0.2",
+            "Current": "IEC 61557-12 Class 0.1",
+            "Voltage": "IEC 61557-12 Class 0.1",
+            "Frequency": "IEC 61557-12 Class 0.02"
+          },
+          "Communication_port_protocol": [
+            "ION",
+            "Secure ION (ION over TLS)",
+            "Modbus TCP",
+            "Modbus RTU",
+            "DNP 3.0",
+            "DLMS",
+            "IEC 61850",
+            "SNMP",
+            "SFTP",
+            "HTTPS"
+          ],
+          "Communication_port_support": [
+            "2 Ethernet (switched mode, RJ45)",
+            "2 RS-485",
+            "1 ANSI optical port",
+            "1 IEC optical port adapter",
+            "1 USB host (Type A)",
+            "1 USB device (Mini-B)"
+          ],
+          "Data_recording": [
+            "Up to 100 data recorders",
+            "Revenue Log",
+            "Historic data logs (Mean, High, Low)",
+            "Loss Log",
+            "Harmonics logs",
+            "Energy and Demand Log",
+            "Sag/swell Log",
+            "Transient Log",
+            "EN 50160, IEC 61000-4-30, IEEE 519 compliance logs",
+            "Event log (5,000 events)"
+          ],
+          "Memory_capacity": "2000 MB",
+          "Cybersecurity": [
+            "Multiple user accounts with configurable access levels",
+            "Secure webpages (HTTPS)",
+            "Protocol enable/disable and port control",
+            "Syslog support for remote event logging"
+          ],
+          "Mounting_mode": "DIN rail-mounted",
+          "Standards": [
+            "IEC 62053-22",
+            "IEC 62053-24",
+            "IEC 61557-12",
+            "IEC 62586-1/2",
+            "IEC 61000-4-30 Class A",
+            "EN 50160",
+            "IEEE 519"
+          ],
+          "Product_weight": "1.5 kg"
+        },
+        "Environment": {
+          "Electromagnetic_compatibility": [
+            "IEC 61326-1",
+            "IEC 61000-6-5",
+            "IEC 61000-4-2 (Electrostatic discharge)",
+            "IEC 61000-4-3 (Radiated fields)",
+            "IEC 61000-4-4 (Fast transients)",
+            "IEC 61000-4-5 (Surges)",
+            "IEC 61000-4-6 (Conducted disturbances)",
+            "IEC 61000-4-8 (Power frequency magnetic fields)",
+            "IEC 61000-4-11 (Voltage dips and interruptions)",
+            "IEC 61000-4-12 (Ring waves)",
+            "IEEE/ANSI C37.90.1 (Surge withstand capability)"
+          ],
+          "IP_degree_of_protection": "IP30 (except connectors)",
+          "Relative_humidity": "5%–95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25°C to 70°C",
+          "Ambient_air_temperature_for_storage": "-40°C to 85°C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    }
+  ]
+,
+  "iem3000_series_models": [
+    {
+      "model_name": "Acti9 iEM3100",
+      "selection_blurb": "The iEM3100 is a basic energy meter for direct measurement up to 63 A. It provides essential total and partial active energy counting, making it an economical choice for simple energy consumption monitoring and sub-metering applications.",
+      "specifications": {
+        "Main": {
+          "Range": "Acti9 iEM3000",
+          "product_name": "Acti9 iEM3100",
+          "Product_or_component_type": "Energy meter",
+          "Device_short_name": "iEM3100"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Sub-billing management",
+            "Metering applications"
+          ],
+          "Type_of_measurement": [
+            "Total active energy",
+            "Partial active energy"
+          ],
+          "supply_voltage": [
+            "Wye: 100-277 V L-N / 173-480 V L-L",
+            "Delta: 173-480 V L-L"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": "63 A (max)",
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "< 10 VA at 63 A",
+          "Display_type": "LCD display",
+          "Accuracy_class": "Active energy: Class 1 conforming to IEC 62053-21",
+          "Number_of_inputs": 0,
+          "Number_of_outputs": 0,
+          "Communication_port_protocol": "None",
+          "Mounting_mode": "DIN rail",
+          "Width": "90 mm",
+          "Height": "95.0 mm",
+          "Depth": "69.0 mm"
+        },
+        "Environment": {
+          "IP_degree_of_protection": "IP40 (front panel), IP20 (meter body)",
+          "Relative_humidity": "5% to 95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25 to 70 °C",
+          "Ambient_air_temperature_for_storage": "-40 to 85 °C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "Acti9 iEM3110",
+      "selection_blurb": "The iEM3110 is a 63A direct-measure energy meter that builds on the basic model by adding a configurable pulse output for remote monitoring of energy consumption. It is suitable for integration with PLCs or other basic data acquisition systems.",
+      "specifications": {
+        "Main": {
+          "Range": "Acti9 iEM3000",
+          "product_name": "Acti9 iEM3110",
+          "Product_or_component_type": "Energy meter",
+          "Device_short_name": "iEM3110"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Sub-billing management",
+            "Metering applications",
+            "Remote monitoring"
+          ],
+          "Type_of_measurement": [
+            "Total active energy",
+            "Partial active energy"
+          ],
+          "supply_voltage": [
+            "Wye: 100-277 V L-N / 173-480 V L-L",
+            "Delta: 173-480 V L-L"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": "63 A (max)",
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "< 10 VA at 63 A",
+          "Display_type": "LCD display",
+          "Accuracy_class": [
+            "Active energy: Class 1 conforming to IEC 62053-21",
+            "Active energy: Class B conforming to EN 50470-3 (MID)"
+          ],
+          "Number_of_inputs": 0,
+          "Number_of_outputs": 1,
+          "Output_type": "Pulse output only",
+          "Communication_port_protocol": "None",
+          "MID_MIR_compliant": true,
+          "Mounting_mode": "DIN rail",
+          "Width": "90 mm",
+          "Height": "95.0 mm",
+          "Depth": "69.0 mm"
+        },
+        "Environment": {
+          "IP_degree_of_protection": "IP40 (front panel), IP20 (meter body)",
+          "Relative_humidity": "5% to 95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25 to 70 °C",
+          "Ambient_air_temperature_for_storage": "-40 to 85 °C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "Acti9 iEM3155",
+      "selection_blurb": "The iEM3155 is a versatile 63A direct-measure energy meter featuring four-quadrant energy measurement, multi-tariff capabilities, and a programmable digital I/O. With its integrated Modbus communication, it is designed for cost allocation and network monitoring within a larger energy management system.",
+      "specifications": {
+        "Main": {
+          "Range": "Acti9 iEM3000",
+          "product_name": "Acti9 iEM3155",
+          "Product_or_component_type": "Energy meter",
+          "Device_short_name": "iEM3155"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Sub-billing management",
+            "Energy demand management",
+            "WAGES monitoring"
+          ],
+          "Type_of_measurement": [
+            "Active and reactive energy (four quadrant)",
+            "Current",
+            "Voltage",
+            "Power",
+            "Power Factor"
+          ],
+          "supply_voltage": [
+            "Wye: 100-277 V L-N / 173-480 V L-L",
+            "Delta: 173-480 V L-L"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": "63 A (max)",
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "< 10 VA at 63 A",
+          "Display_type": "LCD display with white backlight",
+          "Accuracy_class": [
+            "Active energy: Class 1 conforming to IEC 62053-21",
+            "Active energy: Class B conforming to EN 50470-3 (MID)",
+            "Reactive energy: Class 2 conforming to IEC 62053-23"
+          ],
+          "Number_of_inputs": 1,
+          "Input_type": "Programmable (status, tariff control, or input monitoring)",
+          "Number_of_outputs": 1,
+          "Output_type": "Programmable (energy pulsing or overload alarm)",
+          "Communication_port_protocol": "Modbus",
+          "Communication_port_support": "RS-485",
+          "Overload_alarm": true,
+          "Multi_Tariff": "4 tariffs controlled by internal clock, digital input, or communications",
+          "MID_MIR_compliant": true,
+          "Mounting_mode": "DIN rail",
+          "Width": "90 mm",
+          "Height": "101.5 mm",
+          "Depth": "69.0 mm"
+        },
+        "Environment": {
+          "IP_degree_of_protection": "IP40 (front panel), IP20 (meter body)",
+          "Relative_humidity": "5% to 95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25 to 70 °C",
+          "Ambient_air_temperature_for_storage": "-40 to 85 °C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "Acti9 iEM3255",
+      "selection_blurb": "The iEM3255 is a current transformer (CT) connected energy meter offering high accuracy (Class 0.5S) for billing applications. It provides four-quadrant energy measurement, a digital I/O, multi-tariff functions, and Modbus communication, making it ideal for monitoring mains or critical feeders in low and medium voltage networks.",
+      "specifications": {
+        "Main": {
+          "Range": "Acti9 iEM3000",
+          "product_name": "Acti9 iEM3255",
+          "Product_or_component_type": "Energy meter",
+          "Device_short_name": "iEM3255"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Sub-billing management",
+            "Energy demand management",
+            "WAGES monitoring"
+          ],
+          "Type_of_measurement": [
+            "Active and reactive energy (four quadrant)",
+            "Current",
+            "Voltage",
+            "Power",
+            "Power Factor"
+          ],
+          "supply_voltage": [
+            "Wye: 100-277 V L-N / 173-480 V L-L",
+            "Delta: 173-480 V L-L"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": "1 A / 5 A (CT connected)",
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "< 10 VA",
+          "Display_type": "LCD display with white backlight",
+          "Accuracy_class": [
+            "Active energy: Class 0.5S conforming to IEC 62053-22",
+            "Active energy: Class C conforming to EN 50470-3 (MID)",
+            "Reactive energy: Class 2 conforming to IEC 62053-23"
+          ],
+          "Number_of_inputs": 1,
+          "Input_type": "Programmable (status, tariff control, or input monitoring)",
+          "Number_of_outputs": 1,
+          "Output_type": "Programmable (energy pulsing or overload alarm)",
+          "Communication_port_protocol": "Modbus",
+          "Communication_port_support": "RS-485",
+          "Overload_alarm": true,
+          "Multi_Tariff": "4 tariffs controlled by internal clock, digital input, or communications",
+          "MID_MIR_compliant": true,
+          "Mounting_mode": "DIN rail",
+          "Width": "90 mm",
+          "Height": "101.5 mm",
+          "Depth": "69.0 mm"
+        },
+        "Environment": {
+          "IP_degree_of_protection": "IP40 (front panel), IP20 (meter body)",
+          "Relative_humidity": "5% to 95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25 to 70 °C",
+          "Ambient_air_temperature_for_storage": "-40 to 85 °C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    },
+    {
+      "model_name": "Acti9 iEM3355",
+      "selection_blurb": "The iEM3355 is a high-capacity, 125A direct-measure energy meter with Modbus communication. It offers four-quadrant energy measurement, multi-tariff functions, and a programmable digital I/O, making it suitable for monitoring main switchboards or high-load feeders.",
+      "specifications": {
+        "Main": {
+          "Range": "Acti9 iEM3000",
+          "product_name": "Acti9 iEM3355",
+          "Product_or_component_type": "Energy meter",
+          "Device_short_name": "iEM3355"
+        },
+        "Complementary": {
+          "Device_application": [
+            "Sub-billing management",
+            "Energy demand management",
+            "WAGES monitoring"
+          ],
+          "Type_of_measurement": [
+            "Active and reactive energy (four quadrant)",
+            "Current",
+            "Voltage",
+            "Power",
+            "Power Factor"
+          ],
+          "supply_voltage": [
+            "Wye: 100-277 V L-N / 173-480 V L-L",
+            "Delta: 173-480 V L-L"
+          ],
+          "Network_frequency": [
+            "50 Hz",
+            "60 Hz"
+          ],
+          "[In]_rated_current": "125 A (max)",
+          "Poles_description": [
+            "3P + N",
+            "3P",
+            "1P + N"
+          ],
+          "Power_consumption_in_VA": "< 10 VA at 125 A",
+          "Display_type": "LCD display with white backlight",
+          "Accuracy_class": [
+            "Active energy: Class 1 conforming to IEC 62053-21",
+            "Active energy: Class B conforming to EN 50470-3 (MID)",
+            "Reactive energy: Class 2 conforming to IEC 62053-23"
+          ],
+          "Number_of_inputs": 1,
+          "Input_type": "Programmable (status, tariff control, or input monitoring)",
+          "Number_of_outputs": 1,
+          "Output_type": "Programmable (energy pulsing or overload alarm)",
+          "Communication_port_protocol": "Modbus",
+          "Communication_port_support": "RS-485",
+          "Overload_alarm": true,
+          "Multi_Tariff": "4 tariffs controlled by internal clock, digital input, or communications",
+          "MID_MIR_compliant": true,
+          "Mounting_mode": "DIN rail",
+          "Width": "126 mm",
+          "Height": "108.4 mm",
+          "Depth": "69.3 mm"
+        },
+        "Environment": {
+          "IP_degree_of_protection": "IP40 (front panel), IP20 (meter body)",
+          "Relative_humidity": "5% to 95% RH non-condensing",
+          "Ambient_air_temperature_for_operation": "-25 to 70 °C",
+          "Ambient_air_temperature_for_storage": "-40 to 85 °C",
+          "Operating_altitude": "< 3000 m"
+        }
+      }
+    }
+  ]
+}
