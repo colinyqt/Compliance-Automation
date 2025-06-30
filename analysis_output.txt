@@ -1,0 +1,186 @@
+📄 Analyzing document: testing.txt"
+📄 Document loaded: 5238 characters
+📋 Found 2 meter requirements
+
+✨ Processing requirement 1/2: 7.0...
+📝 Type: 
+📝 Specifications:
+   - **Clause 7.0 – Power Quality Meter**
+
+7.0 POWER QUALITY METER SPECIFICATIONS
+
+6.1 Power quality Meter must be used for all incoming HV and LV Switchgears compartments. This advanced metering device will be used to monitor feeder circuits for purposes of network management, energy cost allocation, power quality analysis, operational efficiency and compliance reporting.
+
+6.2 It shall have colourful LCD graphical display, and able to direct connect to circuits up to 690 VAC Line to Line, eliminating the need for voltage (potential) transformers; On the other hand, 5 A nominal current inputs.
+
+6.3 The proposed meter shall comply with IEC62053 class 0.2S or compliance with SAC-SINGLAS certification with passed with accuracy class of 0.2 standard. The communication to BMS system shall be via Modbus TCP/IP connection.
+
+6.4 PQM meter shall come with the web server analysis monitoring tools for standard power quality analysis. The functions of web server software all include but not limited to:
+
+- Weekly analysis report
+- Transient / Sags/ Swells events download
+- Export of event information into COMTRADE format
+- Viewing of harmonics up to at least 63rd order
+- Analysis of flickering, rapid voltage changes and etc
+- Automatic weekly EN50160 report generation
+
+6.5 General Specification
+
+- Class A Power Analyser
+- Monitoring the quality in accordance with DIN EN 50160
+- Measurement accuracy according to IEC62053-22 Cl 0.2S
+- Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+- Support IEC61850
+- Comes with 8GB Internal Memory
+- Build in Modbus TCP/IP communication
+- SNTP Time sync available
+- 8 Digital Inputs (DI), 4 Relay Outputs (RO), 2 Digital Outputs (DO)
+- Operating temperature -10°C to +55°C
+- IP52 at front; IP30 at Side and Back
+- Measured circuit breaker ON / OFF and TRIP status shall be linked to PQM for status monitoring
+
+6.6 Power Quality Analysis
+
+- THD and TDD up to 63rd order
+- EN50160 statistic function
+- Unbalance Voltage-, current- and zero sequence
+- Voltage/Freq. Deviation Setpoint alarm and record
+- Rapid Voltage Alteration Trigger DO point, waveform record
+- High resolution failure record with 1024 points / cycle
+- Able to support up to 1024 PQ Records with time resolution of 1ms
+- Voltage Sag / Swell Waveform record available
+- 20µs for transient disturbance record
+- Configurable waveform recording mode:
+  - 1024 points / cycle @ 50 cycles
+  - 512 points / cycle @ 100 cycles
+  - 256 points / cycle @ 200 cycles
+  - 128 points / cycle @ 400 cycles
+  - 64 points / cycle @ 800 cycles
+  - 32 points / cycle @ 1600 cycles
+  - 16 points / cycle @ 3200 cycles
+- Sag Source Location locate power supply side load side abnormal and fault
+- ITIC Curve/SEMI F47/SARFI Index analysis shall be included
+
+6.7 Accuracy
+
+- Voltage / Current ±0.1%
+- Active Power ±0.2%
+- Reactive Power ±0.2%
+- Apparent Power ±0.2%
+- Active Energy Class 0.2s
+- Reactive Energy Class 2
+- Power Factor ±0.5%
+- Frequency ±0.005Hz
+- Harmonic Class A
+- Voltage Unbalance ±0.1%
+- Current Unbalance ±0.5%
+- Voltage Deviation ±0.1%
+- Frequency Deviation ±0.005Hz
+- Flicker ±5%
+
+🏆 Top 3 Best-fit meters:
+  1. PowerLogic PM5560
+     Reason: Meets all requirements at moderate cost and offers comprehensive features for advanced power quality analysis.
+     Score: 95
+     Description: The PM5560 is a high-accuracy power meter designed for comprehensive energy and cost management. It features a full range of measurements, including harmonics up to the 63rd, extensive data logging capabilities, and multiple communication protocols including Modbus TCP and BACnet/IP.
+  2. PowerLogic PM8240
+     Reason: Advanced features, but not required. Offers high sampling rate and detailed memory for comprehensive analysis.
+     Score: 85
+     Description: The PM8240 is a standard power meter for comprehensive power quality analysis and monitoring. It enhances on the essential model with a higher sampling rate of 256 samples/cycle, significantly more memory (512 MB) for up to 50 data recorders, and Class S power quality measurement according to IEC 61000-4-30.
+  3. EasyLogic PM2230
+     Reason: Premium model with advanced power quality analysis and data logging capabilities at a reasonable cost.
+     Score: 80
+     Description: The PM2230 is the premium model in the series, ideal for critical applications such as sub-billing and advanced power quality analysis. It should be selected when the highest accuracy (Class 0.5S) , detailed harmonic analysis (up to 31st) , data logging, alarming, multi-tariff functions , and I/O expandability  are required.
+
+✨ Processing requirement 2/2: 8.0...
+📝 Type: 
+📝 Specifications:
+   - **Clause 8.0 – Digital Power Meter**
+
+8.0 DIGITAL POWER METER SPECIFICATIONS
+
+Digital power meter record and indicate electrical parameters for electrical network, not only in the electricity transmission and power distribution system including bus-bar tap-off units for each IT racks (Branch Circuit Monitoring System), but also in the power consumption measurement and analysis. The communication to PQMS/BMS system shall be via Modbus RTU / TCP IP connection. The proposed meter shall comply with IEC62053 class 0.5S or compliance with SACSINGLAS certification with passed with accuracy class of 0.2 standard.
+
+**8.1 General Specification**
+
+8.1.1 Measurement accuracy according to IEC62053-22 Cl 0.5S
+
+8.1.2 Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+
+8.1.3 Harmonics up to 63rd order
+
+8.1.4 Memory Recording for energy, demand, max demand & max/min record
+
+8.1.5 Real time clock
+
+8.1.6 Build in Modbus RTU communication
+
+8.1.7 6.4kHz sampling (128 Samples/cycle)
+
+8.1.8 Operating temperature -25°C to +55°C
+
+**8.2 Accuracy**
+
+8.2.1 Apparent power 0.5%
+
+8.2.2 Reactive power 1%
+
+8.2.3 Power factor 0.01
+
+8.2.4 Active energy IEC62053-22 Class 0.5S
+
+8.2.5 Active energy IEC 61557-12 Class 0.5
+
+8.2.6 THD 1%
+
+8.2.7 Voltage VL-N 0.2%
+
+8.2.8 Voltage VL-L 0.2%
+
+8.2.9 Current 0.2%
+
+8.2.10 Frequency 0.1%
+
+8.2.11 Active power 0.5%
+
+**8.3 Electromagnetic Emission**
+
+8.3.1 Electrostatic Discharge - IEC 61000-4-2
+
+8.3.2 Immunity to Radiated Fields - IEC 61000-4-3
+
+8.3.3 Immunity to Fast Transients - IEC 61000-4-4
+
+8.3.4 Immunity to Impulse Waves - IEC 61000-4-5
+
+8.3.5 Conducted Immunity - IEC 61000-4-6
+
+8.3.6 Immunity to Magnetic Fields - IEC 61000-4-8
+
+8.3.7 Immunity to Voltage Dips - IEC 61000-4-11
+
+8.3.8 Radiated Emissions - EN55011 Class A
+
+8.3.9 Conducted Emissions - EN55011 Class A
+
+8.3.10 Harmonics - IEC 61000-3-2
+
+**8.4 Certifications**
+
+8.4.1 All the meter’s accuracy shall be comply with IEC62053-22 with 3rd party lab certifications
+
+🏆 Top 3 Best-fit meters:
+  1. PowerLogic PM5341
+     Reason: Meets all requirements with high accuracy and advanced features, including Modbus TCP communication and expanded I/O.
+     Score: 98
+     Description: The PM5341 is the revenue-certified version of the PM5340, offering MID/MIR compliance for billing applications . It features Ethernet communication, expanded I/O (2 DI/2 DO), and Class 0.5S accuracy, making it suitable for advanced, networked sub-billing and cost allocation.
+  2. PowerLogic PM5760
+     Reason: High-accuracy meter with comprehensive power quality analysis and extensive data logging capabilities.
+     Score: 92
+     Description: The PM5760 combines advanced power quality analysis with residual current measurement. It includes sag/swell detection, waveform capture, and two RCM inputs, providing a comprehensive solution for critical facilities that need to monitor both power quality and potential equipment insulation issues.
+  3. PowerLogic PM8340
+     Reason: Advanced power quality meter with high-resolution display, large memory, and detailed harmonic analysis.
+     Score: 88
+     Description: The PM8340 is an advanced power quality meter featuring a high-resolution color display, 512 MB of memory, and a high sampling rate of 512 samples/cycle for detailed analysis. It provides Class A power quality measurement and is suitable for billing and network management in large buildings, data centers, and industrial settings.
+
+📊 Analysis complete!

@@ -1,0 +1,57 @@
+﻿meter_id,io_type,description
+1,Output,1 pulse output
+4,Output,1 pulse output
+7,Output,1 digital 
+8,Output,1 digital 
+9,Output,1 digital 
+10,Output,1 digital (Form C relay) 
+11,Output,1 digital (Form C relay) 
+12,Input,2 digital 
+12,Output,2 digital (Form C relays) 
+13,Input,2 digital 
+13,Output,2 digital (Form C relays) 
+14,Input,2 digital 
+14,Output,2 digital (Form C relays) 
+15,Input,2 digital 
+15,Output,2 digital (Form C relays) 
+16,Input,4 digital
+16,Output,2 digital
+17,Input,4 digital
+17,Output,2 digital
+18,Input,"2 digital, 2 RCM"
+18,Output,2 digital 
+19,Input,3 digital 30 V AC / 3 digital 60 V DC
+19,Output,1 pulse
+20,Input,3 digital 30 V AC / 3 digital 60 V DC
+20,Output,1 pulse
+21,Input,3 digital 30 V AC / 3 digital 60 V DC
+21,Output,1 pulse
+22,Input,3 digital 30 V AC / 3 digital 60 V DC
+22,Output,1 pulse
+23,Input,3 digital 30 V AC / 3 digital 60 V DC
+23,Output,1 pulse
+24,Input,3 digital 30 V AC / 3 digital 60 V DC
+24,Output,1 pulse
+25,Input,3 digital 30 V AC / 3 digital 60 V DC
+25,Output,1 pulse
+26,Input,3 digital 30 V AC / 3 digital 60 V DC
+26,Output,1 pulse
+27,Input,3 digital 30 V AC / 3 digital 60 V DC
+27,Output,1 pulse
+28,Input,8 digital
+28,Output,4 Form A solid-state / 2 Form C mechanical relay / 2 kWh energy pulsing LEDs (visible and infrared) / 2 kVARh energy pulsing LEDs (visible and infrared)
+29,Input,8 digital
+29,Output,4 Form A solid-state / 2 Form C mechanical relay / 2 kWh energy pulsing LEDs (visible and infrared) / 2 kVARh energy pulsing LEDs (visible and infrared)
+30,Input,0
+30,Output,0
+31,Input,0
+31,Output,1
+32,Input,1
+32,Output,1
+33,Input,1
+33,Output,1
+34,Input,1
+34,Output,1
+3,IO,"Expandable with optional I/O modules (Digital, Analog, Relay)"
+6,Input,Expandable with I/O module
+6,Output,Expandable with I/O module

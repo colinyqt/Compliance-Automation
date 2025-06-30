@@ -1,0 +1,164 @@
+﻿meter_id,recording_type
+2,Min/Max values (available via communication)
+3,"Data logging (Energy, Power, Demand)"
+3,Alarm log (40 records)
+7,Min/max of instantaneous values 
+7,Alarm logs 
+8,Min/max of instantaneous values 
+8,Alarm logs 
+9,Min/max of instantaneous values 
+9,Alarm logs 
+10,Min/max of instantaneous values 
+11,Min/max of instantaneous values 
+12,Min/max of instantaneous values 
+13,Min/max of instantaneous values 
+14,Min/max of instantaneous values 
+15,Min/max of instantaneous values 
+16,Event logs
+16,Maintenance logs
+16,Min/max of instantaneous values
+16,Data logs
+16,Alarm logs
+16,Time stamping
+17,Event logs
+17,Maintenance logs
+17,Min/max of instantaneous values
+17,Data logs
+17,Alarm logs
+17,Time stamping
+17,Waveform capture
+18,Event logs
+18,Maintenance logs
+18,Min/max of instantaneous values
+18,Data logs
+18,Alarm logs
+18,Time stamping
+18,Waveform capture
+19,Min/max of instantaneous values
+19,Waveform logs
+19,Sequence of event recording
+19,Time stamping
+19,Alarm logs
+19,Trending/forecasting
+19,Sag and swell logs
+19,Harmonics logs
+19,GPS synchronisation
+19,Data logs
+19,Event logs
+19,10 data recorders
+20,Min/max of instantaneous values
+20,Waveform logs
+20,Sequence of event recording
+20,Time stamping
+20,Alarm logs
+20,Trending/forecasting
+20,Sag and swell logs
+20,Harmonics logs
+20,GPS synchronisation
+20,Data logs
+20,Event logs
+20,50 data recorders
+21,Min/max of instantaneous values
+21,Waveform logs
+21,Sequence of event recording
+21,Time stamping
+21,Alarm logs
+21,Trending/forecasting
+21,Sag and swell logs
+21,Harmonics logs
+21,GPS synchronisation
+21,Data logs
+21,Event logs
+21,64 data recorders
+22,Min/max of instantaneous values
+22,Waveform logs
+22,Sequence of event recording
+22,Time stamping
+22,Alarm logs
+22,Trending/forecasting
+22,Sag and swell logs
+22,Harmonics logs
+22,GPS synchronisation
+22,Data logs
+22,Event logs
+22,10 data recorders
+23,Min/max of instantaneous values
+23,Waveform logs
+23,Sequence of event recording
+23,Time stamping
+23,Alarm logs
+23,Trending/forecasting
+23,Sag and swell logs
+23,Harmonics logs
+23,GPS synchronisation
+23,Data logs
+23,Event logs
+23,50 data recorders
+24,Min/max of instantaneous values
+24,Waveform logs
+24,Sequence of event recording
+24,Time stamping
+24,Alarm logs
+24,Trending/forecasting
+24,Sag and swell logs
+24,Harmonics logs
+24,GPS synchronisation
+24,Data logs
+24,Event logs
+24,64 data recorders
+25,Min/max of instantaneous values
+25,Waveform logs
+25,Sequence of event recording
+25,Time stamping
+25,Alarm logs
+25,Trending/forecasting
+25,Sag and swell logs
+25,Harmonics logs
+25,GPS synchronisation
+25,Data logs
+25,Event logs
+25,10 data recorders
+26,Min/max of instantaneous values
+26,Waveform logs
+26,Sequence of event recording
+26,Time stamping
+26,Alarm logs
+26,Trending/forecasting
+26,Sag and swell logs
+26,Harmonics logs
+26,GPS synchronisation
+26,Data logs
+26,Event logs
+26,50 data recorders
+27,Min/max of instantaneous values
+27,Waveform logs
+27,Sequence of event recording
+27,Time stamping
+27,Alarm logs
+27,Trending/forecasting
+27,Sag and swell logs
+27,Harmonics logs
+27,GPS synchronisation
+27,Data logs
+27,Event logs
+27,64 data recorders
+28,Up to 100 data recorders
+28,Revenue Log
+28,"Historic data logs (Mean, High, Low)"
+28,Loss Log
+28,Harmonics logs
+28,Energy and Demand Log
+28,Sag/swell Log
+28,Transient Log
+28,"EN 50160, IEC 61000-4-30, IEEE 519 compliance logs"
+28,Event log (5000 events)
+29,Up to 100 data recorders
+29,Revenue Log
+29,"Historic data logs (Mean, High, Low)"
+29,Loss Log
+29,Harmonics logs
+29,Energy and Demand Log
+29,Sag/swell Log
+29,Transient Log
+29,"EN 50160, IEC 61000-4-30, IEEE 519 compliance logs"
+29,Event log (5000 events)

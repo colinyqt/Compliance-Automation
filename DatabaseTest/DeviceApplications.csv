@@ -1,0 +1,77 @@
+﻿meter_id,application
+1,Power monitoring
+1,Cost management
+2,Power monitoring
+2,Cost management
+3,Power monitoring
+3,Cost management
+3,WAGES monitoring (with IO modules)
+4,Power monitoring
+4,Cost management
+5,Power monitoring
+5,Cost management
+6,Power monitoring
+6,Sub billing
+6,Power quality analysis
+7,Power monitoring 
+8,Power monitoring 
+9,Power monitoring 
+10,Power monitoring 
+11,Power monitoring 
+12,Power monitoring 
+13,Power monitoring 
+14,Power monitoring 
+15,Power monitoring 
+16,Gateway
+16,WAGES metering
+16,Power monitoring
+16,Multi-tariff
+17,Gateway
+17,WAGES metering
+17,Power monitoring
+17,Multi-tariff
+18,Gateway 
+18,WAGES metering 
+18,Power monitoring 
+18,Multi-tariff 
+19,Power monitoring
+19,WAGES metering
+20,Power monitoring
+20,WAGES metering
+21,Power monitoring
+21,WAGES metering
+22,Power monitoring
+22,WAGES metering
+23,Power monitoring
+23,WAGES metering
+24,Power monitoring
+24,WAGES metering
+25,Power monitoring
+25,WAGES metering
+26,Power monitoring
+26,WAGES metering
+27,Power monitoring
+27,WAGES metering
+28,Power monitoring
+28,Network management
+28,Cost management
+28,Revenue metering
+29,Power monitoring
+29,Network management
+29,Cost management
+29,Revenue metering
+29,Critical power analysis
+30,Sub-billing management
+30,Metering applications
+31,Sub-billing management
+31,Metering applications
+31,Remote monitoring
+32,Sub-billing management
+32,Energy demand management
+32,WAGES monitoring
+33,Sub-billing management
+33,Energy demand management
+33,WAGES monitoring
+34,Sub-billing management
+34,Energy demand management
+34,WAGES monitoring

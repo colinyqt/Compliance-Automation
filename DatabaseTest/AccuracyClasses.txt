@@ -1,0 +1,106 @@
+meter_id,accuracy_class
+1,Class 1 Active energy conforming to IEC 61557-12
+1,Class 1 Active energy conforming to IEC 62053-22
+1,Class 2 Reactive energy conforming to IEC 62053-24
+2,Class 1 Active energy conforming to IEC 61557-12
+2,Class 1 Active energy conforming to IEC 62053-22
+2,Class 2 Reactive energy conforming to IEC 62053-24
+3,Class 0.5S Active energy conforming to IEC 61557-12
+3,Class 0.5S Active energy conforming to IEC 62053-22
+3,Class 2 Reactive energy conforming to IEC 62053-24
+4,Class 1 Active energy conforming to IEC 61557-12
+4,Class 1 Active energy conforming to IEC 62053-22
+4,Class 2 Reactive energy conforming to IEC 62053-24
+5,Class 1 Active energy conforming to IEC 61557-12
+5,Class 1 Active energy conforming to IEC 62053-22
+5,Class 2 Reactive energy conforming to IEC 62053-24
+6,Class 2 reactive energy conforming to IEC 62053-24
+6,Class 0.5S active energy conforming to IEC 62053-22
+6,Class 5 harmonic distortion (I THD & U THD)
+7,"Class 0.5S active energy conforming to IEC 62053-22 "
+8,"Class 0.5S active energy conforming to IEC 62053-22 "
+9,"Class 0.5S active energy conforming to IEC 62053-22 "
+10,"Class 0.5S active energy conforming to IEC 62053-22 "
+11,"Class 0.5S active energy conforming to IEC 62053-22 "
+12,"Class 0.5S active energy conforming to IEC 62053-22 "
+13,"Class 0.5S active energy conforming to IEC 62053-22 "
+14,"Class 0.5S active energy conforming to IEC 62053-22 "
+15,"Class 0.5S active energy conforming to IEC 62053-22 "
+16,Class 0.2S active energy conforming to IEC 62053-22
+17,Class 0.2S active energy conforming to IEC 62053-22
+18,Class 0.2S active energy conforming to IEC 62053-22
+19,Class 0.2S active energy conforming to IEC 62053-22
+19,Class 0.2 active energy conforming to ANSI C12.20
+19,Class 0.2 active power conforming to IEC 61557-12
+19,Class 0.5S reactive energy conforming to IEC 62053-24
+19,Class 0.5 power factor conforming to IEC 61557-12
+19,Class 0.2 voltage conforming to IEC 61557-12
+19,Class 0.2 current conforming to IEC 61557-12
+20,Class 0.2S active energy conforming to IEC 62053-22
+20,Class 0.2 active energy conforming to ANSI C12.20
+20,Class 0.2 active power conforming to IEC 61557-12
+20,Class 0.5S reactive energy conforming to IEC 62053-24
+20,Class 0.5 power factor conforming to IEC 61557-12
+20,Class 0.2 voltage conforming to IEC 61557-12
+20,Class 0.2 current conforming to IEC 61557-12
+21,Class 0.2S active energy conforming to IEC 62053-22
+21,Class 0.2 active energy conforming to ANSI C12.20
+21,Class 0.2 active power conforming to IEC 61557-12
+21,Class 0.5S reactive energy conforming to IEC 62053-24
+21,Class 0.5 power factor conforming to IEC 61557-12
+21,Class 0.2 voltage conforming to IEC 61557-12
+21,Class 0.2 current conforming to IEC 61557-12
+22,Class 0.2S active energy conforming to IEC 62053-22
+22,Class 0.2 active energy conforming to ANSI C12.20
+22,Class 0.2 active power conforming to IEC 61557-12
+22,Class 0.5S reactive energy conforming to IEC 62053-24
+22,Class 0.5 power factor conforming to IEC 61557-12
+22,Class 0.2 voltage conforming to IEC 61557-12
+22,Class 0.2 current conforming to IEC 61557-12
+23,Class 0.2S active energy conforming to IEC 62053-22
+23,Class 0.2 active energy conforming to ANSI C12.20
+23,Class 0.2 active power conforming to IEC 61557-12
+23,Class 0.5S reactive energy conforming to IEC 62053-24
+23,Class 0.5 power factor conforming to IEC 61557-12
+23,Class 0.2 voltage conforming to IEC 61557-12
+23,Class 0.2 current conforming to IEC 61557-12
+24,Class 0.2S active energy conforming to IEC 62053-22
+24,Class 0.2 active energy conforming to ANSI C12.20
+24,Class 0.2 active power conforming to IEC 61557-12
+24,Class 0.5S reactive energy conforming to IEC 62053-24
+24,Class 0.5 power factor conforming to IEC 61557-12
+24,Class 0.2 voltage conforming to IEC 61557-12
+24,Class 0.2 current conforming to IEC 61557-12
+25,Class 0.2S active energy conforming to IEC 62053-22
+25,Class 0.2 active energy conforming to ANSI C12.20
+25,Class 0.2 active power conforming to IEC 61557-12
+25,Class 0.5S reactive energy conforming to IEC 62053-24
+25,Class 0.5 power factor conforming to IEC 61557-12
+25,Class 0.2 voltage conforming to IEC 61557-12
+25,Class 0.2 current conforming to IEC 61557-12
+26,Class 0.2S active energy conforming to IEC 62053-22
+26,Class 0.2 active energy conforming to ANSI C12.20
+26,Class 0.2 active power conforming to IEC 61557-12
+26,Class 0.5S reactive energy conforming to IEC 62053-24
+26,Class 0.5 power factor conforming to IEC 61557-12
+26,Class 0.2 voltage conforming to IEC 61557-12
+26,Class 0.2 current conforming to IEC 61557-12
+27,Class 0.2S active energy conforming to IEC 62053-22
+27,Class 0.2 active energy conforming to ANSI C12.20
+27,Class 0.2 active power conforming to IEC 61557-12
+27,Class 0.5S reactive energy conforming to IEC 62053-24
+27,Class 0.5 power factor conforming to IEC 61557-12
+27,Class 0.2 voltage conforming to IEC 61557-12
+27,Class 0.2 current conforming to IEC 61557-12
+30,"Active energy: Class 1 conforming to IEC 62053-21"
+31,"Active energy: Class 1 conforming to IEC 62053-21"
+31,Active energy: Class B conforming to EN 50470-3 (MID)
+32,"Active energy: Class 1 conforming to IEC 62053-21"
+32,Active energy: Class B conforming to EN 50470-3 (MID)
+32,"Reactive energy: Class 2 conforming to IEC 62053-23"
+33,"Active energy: Class 0.5S conforming to IEC 62053-22"
+33,Active energy: Class C conforming to EN 50470-3 (MID)
+33,"Reactive energy: Class 2 conforming to IEC 62053-23"
+34,"Active energy: Class 1 conforming to IEC 62053-21"
+34,Active energy: Class B conforming to EN 50470-3 (MID)
+34,"Reactive energy: Class 2 conforming to IEC 62053-23"

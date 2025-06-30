@@ -1,0 +1,152 @@
+﻿meter_id,analysis_feature
+1,Total harmonic distortion
+2,Total harmonic distortion (THD)
+2,Individual odd harmonics up to 15th order
+3,Total harmonic distortion (THD)
+3,Individual odd harmonics up to 31st order
+4,Total harmonic distortion (THD)
+5,Total harmonic distortion (THD)
+5,Individual odd harmonics up to 15th order
+6,Total harmonic distortion
+6,up to the 31st harmonic
+7,"Total harmonic distortion (THD, thd) "
+7,Individual odd harmonics up to 15th 
+8,"Total harmonic distortion (THD, thd) "
+8,Individual odd harmonics up to 15th 
+9,"Total harmonic distortion (THD, thd) "
+9,Individual odd harmonics up to 15th 
+10,Individual odd harmonics up to 31st 
+11,Individual odd harmonics up to 31st 
+12,Individual odd harmonics up to 31st 
+13,Individual odd harmonics up to 31st 
+14,Individual odd harmonics up to 31st 
+15,Individual odd harmonics up to 31st 
+16,up to the 63rd harmonic
+17,up to the 63rd harmonic
+17,Sag/swell detection
+17,Waveform capture
+18,up to the 63rd harmonic 
+18,Sag/swell detection 
+18,Waveform capture 
+19,conforming to EN 50160: 2010 compliance report
+19,conforming to IEEE 519: 2014 compliance report
+19,conforming to IEC 61000-4-30: class A power quality measurement
+19,up to the 63rd harmonic
+19,conforming to IEC 61000-4-15 harmonic distortion
+19,conforming to EN 50160: 2010 waveform capture
+19,conforming to IEEE 519: 2014 voltage sag and swell detection
+19,programmablity (logic and math functions)
+19,conforming to IEC 62586 power quality monitoring
+19,disturbance direction detection
+19,conforming to IEC 61000-4-15 flicker
+19,rapid voltage change
+20,conforming to EN 50160: 2010 compliance report
+20,conforming to IEEE 519: 2014 compliance report
+20,conforming to IEC 61000-4-30: class S power quality measurement
+20,up to the 63rd harmonic
+20,harmonic distortion
+20,waveform capture
+20,voltage sag and swell detection
+20,programmablity (logic and math functions)
+20,conforming to IEC 62586 power quality monitoring
+20,disturbance direction detection
+20,rapid voltage change
+21,conforming to EN 50160: 2010 compliance report
+21,conforming to IEEE 519: 2014 compliance report
+21,conforming to IEC 61000-4-30: class A power quality measurement
+21,up to the 63rd harmonic
+21,conforming to IEC 61000-4-15 harmonic distortion
+21,conforming to EN 50160: 2010 waveform capture
+21,conforming to IEEE 519: 2014 voltage sag and swell
+21,programmablity (logic and math functions)
+21,conforming to IEC 62586 power quality monitoring
+21,disturbance direction detection
+21,conforming to IEC 61000-4-15 flicker
+21,rapid voltage change
+22,conforming to EN 50160: 2010 compliance report
+22,conforming to IEEE 519: 2014 compliance report
+22,conforming to IEC 61000-4-30: class A power quality measurement
+22,up to the 63rd harmonic
+22,conforming to IEC 61000-4-15 harmonic distortion
+22,conforming to EN 50160: 2010 waveform capture
+22,conforming to IEEE 519: 2014 voltage sag and swell detection
+22,programmablity (logic and math functions)
+22,conforming to IEC 62586 power quality monitoring
+22,disturbance direction detection
+22,conforming to IEC 61000-4-15 flicker
+22,rapid voltage change
+23,conforming to EN 50160: 2010 compliance report
+23,conforming to IEEE 519: 2014 compliance report
+23,conforming to IEC 61000-4-30: class S power quality measurement
+23,up to the 63rd harmonic
+23,harmonic distortion
+23,waveform capture
+23,voltage sag and swell detection
+23,programmablity (logic and math functions)
+23,conforming to IEC 62586 power quality monitoring
+23,disturbance direction detection
+23,rapid voltage change
+24,conforming to EN 50160: 2010 compliance report
+24,conforming to IEEE 519: 2014 compliance report
+24,conforming to IEC 61000-4-30: class A power quality measurement
+24,up to the 63rd harmonic
+24,conforming to IEC 61000-4-15 harmonic distortion
+24,conforming to EN 50160: 2010 waveform capture
+24,conforming to IEEE 519: 2014 voltage sag and swell
+24,programmablity (logic and math functions)
+24,conforming to IEC 62586 power quality monitoring
+24,disturbance direction detection
+24,conforming to IEC 61000-4-15 flicker
+24,rapid voltage change
+25,conforming to EN 50160: 2010 compliance report
+25,conforming to IEEE 519: 2014 compliance report
+25,conforming to IEC 61000-4-30: class A power quality measurement
+25,up to the 63rd harmonic
+25,conforming to IEC 61000-4-15 harmonic distortion
+25,conforming to EN 50160: 2010 waveform capture
+25,conforming to IEEE 519: 2014 voltage sag and swell detection
+25,programmablity (logic and math functions)
+25,conforming to IEC 62586 power quality monitoring
+25,disturbance direction detection
+25,conforming to IEC 61000-4-15 flicker
+25,rapid voltage change
+26,conforming to EN 50160: 2010 compliance report
+26,conforming to IEEE 519: 2014 compliance report
+26,conforming to IEC 61000-4-30: class S power quality measurement
+26,up to the 63rd harmonic
+26,harmonic distortion
+26,waveform capture
+26,voltage sag and swell detection
+26,programmablity (logic and math functions)
+26,conforming to IEC 62586 power quality monitoring
+26,disturbance direction detection
+26,rapid voltage change
+27,conforming to EN 50160: 2010 compliance report
+27,conforming to IEEE 519: 2014 compliance report
+27,conforming to IEC 61000-4-30: class A power quality measurement
+27,up to the 63rd harmonic
+27,conforming to IEC 61000-4-15 harmonic distortion
+27,conforming to EN 50160: 2010 waveform capture
+27,conforming to IEEE 519: 2014 voltage sag and swell
+27,programmablity (logic and math functions)
+27,conforming to IEC 62586 power quality monitoring
+27,disturbance direction detection
+27,conforming to IEC 61000-4-15 flicker
+27,rapid voltage change
+28,IEC 61000-4-30 Class A Power Quality Instrument (PQI-A) certified
+28,"EN 50160 compliance monitoring, including flicker"
+28,IEEE 519 compliance monitoring
+28,Disturbance Direction Detection
+28,Extended waveform capture
+28,Harmonics measurement up to the 63rd harmonic
+28,Interharmonics measurement
+28,Rapid voltage change monitoring
+29,High-Speed Transient Capture (10 MHz sampling up to 10 kV)
+29,IEC 61000-4-30 Class A Power Quality Instrument (PQI-A) certified
+29,"EN 50160 compliance monitoring, including flicker"
+29,IEEE 519 compliance monitoring
+29,Disturbance Direction Detection
+29,Extended waveform capture
+29,Harmonics measurement up to the 63rd harmonic
+29,Interharmonics measurement
+29,Rapid voltage change monitoring

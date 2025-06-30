@@ -1,0 +1,259 @@
+meter_id,measurement_type
+1,"Current: per-phase, 3-phase average, and calculated neutral"
+1,"Voltage: V L-N per-phase and 3-phase average, V L-L per-phase and 3-phase average"
+1,"Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total"
+1,Power Factor: True PF - per phase and total
+1,"Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered and Received"
+1,"Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - Last, Present, Predictive, Peak (no timestamp)"
+1,Frequency
+2,"Current: per-phase, 3-phase average, and calculated neutral"
+2,"Voltage: V L-N per-phase and 3-phase average, V L-L per-phase and 3-phase average"
+2,"Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total"
+2,Power Factor: True PF & Displacement PF - per phase and total
+2,"Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered and Received"
+2,"Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - Last, Present, Predictive, Peak (with timestamp)"
+2,Frequency
+2,Real-time clock (RTC)
+2,3 Phase unbalance: Current
+3,"Current: per-phase, 3-phase average, and calculated neutral"
+3,"Voltage: V L-N per-phase and 3-phase average, V L-L per-phase and 3-phase average"
+3,"Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total"
+3,Power Factor: True PF & Displacement PF - per phase and total
+3,"Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered, Received, Total, Net, Last cleared"
+3,"Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - Last, Present, Predictive, Peak (with timestamp)"
+3,Frequency
+3,Real-time clock (RTC)
+3,3 Phase unbalance: Current and Voltage
+3,"Min/Max with timestamp for average/total V L-L, V L-N, Current, Frequency, Active/Apparent/Reactive Power, Power Factor"
+4,"Current: per-phase, 3-phase average, and calculated neutral"
+4,Voltage: V L-N and V L-L per-phase and 3-phase average
+4,"Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total"
+4,Power Factor: True PF
+4,"Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered, Received, Total, Net, Non-resettable"
+4,Demand: Peak demand (no timestamp)
+4,Frequency
+5,"Current: per-phase, 3-phase average, and calculated neutral"
+5,Voltage: V L-N and V L-L per-phase and 3-phase average
+5,"Power: Active (kW), Reactive (kVAR), Apparent (kVA) - phase-wise and total"
+5,Power Factor: True PF & Displacement PF
+5,"Energy: Active (kWh), Reactive (kVARh), Apparent (kVAh) - Delivered, Received, Total, Net, Last cleared, Non-resettable"
+5,"Demand: Active (kW), Reactive (kVAR), Apparent (kVA), Current (I) - with timestamp"
+5,3 Phase unbalance: Current and Voltage
+5,Min/Max with timestamp
+5,Frequency
+6,"Apparent power min/max, total"
+6,"Active and reactive power min/max, total"
+6,"Current min/max, avg"
+6,"Voltage min/max, avg"
+6,"Frequency min/max, avg"
+6,Total current harmonic distortion THD (I) per phase
+6,Total voltage harmonic distortion THD (U) per phase
+6,"Power factor min/max, avg"
+6,Apparent energy total
+6,Active and reactive energy total
+6,Calculated neutral current
+6,"Active power P, P1, P2, P3"
+6,"Current I, I1, I2, I3"
+6,Peak demand power PM, QM, SM
+6,"Voltage U, U21, U32, U13, V, V1, V2, V3"
+6,Peak demand currents
+6,"Reactive power Q, Q1, Q2, Q3"
+6,"Demand power P, Q, S"
+6,Unbalance current
+6,"Active, reactive, apparent energy (signed, four quadrant)"
+6,"Apparent power S, S1, S2, S3"
+7,Current 
+7,Voltage 
+7,Frequency 
+7,Power factor 
+7,Energy 
+7,Active and reactive power 
+8,Current 
+8,Voltage 
+8,Frequency 
+8,Power factor 
+8,Energy 
+8,Active and reactive power 
+9,Current 
+9,Voltage 
+9,Frequency 
+9,Power factor 
+9,Energy 
+9,Active and reactive power 
+10,"Current (per phase and neutral) "
+10,"Voltage (total, per phase L-L and L-N) "
+10,Frequency 
+10,Power factor 
+10,Energy 
+10,Active and reactive power 
+11,"Current (per phase and neutral) "
+11,"Voltage (total, per phase L-L and L-N) "
+11,Frequency 
+11,Power factor 
+11,Energy 
+11,Active and reactive power 
+12,"Current (per phase and neutral) "
+12,"Voltage (total, per phase L-L and L-N) "
+12,Frequency 
+12,Power factor 
+12,Energy 
+12,Active and reactive power 
+13,"Current (per phase and neutral) "
+13,"Voltage (total, per phase L-L and L-N) "
+13,Frequency 
+13,Power factor 
+13,Energy 
+13,Active and reactive power 
+14,"Current (per phase and neutral) "
+14,"Voltage (total, per phase L-L and L-N) "
+14,Frequency 
+14,Power factor 
+14,Energy 
+14,Active and reactive power 
+15,"Current (per phase and neutral) "
+15,"Voltage (total, per phase L-L and L-N) "
+15,Frequency 
+15,Power factor 
+15,Energy 
+15,Active and reactive power 
+16,Current
+16,Voltage
+16,Frequency
+16,Power factor
+16,Energy
+16,Active and reactive power
+16,Measured neutral current
+16,Calculated ground current
+17,Current
+17,Voltage
+17,Frequency
+17,Power factor
+17,Energy
+17,Active and reactive power
+17,Measured neutral current
+17,Calculated ground current
+18,Current 
+18,Voltage 
+18,Frequency 
+18,Power factor 
+18,Energy 
+18,Active and reactive power 
+18,Measured neutral current 
+18,Calculated ground current 
+18,Residual Current Measurement (RCM)
+19,"Current per phase, rms"
+19,Voltage
+19,Frequency total
+19,Active and reactive power total
+19,Apparent power total
+19,Power factor total
+19,"Active and reactive power per phase, rms"
+19,"Apparent power per phase, rms"
+19,Power factor per phase, rms
+20,Current
+20,Voltage
+20,Frequency
+20,Active and reactive power total
+20,Apparent power total
+20,Power factor total
+20,"Active and reactive power per phase, rms"
+20,"Apparent power per phase, rms"
+20,Power factor per phase, rms
+21,"Current per phase, rms"
+21,Voltage
+21,Frequency total
+21,Active and reactive power total
+21,Apparent power total
+21,Power factor total
+21,"Active and reactive power per phase, rms"
+21,"Apparent power per phase, rms"
+21,Power factor per phase, rms
+22,"Current per phase, rms"
+22,Voltage
+22,Frequency total
+22,Active and reactive power total
+22,Apparent power total
+22,Power factor total
+22,"Active and reactive power per phase, rms"
+22,"Apparent power per phase, rms"
+22,Power factor per phase, rms
+23,Current
+23,Voltage
+23,Frequency
+23,Active and reactive power total
+23,Apparent power total
+23,Power factor total
+23,"Active and reactive power per phase, rms"
+23,"Apparent power per phase, rms"
+23,Power factor per phase, rms
+24,"Current per phase, rms"
+24,Voltage
+24,Frequency total
+24,Active and reactive power total
+24,Apparent power total
+24,Power factor total
+24,"Active and reactive power per phase, rms"
+24,"Apparent power per phase, rms"
+24,Power factor per phase, rms
+25,"Current per phase, rms"
+25,Voltage
+25,Frequency total
+25,Active and reactive power total
+25,Apparent power total
+25,Power factor total
+25,"Active and reactive power per phase, rms"
+25,"Apparent power per phase, rms"
+25,Power factor per phase, rms
+26,Current
+26,Voltage
+26,Frequency
+26,Active and reactive power total
+26,Apparent power total
+26,Power factor total
+26,"Active and reactive power per phase, rms"
+26,"Apparent power per phase, rms"
+26,Power factor per phase, rms
+27,"Current per phase, rms"
+27,Voltage
+27,Frequency total
+27,Active and reactive power total
+27,Apparent power total
+27,Power factor total
+27,"Active and reactive power per phase, rms"
+27,"Apparent power per phase, rms"
+27,Power factor per phase, rms
+28,"Voltage (L-L, L-N, L-E)"
+28,"Current (per phase, avg, I4, I5)"
+28,Active, reactive, and apparent power (per phase and total)
+28,Power factor (per phase and total)
+28,Frequency
+28,Voltage and current unbalance
+28,Phase reversal
+28,Calculated residual current
+29,"Voltage (L-L, L-N, L-E)"
+29,"Current (per phase, avg, I4, I5)"
+29,Active, reactive, and apparent power (per phase and total)
+29,Power factor (per phase and total)
+29,Frequency
+29,Voltage and current unbalance
+29,Phase reversal
+29,Calculated residual current
+30,Total active energy
+30,Partial active energy
+31,Total active energy
+31,Partial active energy
+32,Active and reactive energy (four quadrant)
+32,Current
+32,Voltage
+32,Power
+32,Power Factor
+33,Active and reactive energy (four quadrant)
+33,Current
+33,Voltage
+33,Power
+33,Power Factor
+34,Active and reactive energy (four quadrant)
+34,Current
+34,Voltage
+34,Power
+34,Power Factor
