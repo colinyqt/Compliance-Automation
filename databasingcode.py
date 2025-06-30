@@ -508,5 +508,17 @@ class TenderAnalyzer:
                 "potential_issues": []
             }
 
+if __name__ == "__main__":
+    analyzer = TenderAnalyzer("testing.db")
+
+    # Prompt for tender file path
+    tender_file = input("Enter the path to the tender document (e.g., tender.txt): ").strip()
+
+    # Prompt for clause IDs (comma-separated)
+    clause_input = input("Enter clause IDs to extract (comma-separated, e.g., 6.7.2,6.7.3): ").strip()
+    manual_clauses = [c.strip() for c in clause_input.split(",") if c.strip()]
+
+    analyzer.analyze_document(tender_file, manual_clauses)
+
 
 

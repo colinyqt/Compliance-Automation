@@ -6,7 +6,7 @@ import sqlite3
 import sys
 import time
 from typing import Dict, List, Any
-from openpyxl import Workbook
+from openpyxl import Workbook, DEBUG
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 

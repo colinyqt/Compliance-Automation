@@ -1,4 +1,4 @@
-📄 Analyzing document: testing.txt
+📄 Analyzing document: testing.txt"
 📄 Document loaded: 5238 characters
 📋 Found 2 meter requirements
 
@@ -68,16 +68,16 @@
 🏆 Top 3 Best-fit meters:
   1. PowerLogic ION9000
      Reason: Highest accuracy (Class 0.1S), advanced power quality analysis, compliance reporting, and extensive communications.
-     Score: 100
+     Score: 98
      Description: The PowerLogic ION9000 is a premium revenue and power quality meter offering Class 0.1S accuracy and certified Class A power quality analysis. It provides extensive data logging, root cause analysis features like disturbance direction detection, and robust cybersecurity protocols, making it ideal for critical power applications in large facilities and utilities.
-  2. PowerLogic PM8240
-     Reason: Advanced power quality analysis, high sampling rate, large memory, and Class S accuracy.
-     Score: 95
-     Description: The PM8240 is a standard power meter for comprehensive power quality analysis and monitoring. It enhances on the essential model with a higher sampling rate of 256 samples/cycle, significantly more memory (512 MB) for up to 50 data recorders, and Class S power quality measurement according to IEC 61000-4-30.
-  3. PowerLogic PM5560
-     Reason: Full range of measurements, extensive data logging capabilities, and multiple communication protocols including Modbus TCP and BACnet/IP.
-     Score: 93
-     Description: The PM5560 is a high-accuracy power meter designed for comprehensive energy and cost management. It features a full range of measurements, including harmonics up to the 63rd, extensive data logging capabilities, and multiple communication protocols including Modbus TCP and BACnet/IP.
+  2. PowerLogic PM8140
+     Reason: Versatile power meter with a color TFT display, designed for power monitoring and WAGES metering applications.
+     Score: 88
+     Description: The PM8140 is a versatile power meter with a color TFT display, designed for power monitoring and WAGES metering applications. It features a broad range of measurements, including harmonic distortion analysis up to the 63rd harmonic and waveform capture capabilities.
+  3. PowerLogic PM5650
+     Reason: Builds on the PM5560 by adding advanced power quality functions like sag/swell detection and waveform capture.
+     Score: 85
+     Description: The PM5650 builds on the PM5560 by adding advanced power quality functions, including sag/swell detection and waveform capture. This makes it suitable for applications where monitoring power quality disturbances is necessary in addition to energy management.
 
 ✨ Processing requirement 2/2: 8.0...
 📝 Type: DIGITAL POWER METER SPECIFICATIONS
@@ -121,16 +121,16 @@
 
 🏆 Top 3 Best-fit meters:
   1. PowerLogic PM5320
-     Reason: Meets all requirements with high accuracy and advanced features at a reasonable cost.
+     Reason: Meets all requirements with advanced features and high accuracy, making it ideal for comprehensive energy management in large buildings, data centers, and industrial settings.
      Score: 98
      Description: The PM5320 provides the same Class 0.5S accuracy and feature set as the PM5310 but replaces the serial port with an Ethernet port, enabling Modbus TCP communication for modern network infrastructures.
   2. PowerLogic PM5760
-     Reason: Offers comprehensive power quality analysis, including sag/swell detection and waveform capture, making it suitable for critical applications.
+     Reason: Offers advanced power quality analysis and residual current measurement, suitable for critical facilities that need to monitor both power quality and potential equipment insulation issues.
      Score: 93
      Description: The PM5760 combines advanced power quality analysis with residual current measurement. It includes sag/swell detection, waveform capture, and two RCM inputs, providing a comprehensive solution for critical facilities that need to monitor both power quality and potential equipment insulation issues.
-  3. PowerLogic ION9000T
-     Reason: Provides unparalleled insight into transient events with high-speed transient capture, ideal for mission-critical power systems.
-     Score: 88
-     Description: The PowerLogic ION9000T extends the capabilities of the advanced ION9000 by adding high-speed transient capture. It detects sub-microsecond transients up to 10 kV with a 10 MHz sampling rate, providing unparalleled insight into transient events for mission-critical power systems.
+  3. PowerLogic PM8240
+     Reason: Enhances on the essential model with a higher sampling rate of 256 samples/cycle, significantly more memory (512 MB) for up to 50 data recorders, and Class S power quality measurement according to IEC 61000-4-30.
+     Score: 90
+     Description: The PM8240 is a standard power meter for comprehensive power quality analysis and monitoring. It enhances on the essential model with a higher sampling rate of 256 samples/cycle, significantly more memory (512 MB) for up to 50 data recorders, and Class S power quality measurement according to IEC 61000-4-30.
 
 📊 Analysis complete!

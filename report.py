@@ -5,8 +5,6 @@ import ollama
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from pathlib import Path
-import vanna
-from vanna.remote import VannaDefault
 
 @dataclass
 class RequirementSpec:
