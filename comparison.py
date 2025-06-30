@@ -194,28 +194,15 @@ class MeterSpecificationComparison:
                     # Collect all lines until the next block
                     while i < len(lines):
                         line_strip = lines[i].strip()
-                        
-                        # Stop if we hit the best-fit meters section
-                        if line_strip.startswith("🏆 Top 3 Best-fit meters:"):
+                        # Stop if we hit the next block
+                        if line_strip.startswith("🏆 Top 3 Best-fit meters:") or \
+                           line_strip.startswith("✨ Processing requirement") or \
+                           line_strip.startswith("📊 Analysis complete!"):
+
                             break
-                        
-                        # Stop if we hit the next processing requirement
-                        if line_strip.startswith("✨ Processing requirement"):
-                            break
-                        
-                        # Stop if we hit analysis complete
-                        if line_strip.startswith("📊 Analysis complete!"):
-                            break
-                        
-                        # Only keep lines that start with a dash (specifications)
-                        if line_strip.startswith("-"):
-                            # Remove leading dash and spaces
-                            cleaned = line_strip[1:].strip()
-                            
-                            # Skip the section header if it's just repeating the clause ID
-                            if not cleaned.startswith(clause_id):
-                                section['requirements'].append(cleaned)
-                                
+                        # Add all non-empty lines as requirements
+                        if line_strip:
+                            section['requirements'].append(line_strip)
                         i += 1
                         
                 # Find the top recommended meter (use the first one as "selected")
@@ -254,7 +241,8 @@ class MeterSpecificationComparison:
                                     description_lines.append(desc_line)
                                 i += 1
                             
-                            section['meter_description'] = ' '.join(description_lines)
+                            # Update the meter description to match the selected meter (not available here)
+                            section['meter_description'] = ''
                             break
                         
                         i += 1
@@ -283,7 +271,7 @@ class MeterSpecificationComparison:
         print(f"\nComparing {len(requirements)} requirements against {model_number} specifications...")
         
         # If we have too many requirements, chunk them
-        MAX_REQUIREMENTS_PER_CHUNK = 15
+        MAX_REQUIREMENTS_PER_CHUNK = 10
         
         if len(requirements) > MAX_REQUIREMENTS_PER_CHUNK:
             print(f"🔄 Large requirement set detected. Processing in chunks of {MAX_REQUIREMENTS_PER_CHUNK}...")
@@ -642,7 +630,10 @@ Analyze ALL {len(requirements)} requirements. Do not skip any.
 
             # Get meter specifications from DB
             meter_specs = self._find_meter_specs(selected_meter)
-            
+
+            # Update the meter description to match the selected meter
+            section['meter_description'] = meter_specs.get('selection_blurb', '')
+
             if not meter_specs:
                 all_sections_compliant = False
                 print(f"❌ No specifications found for {selected_meter}")

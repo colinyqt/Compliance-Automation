@@ -337,7 +337,7 @@ If none are suitable, output:
         return "\n".join(lines)
 
 class DocumentParser:
-    """Clean document parsing for tender files"""
+    """LLM-powered document parsing for tender files"""
 
     @staticmethod
     def read_document(file_path: str) -> str:
@@ -348,31 +348,32 @@ class DocumentParser:
 
     @staticmethod
     def extract_meter_requirements(text: str, manual_clauses: List[str]) -> List['MeterRequirement']:
-        """Extract only the specified clauses from the document."""
-        lines = text.split('\n')
-        section_pattern = re.compile(r'^([A-Za-z]?\d+(\.\d+)*)([)\.]|\s)\s*(.+)?$')
-        manual_clauses_set = set(str(c).strip() for c in manual_clauses)
-        clause_positions = []
-        for idx, line in enumerate(lines):
-            match = section_pattern.match(line.strip())
-            if match:
-                section_id = match.group(1)
-                title = match.group(4) or ""
-                if section_id in manual_clauses_set:
-                    clause_positions.append((section_id, idx, title.strip()))
-        clause_positions.sort(key=lambda x: x[1])
+        """Extract specified clauses using LLM for robust parsing."""
+        import ollama
         requirements = []
-        for i, (section_id, start_idx, title) in enumerate(clause_positions):
-            end_idx = clause_positions[i+1][1] if i+1 < len(clause_positions) else len(lines)
-            content = "\n".join(lines[start_idx:end_idx])
-            # For simplicity, just treat the whole section as the requirement
-            specs = [line.strip() for line in content.split('\n') if line.strip()]
-            requirements.append(MeterRequirement(
-                clause_id=section_id,
-                meter_type=title,
-                specifications=specs,
-                content=content
-            ))
+        for clause_id in manual_clauses:
+            prompt = f"""
+You are an expert at reading tender documents. Extract the **full text** (including all subpoints, bullet points, and indented text) for clause "{clause_id}" from the following tender document. Return only the text for this clause, including its heading and all relevant content, but do not include any other clauses.
+
+Tender document:
+{text}
+"""
+            try:
+                response = ollama.chat(
+                    model="qwen2.5-coder:7b",
+                    messages=[{"role": "user", "content": prompt}],
+                    options={"temperature": 0.1}
+                )
+                clause_text = response['message']['content'].strip()
+                if clause_text:
+                    requirements.append(MeterRequirement(
+                        clause_id=clause_id,
+                        meter_type="",  # Optionally, use LLM to extract a type/title
+                        specifications=[clause_text],  # Or further split/specify if needed
+                        content=clause_text
+                    ))
+            except Exception as e:
+                print(f"LLM extraction failed for clause {clause_id}: {e}")
         return requirements
 
 class TenderAnalyzer:
