@@ -1,0 +1,75 @@
+# prompts/quick_meter_analysis.yaml
+name: "Quick Meter Analysis"
+description: "Simple meter recommendation for any document"
+version: "1.1"
+
+inputs:
+  - name: "document"
+    type: "file"
+    required: true
+    formats: ["txt"]
+    description: "Document to analyze"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "extract_clauses"
+    prompt_template: |
+      You are an expert at analyzing technical documents.
+      Extract all relevant meter-related clauses or requirements from the following document.
+      For each clause, provide:
+        - clause_id (or a short identifier)
+        - full text of the clause or requirement
+
+      DOCUMENT:
+      {{ document.content }}
+
+      Return JSON:
+      {
+        "clauses": [
+          {
+            "clause_id": "e.g. 3.1",
+            "text": "full clause text"
+          }
+        ]
+      }
+
+  - name: "recommend_meters"
+    dependencies: ["extract_clauses"]
+    prompt_template: |
+      For each clause below, recommend the top 3 most suitable meters from the database.
+      Use the clause text to determine the requirements.
+
+      CLAUSES:
+      {{ clauses | tojson(indent=2) }}
+
+      AVAILABLE METERS:
+      {{ meters | tojson(indent=2) }}
+
+      Your task:
+      - For each clause, recommend the 3 best meters and explain why.
+      - Return ONLY a valid JSON object with a top-level "recommendations" key as shown below.
+      - Do NOT return markdown, explanations, or any text outside the JSON.
+
+      Example output:
+      {
+        "recommendations": [
+          {
+            "clause_id": "3.1",
+            "top_meters": [
+              {
+                "model_name": "PM5560",
+                "series": "pm5000_series",
+                "justification": "This meter fits because..."
+              }
+            ]
+          }
+        ]
+      }
+
+outputs:
+  - name: "quick_results"
+    type: "json"
+    filename: "quick_analysis_{{ timestamp }}.json"
+    data: "{{ recommend_meters.parsed_result }}"

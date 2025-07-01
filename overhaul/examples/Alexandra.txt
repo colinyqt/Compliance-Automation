@@ -1,0 +1,238 @@
+Clause 1.20.4 Multi-Function Electronic Meters  
+a) 
+Multi-function electronic meter shall be of a digital display type to measure the following 
+electrical parameters by means of microprocessor technology 
+Function of Measurement 
+Minimum 
+Accuracy 
+True Root Mean Square (RMS) Current: per phase & neutral   
+±0.5% 
+True RMS Volts: all phase-to-phase & phase-to-neutral   
+±0.5% 
+Real Power (kW): per phase & three phase total 
+±0.5% 
+Apparent Power (kVA): per phase & three phase total 
+±0.5% 
+Reactive Power (kVAr): per phase & three phase total  
+±0.5% 
+Total Power Factor: per phase & three phase total  
+±0.5% 
+Frequency (Hz) 
+±0.5% 
+Maximum Demand Current (Id): per phase, present & peak 
+±0.5% 
+Real Power Demand (kWd): three phase total, present & peak  
+±0.5% 
+Apparent Power Demand (kVAd): three phase total, present & 
+peak  
+±0.5% 
+Reactive Power Demand (kVArd): three phase total 
+±0.5% 
+Real Energy (kWh): three phase total 
+±0.5% 
+Total Harmonic Distortion (THD): per phase, voltage & current (at 
+least up to 31st harmonic order)   
+±1% 
+b) 
+The meter shall be suitable for operation at 400V/230V, 50Hz and accepts current inputs 
+from standard measuring current transformers with rated secondary current of 5A.  The 
+meter shall be rated for an operating temperature up to 50°C and have a minimum 
+overcurrent withstand rating of 100A for 1 second;  
+c) 
+The meter shall be capable to trend the required parameters as stipulated in the EMA at 
+every 15 minutes and include hourly, daily, monthly and annual data.  The meter shall be 
+equipped with sufficient built-in memory capable of maintaining all data collected for a 
+minimum of 36 months.  The Contractor shall retrieve the data files from all meters and 
+submit to the Employer on annual basis or as required by the Employer during the Defect 
+Liability Period;  
+d) 
+The meter shall be equipped with a communication port at front panel, using either 
+RS485, RJ45 or similar socket and plug as Approved, for communication with portable 
+personal computer for energy control and audit purpose.  The connection cable with the 
+appropriate plug and a copy of proprietary-made software for data retrieval shall be 
+provided;  
+e) 
+The meter shall be flush mounted with protection to not less than IP2X at front face.  All 
+wiring shall be connected via terminal blocks to allow easy removal of the cable 
+connectors in the event that the meter requires replacement;  
+f) 
+The meter shall comply with the general electrical safety requirements as specified in IEC 
+61010-1 and should be suitably suppressed to fall within the limits allowed by BS EN 
+61000-6-4 or IEC 61000-6-4 and BS EN 61000-6-2 or IEC 61000-6-2 for electromagnetic 
+emission and immunity; 
+g) 
+The manufacturer shall operate a quality management system conforming to ISO 9001 or 
+other equivalent national/international quality system.  The manufacturer shall issue a 
+calibration certificate for every meter at time of production and the calibration certificate 
+shall be submitted to the CM.  Such calibration shall be conducted by the manufacturer 
+within one year prior to delivery of the meter on site or prior to the date of factory 
+acceptance test if the meter is installed in a switchboard that factory acceptance test is 
+required.  The manufacturer shall also declare in writing that the meter shall require no 
+re-calibration for a minimum of 10 years from the time of issue of calibration certificate.  
+A label marking the manufacturer’s calibration date shall be fixed adjacent to the meter.
+
+Clause 1.20.5 Power Quality Meters (PQM) 
+Where indicated on the drawings (HV/LT MSB) provide a microprocessor based DIN LCD 
+Quality Power Meter with RS485 and/or TCP/IP communications to interface with the EMS 
+system. 
+PM denotes for HT switchboards and PQM for LV switchboards.  
+As a minimum the Meter shall provide the following information, with a minimum of 0.5% 
+accuracy through a LCD display: 
+• 
+True RMS voltage (Line to Line Voltage) 
+• 
+True RMS voltage (Line to Neutral Voltage) 
+• 
+Frequency 
+• 
+Line and system currents  
+• 
+System power (active, apparent and reactive) 
+• 
+Peak average demand, kVA and kW 
+• 
+Harmonics, Vthd and Ithd and harmonic spectrum up to 50th harmonic 
+• 
+Power factor 
+ 
+1.20.6 Waveforms (voltage and current)  
+The meter shall also provide disturbance monitoring, capable of capturing waveform on 
+voltages and currents on trigger. After a trigger the meter can store up to 100 waveforms with a 
+resolution from 1024 samples/cycle as a minimum 
+As a minimum, the meter shall be able to provide the following functions: 
+• 
+On-board memory up to 8 GB. 
+• 
+Up to 10 programmable recordings with different start and stop time 
+• 
+provides event recording, waveform capture, waveform display, phasor diagrams, 
+historical trending, time-of-use etc. 
+• 
+records of individual order for even and odd harmonic of voltage and current up to 50th 
+order 
+• 
+Provide a RS485 and/or TCP/IP communication interface to the metering communication 
+network 
+• 
+Meters shall be tested to IEC 60255 & 61000 Pt 4 & 6.  
+Others include: 
+a) 
+Cross triggering.  All disturbances will cause all channels (voltage, current, and any 
+additional channels) to be recorded. 
+b) 
+Triggering shall be on both the line-to-neutral and line-to-line channels.  All disturbances 
+will result in recording of both line-to-neutral and line-to-line voltage waveforms. 
+c) 
+RMS Disturbances. 
+i) 
+The unit will trigger on one-cycle or longer variations in the rms voltage level, 
+outside user-defined thresholds.  Triggering thresholds will be user-defined for 
+both voltages (L-N and L-L) and currents. 
+ii) 
+The monitor shall characterize rms disturbances according to the requirements of 
+IEC 61000-4-30. 
+iii) 
+Both waveforms and rms plots will be recorded for rms disturbances. 
+iv) 
+The initiation of a trigger will cause the instrument to store a trend plot of the rms 
+voltage during the disturbance (both L-N and L-L rms plots will be recorded).  This 
+trend will include a minimum of 5 cycles of pre-trigger data, and 25 cycles of post-
+event data.  The pre-event and post-event durations will be user-defined. 
+v) 
+The initiation of a trigger will cause the instrument to store the actual waveforms 
+(voltage and current) during the disturbance.  The waveform recording will include 
+user-defined pre-event and post-event cycles. 
+ 
+1.20.7 PQM Characterizing steady state quantities 
+a) 
+The unit shall trend Voltage, current, power factor, kW, kVAR, and energy.  Individual 
+phase quantities and three phase quantities shall be available.  These will be provided as 
+maximum, minimum, and average values at user-specified intervals based on continuous 
+sampling and calculation. 
+b) 
+Steady state voltage and current profiling 
+i) 
+A daily trend of envelope data shall be recorded for voltage and current.  This 
+trend shall store for each sampling interval (user-specified with a default to ten 
+minutes per IEC specifications) the minimum cycle rms value, maximum cycle rms 
+value, and average rms value over all cycles in the ten minute interval.  This 
+information shall be available for all three phases of the voltage and current. 
+ii) 
+Any violations of the sustained RMS voltage regulation values (duration > 60 
+seconds and magnitude user definable) shall be recorded and “alarmable”.  The 
+total amount of time the regulation limit was violated for each event shall also be 
+recorded.  
+c) 
+Frequency envelopes (min, max and average) time trends shall be available.
+
+Clause 1.20.8 Digital Power Meter (DM) 
+a) 
+All digital power meter shall be verified by either tested and certification by a laboratory 
+accredited by SAC-SINGLAS or recognised by SAC-SINGLAS.  
+b) 
+Provide manual link bypass for direct connected meters to maintain continuity of supply 
+during meter servicing or replacement.   
+c) 
+All meters receiving supply from a PV solar connection shall be bi-directional. 
+d) 
+Records confirming the satisfactory testing of power meter required to be tested under 
+sections 2.4.2 and 2.4.3 of Singapore Metering Code are to be produced when requested 
+upon. 
+e) 
+The power meter accuracy shall comply to Singapore Metering Code 2.4.29 with 
+accuracy class 0.5 or better. While the metering current transformers of accuracy class 
+0.5 with 5 amperes secondary current and 5VA burden. 
+f) 
+The meter memory shall be tamper-free and allow no resettable of kWh value.  
+g) 
+The data from the meter shall be collected via built in communication interface Modbus 
+RTU (RS485). 
+h) 
+Communication terminals shall be protected by suitable surge protective device. 
+i) 
+The kWh meter shall be applied in three-phase, four wired systems. In four-wire 
+connection, the kWh meter shall utilise the circuit neutral common reference and not 
+earth ground to provide metering accuracy. 
+j) 
+The kWh meter shall be capable of being applied without modification at nominal 
+frequency of 50Hz. 
+k) 
+The kWh meter shall include instantaneous quantity and accessible via communication 
+interface to an energy management software: 
+i) 
+Current, per phase RMS, three-phase. 
+ii) 
+Voltage, phase-to-phase, phase to neutral, and three-phase average (phase-to-
+phase and phase-to-neutral) 
+iii) 
+Real power, per phase and three-phase total 
+iv) 
+Power factor, per phase and three-phase total 
+v) 
+Frequency 
+l) 
+The electricity meter shall have the following EMC compatibility: 
+i) 
+Impulse voltage test: 6 kV 1.2/50 μs (IEC 60060-1) 
+ii) 
+Surge voltage test: 4kV 1.2/50 μs (IEC 61000-4-5) 
+iii) 
+Immunity to disturbance with harmonics: 2kHz – 150kHz 
+iv) 
+Immunity to electromagnetic HF-fields: 80 MHz – 2 GHz at 10 V/m  
+v) 
+IEC 61000-4-3 
+vi) 
+Radio frequency emission: EB 55022, class B 
+vii) 
+Electrostatic discharge: 15 kV (IEC 61000-4-2) 
+m) 
+All sub meters (electrical, medical gas, water etc) shall be able to communicate with the 
+EMS for analysing. The energy analyser shall have built-in web user interface via IP 
+connection to allow remote monitoring. The user interface shall have configurable 
+dashboards and graphical analysis functions (historical data, benchmark, instantaneous 
+values, and consumption). 
+Meters/devices connected via Modbus RS485 shall be limited to 15 nos. for maximum 
+latency.
+
+
