@@ -1,0 +1,114 @@
+================================================================================
+TENDER ANALYSIS REPORT - RELEVANT CLAUSE EXTRACTION ONLY
+================================================================================
+
+Analysis Date: 20250702_060728
+Source Document: redacted_output.pdf
+Analysis Engine: Tender Clause Extraction Only
+
+================================================================================
+
+## RELEVANT CLAUSES EXTRACTED
+
+### Clause 1.20.4 - Multi-Function Electronic Meters
+**Category:** Metering Devices
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+a) Multi-function electronic meter shall be of a digital display type to measure the following electrical parameters by means of microprocessor technology  
+Function of Measurement Minimum Accuracy  
+True Root Mean Square (RMS) Current: per phase & neutral ±0.5%  
+True RMS Volts: all phase-to-phase & phase-to-neutral ±0.5%  
+Real Power (kW): per phase & three phase total ±0.5%  
+Apparent Power (kVA): per phase & three phase total ±0.5%  
+Reactive Power (kVAr): per phase & three phase total ±0.5%  
+Total Power Factor: per phase & three phase total ±0.5%  
+Frequency (Hz) ±0.5%  
+Maximum Demand Current (Id): per phase, present & peak ±0.5%  
+Real Power Demand (kWd): three phase total, present & peak ±0.5%  
+Apparent Power Demand (kVAd): three phase total, present & peak ±0.5%  
+Reactive Power Demand (kVArd): three phase total ±0.5%  
+Real Energy (kWh): three phase total ±0.5%  
+Total Harmonic Distortion (THD): per phase, voltage & current (at least up to 31st harmonic order) ±1%  
+b) The meter shall be suitable for operation at 400V/230V, 50Hz and accepts current inputs from standard measuring current transformers with rated secondary current of 5A. The meter shall be rated for an operating temperature up to 50°C and have a minimum overcurrent withstand rating of 100A for 1 second;  
+c) The meter shall be capable to trend the required parameters as stipulated in the EMA at every 15 minutes and include hourly, daily, monthly and annual data. The meter shall be equipped with sufficient built-in memory capable of maintaining all data collected for a minimum of 36 months. The Contractor shall retrieve the data files from all meters and submit to the Employer on annual basis or as required by the Employer during the Defect Liability Period;  
+d) The meter shall be equipped with a communication port at front panel, using either RS485, RJ45 or similar socket and plug as Approved, for communication with portable personal computer for energy control and audit purpose. The connection cable with the appropriate plug and a copy of proprietary-made software for data retrieval shall be provided;  
+e) The meter shall be flush mounted with protection to not less than IP2X at front face. All wiring shall be connected via terminal blocks to allow easy removal of the cable connectors in the event that the meter requires replacement;  
+f) The meter shall comply with the general electrical safety requirements as specified in IEC 61010-1 and should be suitably suppressed to fall within the limits allowed by BS EN 61000-6-4 or IEC 61000-6-4 and BS EN 61000-6-2 or IEC 61000-6-2 for electromagnetic emission and immunity;  
+g) The manufacturer shall operate a quality management system conforming to ISO 9001 or other equivalent national/international quality system. The manufacturer shall issue a calibration certificate for every meter at time of production and the calibration certificate shall be submitted to the CM. Such calibration shall be conducted by the manufacturer within one year prior to delivery of the meter on site or prior to the date of factory acceptance test if the meter is installed in a switchboard that factory acceptance test is required. The manufacturer shall also declare in writing that the meter shall require no re-calibration for a minimum of 10 years from the time of issue of calibration certificate. A label marking the manufacturer’s calibration date shall be fixed adjacent to the meter.
+
+**Key Specifications Identified:**
+- True RMS Current, True RMS Volts, Real Power, Apparent Power, Reactive Power, Total Power Factor, Frequency, Maximum Demand Current, Real Power Demand, Apparent Power Demand, Reactive Power Demand, Real Energy
+- Accuracy ±0.5%
+- Communication protocols (RS485, RJ45)
+- Operating temperature up to 50°C
+- Overcurrent withstand rating of 100A for 1 second
+- Data trending every 15 minutes, hourly, daily, monthly, and annually
+- Built-in memory for 36 months
+- Communication port with RS485, RJ45 sockets
+- IP2X protection
+- Electrical safety compliance (IEC 61010-1)
+- Electromagnetic emission and immunity compliance (BS EN 61000-6-4, IEC 61000-6-4, BS EN 61000-6-2, IEC 61000-6-2)
+
+### Clause 1.20.8 - Digital Power Meter (DM)
+**Category:** Metering Devices
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+a) All digital power meter shall be verified by either tested and certification by a laboratory accredited by SAC-SINGLAS or recognised by SAC-SINGLAS.  
+b) Provide manual link bypass for direct connected meters to maintain continuity of supply during meter servicing or replacement.   
+c) All meters receiving supply from a PV solar connection shall be bi-directional.  
+d) Records confirming the satisfactory testing of power meter required to be tested under sections 2.4.2 and 2.4.3 of Singapore Metering Code are to be produced when requested upon.  
+e) The power meter accuracy shall comply to Singapore Metering Code 2.4.29 with accuracy class 0.5 or better. While the metering current transformers of accuracy class 0.5 with 5 amperes secondary current and 5VA burden.  
+f) The meter memory shall be tamper-free and allow no resettable of kWh value.  
+g) The data from the meter shall be collected via built-in communication interface Modbus RTU (RS485).  
+h) Communication terminals shall be protected by suitable surge protective device.  
+i) The kWh meter shall be applied in three-phase, four-wired systems. In four-wire connection, the kWh meter shall utilise the circuit neutral common reference and not earth ground to provide metering accuracy.  
+j) The kWh meter shall be capable of being applied without modification at nominal frequency of 50Hz.  
+k) The kWh meter shall include instantaneous quantity and accessible via communication interface to an energy management software:  
+i) Current, per phase RMS, three-phase.  
+ii) Voltage, phase-to-phase, phase to neutral, and three-phase average (phase-to-phase and phase-to-neutral)  
+iii) Real power, per phase and three-phase total  
+iv) Power factor, per phase and three-phase total  
+v) Frequency  
+l) The electricity meter shall have the following EMC compatibility:  
+i) Impulse voltage test: 6 kV 1.2/50 μs (IEC 60060-1)  
+ii) Surge voltage test: 4kV 1.2/50 μs (IEC 61000-4-5)  
+iii) Immunity to disturbance with harmonics: 2kHz – 150kHz  
+iv) Immunity to electromagnetic HF-fields: 80 MHz – 2 GHz at 10 V/m  
+v) IEC 61000-4-3  
+vi) Radio frequency emission: EB 55022, class B  
+vii) Electrostatic discharge: 15 kV (IEC 61000-4-2)  
+m) All sub meters (electrical, medical gas, water etc) shall be able to communicate with the EMS for analysing. The energy analyser shall have built-in web user interface via IP connection to allow remote monitoring. The user interface shall have configurable dashboards and graphical analysis functions (historical data, benchmark, instantaneous values, and consumption).  
+Meters/devices connected via Modbus RS485 shall be limited to 15 nos. for maximum latency.
+
+**Key Specifications Identified:**
+- True RMS Current, True RMS Volts, Real Power, Apparent Power, Reactive Power, Total Power Factor, Frequency
+- Accuracy class 0.5 or better
+- Communication interface (Modbus RTU)
+- Surge protection
+- EMC compatibility (IEC 60060-1, IEC 61000-4-5, IEC 61000-4-3, IEC 61000-4-2)
+- Remote monitoring via IP connection
+
+### Clause 1.20.7 - PQM Characterizing Steady State Quantities
+**Category:** Metering Devices
+**Relevance Score:** 8
+
+**Complete Clause Text:**
+a) The unit shall trend Voltage, current, power factor, kW, kVAR, and energy. Individual phase quantities and three phase quantities shall be available. These will be provided as maximum, minimum, and average values at user-specified intervals based on continuous sampling and calculation.  
+b) Steady state voltage and current profiling  
+i) A daily trend of envelope data shall be recorded for voltage and current. This trend shall store for each sampling interval (user-specified with a default to ten minutes per IEC specifications) the minimum cycle rms value, maximum cycle rms value, and average rms value over all cycles in the ten minute interval. This information shall be available for all three phases of the voltage and current.  
+ii) Any violations of the sustained RMS voltage regulation values (duration > 60 seconds and magnitude user definable) shall be recorded and "alarmable". The total amount of time the regulation limit was violated for each event shall also be recorded.
+
+**Key Specifications Identified:**
+- Voltage, Current, Power Factor, kW, kVAR, Energy
+- Trending every 15 minutes, hourly, daily, monthly, and annually
+- Steady state voltage and current profiling
+- Sustained RMS voltage regulation values
+
+END OF EXTRACTION
+
+================================================================================
+
+END OF REPORT
+================================================================================

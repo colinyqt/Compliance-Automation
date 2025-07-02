@@ -29,7 +29,7 @@ class MeterDatabase:
     def __init__(self, db_path: str):
         self.db_path = db_path
         self._validate_database()
-        self.model = "qwen2.5-coder:7b"
+        self.model = "qwen2.5-coder:7b"  # Default model for AI interactions
 
     def _validate_database(self):
         """Ensure database exists and has expected structure"""
@@ -510,7 +510,7 @@ class TenderAnalyzer:
             }
 
 if __name__ == "__main__":
-    analyzer = TenderAnalyzer("testing.db")
+    analyzer = TenderAnalyzer(r"C:\Users\cyqt2\Database\overhaul\databases\meters.db")
 
     # Prompt for tender file path
     tender_file = input("Enter the path to the tender document (e.g., tender.txt): ").strip()

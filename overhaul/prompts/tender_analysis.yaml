@@ -1,0 +1,71 @@
+name: "Tender Clause Extraction Only"
+description: "Extract only the relevant meter specification clauses from the tender document."
+
+inputs:
+  - name: "tender_document"
+    type: "file"
+    required: true
+    formats: ["txt", "pdf"]
+    description: "Tender document to analyze"
+
+processing_steps:
+  - name: "extract_relevant_clauses"
+    description: "Extract COMPLETE specifications from ONLY relevant clauses"
+    prompt_template: |
+      You are an expert electrical engineer specializing in tender specification analysis.
+
+      INSTRUCTIONS:
+      1. Focus ONLY on clauses that name a specific device (e.g. "Digital Power Analyzer", "Multi-Function Meter", "DMMD")
+      2. Exclude general requirement clauses (e.g. "General", "Testing") and component clauses (e.g. "Current Transformer", "Wiring"), unless they are a sub-section of a specific device clause.
+      3. For each relevant clause, provide the COMPLETE text—no truncation.
+      4. Format your response as clear, structured text (not JSON).
+
+      RELEVANCE CRITERIA - A clause must contain at least one of:
+      - Voltage/Current measurement specifications
+      - Accuracy requirements or standards
+      - Communication protocols
+      - Power measurement capabilities
+      - Environmental ratings or EMC requirements
+
+      DOCUMENT CONTENT:
+      {{ tender_document.content }}
+
+      FORMAT YOUR RESPONSE EXACTLY LIKE THIS:
+
+      ## RELEVANT CLAUSES EXTRACTED
+
+      ### Clause [number] - [Clause Title]
+      **Category:** [Category if available]
+      **Relevance Score:** [Your estimate, 1-10]
+
+      **Complete Clause Text:**
+      [Full clause text here - include everything, do not truncate]
+
+      **Key Specifications Identified:**
+      - [List all key specs found]
+
+      ### [Next relevant clause if any...]
+
+      END OF EXTRACTION
+    timeout: 300
+
+outputs:
+  - type: "text"
+    filename: "{{ tender_document.basename }}_relevant_clauses_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      TENDER ANALYSIS REPORT - RELEVANT CLAUSE EXTRACTION ONLY
+      ================================================================================
+
+      Analysis Date: {{ timestamp }}
+      Source Document: {{ tender_document.name }}
+      Analysis Engine: {{ config.name }}
+
+      ================================================================================
+
+      {{ extract_relevant_clauses.raw_response }}
+
+      ================================================================================
+
+      END OF REPORT
+      ================================================================================
