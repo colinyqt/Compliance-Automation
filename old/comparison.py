@@ -13,9 +13,9 @@ from openpyxl.utils import get_column_letter
 class MeterSpecificationComparison:
     """Tool to compare tender requirements with actual meter specifications"""
 
-    def __init__(self, db_path="testing.db"):
+    def __init__(self, db_path="overhaul\databases\meters.db"):
         """Initialize with the SQLite database"""
-        self.db_path = db_path
+        self.db_path = r"C:\Users\cyqt2\Database\overhaul\databases\meters.db"
         self.model = "qwen2.5-coder:7b"
         self._validate_database()
 

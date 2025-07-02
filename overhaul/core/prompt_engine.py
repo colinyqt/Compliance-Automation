@@ -13,6 +13,7 @@ from .function_registry import DatabaseFunctionRegistry
 from .template_analyzer import TemplateAnalyzer
 from .file_processor import FileProcessor
 from .llm_processor import LLMProcessor
+from .excel_generator import ExcelGenerator
 
 class PromptEngine:
     """Main YAML prompt engine with auto-discovery database integration"""
@@ -311,7 +312,56 @@ class PromptEngine:
                 
                 with open(output_path, 'w', encoding='utf-8') as f:
                     json.dump(data, f, indent=2, default=str)
+            
+            elif output_type == 'excel':
+                data = output_spec.get('data', pipeline_results)
+                if isinstance(data, str):
+                    # Data is a template string
+                    data_template = self.jinja_env.from_string(data)
+                    data = data_template.render(**context)
+                    try:
+                        data = json.loads(data)
+                    except:
+                        pass
+                elif isinstance(data, dict):
+                    # Data is a structure with template values
+                    data = self._render_template_dict(data, context)
                 
+                # Generate Excel file
+                excel_generator = ExcelGenerator()
+                try:
+                    if excel_generator.generate_compliance_report(str(output_path), data):
+                        print(f"✅ Excel file generated: {output_path}")
+                    else:
+                        print(f"❌ Failed to generate Excel file: {output_path}")
+                except Exception as e:
+                    print(f"❌ Excel generation error: {e}")
+
+            elif output_type == 'custom_excel':
+                # Handle custom Excel generation with direct LLM processing
+                llm_step = output_spec.get('llm_step')
+                if llm_step and llm_step in pipeline_results:
+                    llm_result = pipeline_results[llm_step]
+                    raw_response = llm_result.get('raw_response', '')
+                    
+                    # Try to extract JSON from raw response
+                    excel_data = self._extract_and_fix_json_from_raw_response(raw_response)
+                    
+                    # Generate Excel file
+                    if excel_data is not None:
+                        excel_generator = ExcelGenerator()
+                        try:
+                            if excel_generator.generate_compliance_report(str(output_path), excel_data):
+                                print(f"✅ Custom Excel file generated: {output_path}")
+                            else:
+                                print(f"❌ Failed to generate Excel file: {output_path}")
+                        except Exception as e:
+                            print(f"❌ Excel generation error: {e}")
+                    else:
+                        print(f"❌ Could not extract valid JSON from LLM response - check raw output file")
+                else:
+                    print(f"❌ LLM step '{llm_step}' not found in pipeline results")
+            
             elif output_type == 'markdown':
                 template_file = output_spec.get('template')
                 if template_file and Path(template_file).exists():
@@ -354,6 +404,94 @@ class PromptEngine:
                 return data
         else:
             return data
+    
+    def _extract_and_fix_json_from_raw_response(self, raw_response: str) -> dict:
+        """Extract and fix JSON from raw LLM response"""
+        
+        print(f"🔧 Extracting JSON from {len(raw_response)} character response...")
+        
+        import re
+        import json
+        
+        # Remove any markdown code block markers
+        clean_response = raw_response.strip()
+        if clean_response.startswith('```json'):
+            clean_response = clean_response[7:]  # Remove ```json
+        if clean_response.startswith('```'):
+            clean_response = clean_response[3:]   # Remove ```
+        if clean_response.endswith('```'):
+            clean_response = clean_response[:-3]  # Remove trailing ```
+        
+        clean_response = clean_response.strip()
+        
+        # Try to parse the entire response as JSON first
+        try:
+            data = json.loads(clean_response)
+            
+            # Validate that it has the required sections
+            required_sections = ['summary_sheet', 'compliance_matrix', 'meter_specs']
+            missing_sections = [s for s in required_sections if s not in data]
+            
+            if not missing_sections:
+                print("✅ Found complete valid Excel structure in LLM response")
+                return data
+            else:
+                print(f"⚠️ Found JSON but missing sections: {missing_sections}")
+                
+        except json.JSONDecodeError as e:
+            print(f"⚠️ Direct JSON parse failed: {e}")
+        
+        # Try to find JSON blocks with improved regex
+        json_pattern = re.compile(r'\{(?:[^{}]|{[^{}]*})*\}', re.DOTALL)
+        matches = json_pattern.findall(clean_response)
+        
+        # Try each match, from longest to shortest
+        if matches:
+            matches.sort(key=len, reverse=True)
+            for i, match in enumerate(matches):
+                try:
+                    data = json.loads(match)
+                    
+                    # Validate that it has the required sections
+                    required_sections = ['summary_sheet', 'compliance_matrix', 'meter_specs']
+                    missing_sections = [s for s in required_sections if s not in data]
+                    
+                    if not missing_sections:
+                        print(f"✅ Found valid Excel structure in match {i+1}")
+                        return data
+                    else:
+                        print(f"⚠️ Match {i+1} missing sections: {missing_sections}")
+                        
+                except json.JSONDecodeError as e:
+                    print(f"⚠️ JSON parse error in match {i+1}: {e}")
+                    continue
+        
+        # If we get here, something went wrong - but we know the LLM response was good
+        # Let's try a more aggressive approach
+        print("🔄 Attempting aggressive JSON extraction...")
+        
+        # Find the opening brace and try to parse from there
+        start_idx = clean_response.find('{')
+        if start_idx != -1:
+            # Find the last closing brace
+            end_idx = clean_response.rfind('}')
+            if end_idx != -1 and end_idx > start_idx:
+                json_candidate = clean_response[start_idx:end_idx+1]
+                try:
+                    data = json.loads(json_candidate)
+                    required_sections = ['summary_sheet', 'compliance_matrix', 'meter_specs']
+                    missing_sections = [s for s in required_sections if s not in data]
+                    
+                    if not missing_sections:
+                        print("✅ Aggressive extraction successful!")
+                        return data
+                        
+                except json.JSONDecodeError:
+                    pass
+        
+        print("❌ All JSON extraction methods failed")
+        # Return None to indicate failure - let the calling code handle fallback
+        return None
     
     async def _execute_chunked_llm_step(
         self,
@@ -411,6 +549,3 @@ class PromptEngine:
                 print("⚠️ Chunk result is not a dict, skipping this chunk.")
 
         return {"recommendations": aggregated_recommendations}
-
-
-
