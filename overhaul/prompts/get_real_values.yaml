@@ -1,0 +1,69 @@
+name: "Get Real Database Values"
+description: "Get actual values from database for proper searching"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "get_measurement_types"
+    description: "Get actual measurement types"
+    prompt_template: |
+      Execute this query and return the actual measurement types: 
+      SELECT DISTINCT measurement_type FROM Measurements LIMIT 10;
+      
+      Show me the real values, not examples.
+    timeout: 120
+
+  - name: "get_protocols"
+    description: "Get actual communication protocols"
+    prompt_template: |
+      Execute this query and return the actual protocols: 
+      SELECT DISTINCT protocol FROM CommunicationProtocols LIMIT 10;
+      
+      Show me the real values, not examples.
+    timeout: 120
+
+  - name: "get_accuracy_values"
+    description: "Get actual accuracy values"
+    prompt_template: |
+      Execute this query and return the actual accuracy values: 
+      SELECT DISTINCT accuracy FROM MeasurementAccuracy LIMIT 10;
+      
+      Show me the real values, not examples.
+    timeout: 120
+
+  - name: "find_voltage_meters"
+    description: "Find meters with voltage measurement"
+    prompt_template: |
+      Find meters that measure voltage. Look for measurement_type containing 'voltage' or 'Voltage' or 'volt':
+      
+      Execute the query and show me actual meter product names that can measure voltage.
+    timeout: 120
+
+outputs:
+  - type: "text"
+    filename: "real_database_values_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      REAL DATABASE VALUES
+      ================================================================================
+      
+      MEASUREMENT TYPES:
+      {{ step_results.get_measurement_types.llamaindex_result }}
+      
+      ================================================================================
+      
+      COMMUNICATION PROTOCOLS:
+      {{ step_results.get_protocols.llamaindex_result }}
+      
+      ================================================================================
+      
+      ACCURACY VALUES:
+      {{ step_results.get_accuracy_values.llamaindex_result }}
+      
+      ================================================================================
+      
+      VOLTAGE METERS:
+      {{ step_results.find_voltage_meters.llamaindex_result }}
+      
+      ================================================================================

@@ -1,0 +1,52 @@
+name: "Dynamic Context Test"
+description: "Test LlamaIndex with dynamic database context"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "test_communication_search"
+    description: "Find communication capabilities"
+    prompt_template: |
+      What communication protocols are supported by the meters? Show me which meters support each type of communication.
+    timeout: 180
+
+  - name: "test_measurement_search"
+    description: "Find measurement capabilities"
+    prompt_template: |
+      What types of measurements can the meters perform? Show me which meters can measure different parameters.
+    timeout: 180
+
+  - name: "test_requirements_match"
+    description: "Find meters matching specific requirements"
+    prompt_template: |
+      Find meters that meet these requirements:
+      - Can measure voltage
+      - Support Modbus or RS485 communication
+      - Have good measurement accuracy
+      
+      Show me specific meter models that match.
+    timeout: 180
+
+outputs:
+  - type: "text"
+    filename: "dynamic_context_test_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      DYNAMIC CONTEXT TEST RESULTS
+      ================================================================================
+      
+      COMMUNICATION CAPABILITIES:
+      {{ step_results.test_communication_search.llamaindex_result }}
+      
+      ================================================================================
+      
+      MEASUREMENT CAPABILITIES:
+      {{ step_results.test_measurement_search.llamaindex_result }}
+      
+      ================================================================================
+      
+      REQUIREMENTS MATCHING:
+      {{ step_results.test_requirements_match.llamaindex_result }}
+      
+      ================================================================================

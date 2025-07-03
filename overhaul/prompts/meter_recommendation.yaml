@@ -1,0 +1,261 @@
+name: "Fully Dynamic Clause-Specific Meter Recommendation Engine"
+description: "Process ANY tender analysis with ALL available meters from database"
+version: "7.2"
+
+inputs:
+  - name: "analysis_file"
+    type: "file"
+    required: true
+    formats: ["txt"]
+    description: "ANY tender analysis output file with extracted clauses and specifications"
+  
+  - name: "cost_weight"
+    type: "text"
+    required: false
+    default: "0.4"
+    description: "Cost weighting factor (0.0-1.0). Higher values favor cost savings over compliance"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "parse_any_tender_format"
+    description: "Parse any tender analysis format to extract clauses dynamically"
+    prompt_template: |
+      Analyze the provided tender analysis output and extract ALL clauses that specify meter/device requirements.
+
+      TENDER ANALYSIS CONTENT:
+      {{ inputs.analysis_file.content }}
+
+      TASK: Find ANY and ALL clauses/sections that specify electrical meters, power analyzers, or measurement devices.
+
+      For EACH clause/section found, extract:
+      1. The clause identifier 
+      2. The device/meter type described
+      3. Key technical requirements mentioned
+
+      OUTPUT FORMAT (JSON ARRAY):
+      [
+        {
+          "clause_id": "[identifier]",
+          "clause_title": "[title]", 
+          "device_type": "[type]",
+          "key_requirements": ["requirement 1", "requirement 2"]
+        }
+      ]
+
+      Return ONLY the JSON array.
+    timeout: 180
+
+  - name: "extract_requirements_dynamically"
+    description: "Extract detailed requirements for whatever clauses were found"
+    dependencies: ["parse_any_tender_format"]
+    prompt_template: |
+      Extract detailed technical requirements for each clause that was identified.
+
+      IDENTIFIED CLAUSES:
+      {{ step_results.parse_any_tender_format.raw_response }}
+
+      ORIGINAL DOCUMENT:
+      {{ inputs.analysis_file.content }}
+
+      TASK: For each clause identified above, extract comprehensive technical requirements.
+
+      OUTPUT FORMAT (JSON):
+      {
+        "total_clauses_found": [number],
+        "clause_details": {
+          "[clause_id]": {
+            "primary_function": "[main purpose]",
+            "accuracy_requirements": ["specs"],
+            "communication_requirements": ["protocols"],
+            "measurement_requirements": ["parameters"],
+            "special_features": ["unique needs"]
+          }
+        }
+      }
+
+      Return ONLY the JSON object.
+    timeout: 240
+
+  - name: "get_complete_meter_database"
+    description: "Get ALL meters and their capabilities - no filtering"
+    prompt_template: |
+      DATABASE ANALYSIS - ALL AVAILABLE METERS:
+
+      DATABASE STRUCTURE:
+      - Main Table: {{ database_schemas.meters.main_table }}
+      - Total Tables: {{ database_schemas.meters.tables | length }}
+      - Total Records: {{ database_schemas.meters.tables[database_schemas.meters.main_table].row_count if database_schemas.meters.main_table and database_schemas.meters.main_table in database_schemas.meters.tables else 'Unknown' }}
+
+      ALL AVAILABLE METERS (MAIN TABLE):
+      {{ databases.meters.get_all() | tojson(indent=2) }}
+
+      TABLE SUMMARIES:
+      {% for table_name, table_info in database_schemas.meters.tables.items() %}
+      **{{ table_name }}**:
+      - Columns: {{ table_info.columns | join(', ') }}
+      - Records: {{ table_info.row_count }}
+      - Sample Data: {{ databases.meters.get_table_data(table_name, 3) | tojson(indent=2) }}
+      {% endfor %}
+
+      RELATIONSHIPS:
+      {% if database_schemas.meters.relationships %}
+      {{ database_schemas.meters.relationships | tojson(indent=2) }}
+      {% else %}
+      No foreign key relationships found in this database.
+      {% endif %}
+
+      AVAILABLE QUERIES:
+      {% for query_name, query_sql in database_schemas.meters.suggested_queries.items() %}
+      - {{ query_name }}: {{ query_sql }}
+      {% endfor %}
+
+      IMPORTANT: This is the COMPLETE database content. Use ONLY this data for meter selection. Do not reference any meters not shown in this data.
+    timeout: 120
+
+  - name: "select_optimal_meters"
+    description: "Select best meters for each clause from the complete database"
+    dependencies: ["parse_any_tender_format", "extract_requirements_dynamically", "get_complete_meter_database"]
+    prompt_template: |
+      ⚠️ CRITICAL ANTI-HALLUCINATION INSTRUCTIONS ⚠️
+      
+      YOU ARE FORBIDDEN FROM:
+      - Creating or inventing ANY meter models, names, or specifications
+      - Using ANY meter data that is not explicitly shown in the database below
+      - Referencing meters like "Meter X123", "Series A", or any fictional names
+      - Making up technical specifications not present in the database
+
+      You are an expert in electrical metering with a specialization in tendering opportunities. Given the following meter requirement and a list of candidate meters, select and rank the best-fit meters.
+
+      INSTRUCTIONS:
+      For each clause:
+      1. Filter the meters table below to only those that meet ALL mandatory requirements.
+      2. For each filtered meter, compare its specs to the requirements and assign a compliance score.
+      3. Rank the filtered meters by compliance score (and cost_weight if available).
+      4. Select the top 3 meters and provide justification.
+      5. If no meter meets all requirements, state "NO SUITABLE METER FOUND".
+
+      AVAILABLE METERS (TABLE):
+      | model_name | series_name | product_type | selection_blurb |
+      |------------|-------------|--------------|-----------------|
+      {% for meter in databases.meters.get_all() %}
+      | {{ meter.model_name }} | {{ meter.series_name }} | {{ meter.product_type }} | {{ meter.selection_blurb }} |
+      {% endfor %}
+
+      CLAUSES TO ANALYZE:
+      {{ step_results.parse_any_tender_format.raw_response }}
+
+      OUTPUT FORMAT:
+      {
+        "recommendations": [
+          {
+            "clause_id": "...",
+            "top_items": [
+              {
+                "model_name": "...",
+                "series_name": "...",
+                "justification": "..."
+              }
+            ]
+          }
+        ]
+      }
+    timeout: 480
+
+  - name: "validate_selections"
+    description: "Validate that selections use only database data and apply cost weight properly"
+    dependencies: ["select_optimal_meters"]
+    prompt_template: |
+      ⚠️ VALIDATION - CHECK FOR HALLUCINATION ⚠️
+
+      COST WEIGHT USED: {{ inputs.cost_weight }}
+
+      SELECTIONS MADE:
+      {{ step_results.select_optimal_meters.raw_response }}
+
+      DATABASE DATA (FOR VALIDATION):
+      {{ step_results.get_complete_meter_database.raw_response }}
+
+      VALIDATION TASKS:
+      1. Verify that ALL selected meters appear in the database data with EXACT names
+      2. Confirm that the cost weight of {{ inputs.cost_weight }} was properly considered
+      3. Check that the selection rationale aligns with the cost weight
+      4. Ensure no hallucinated specifications were used
+      5. Flag ANY meter names that don't appear in the database (e.g., "Meter X123", "Series A")
+
+      CRITICAL VALIDATION:
+      - Search for fake meter names like "Meter X123", "Series A", "Meter Y456", etc.
+      - Verify every meter mentioned exists in the database data
+      - Check that series names match exactly (e.g., "pm2000_series", not "Series A")
+
+      Provide a validation report confirming:
+      - All selected meters are from the database with EXACT names
+      - Cost weight was properly applied
+      - No hallucinated data was used
+      - Selection logic is sound
+
+      If ANY fake meters are found, mark the entire selection as INVALID and explain why.
+    timeout: 120
+
+  - name: "llamaindex_meter_query"
+    description: "Query meters using LlamaIndex natural language interface"
+    prompt_template: |
+      Find meters that meet the following requirements:
+      
+      {% if step_results.parse_any_tender_format.parsed_result %}
+      {% for clause in step_results.parse_any_tender_format.parsed_result %}
+      Clause {{ clause.clause_id }} - {{ clause.clause_title }}:
+      {% if clause.key_requirements %}
+      {% for req in clause.key_requirements %}
+      - {{ req }}
+      {% endfor %}
+      {% endif %}
+      
+      {% endfor %}
+      {% else %}
+      Based on the tender analysis, find meters with:
+      - True RMS Current and Voltage measurement with ±0.5% accuracy
+      - Real Power, Apparent Power, Reactive Power measurement
+      - Total Harmonic Distortion (THD) measurement up to 31st harmonic order
+      - Operating temperature up to 50°C
+      - Communication ports (RS485, RJ45, TCP/IP)
+      - Data trending and logging capabilities
+      - Memory for 36+ months of data
+      {% endif %}
+      
+      Which meters in the database best match these specifications?
+    timeout: 120
+
+  - name: "debug_clause_data"
+    description: "Debug the clause data structure"
+    prompt_template: |
+      DEBUG: Clause data structure inspection
+      
+      Raw parse result type: {{ step_results.parse_any_tender_format.parsed_result | type }}
+      Raw parse result: {{ step_results.parse_any_tender_format.parsed_result }}
+      
+      Raw response: {{ step_results.parse_any_tender_format.raw_response }}
+    timeout: 30
+
+outputs:
+  - type: "text"
+    filename: "{{ inputs.analysis_file.basename }}_meter_recommendations_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      METER RECOMMENDATION REPORT
+      ================================================================================
+
+      {{ step_results.select_optimal_meters.raw_response }}
+
+      {% if step_results.llamaindex_meter_query %}
+      ================================================================================
+      LLAMAINDEX QUERY RESULTS
+      ================================================================================
+      {{ step_results.llamaindex_meter_query.llamaindex_result }}
+      {% endif %}
+
+      ================================================================================
+      END OF REPORT
+      ================================================================================
+

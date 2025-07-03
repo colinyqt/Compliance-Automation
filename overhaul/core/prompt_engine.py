@@ -14,6 +14,7 @@ from .template_analyzer import TemplateAnalyzer
 from .file_processor import FileProcessor
 from .llm_processor import LLMProcessor
 from .excel_generator import ExcelGenerator
+from .llamaindex_query_engine import LlamaIndexQueryEngine
 
 class PromptEngine:
     """Main YAML prompt engine with auto-discovery database integration"""
@@ -36,60 +37,73 @@ class PromptEngine:
         self.file_processor = FileProcessor()
         self.llm_processor = LLMProcessor()
         
+        # Initialize database schemas storage
+        self._database_schemas = {}
+        
         # Jinja2 environment for template rendering
         self.jinja_env = Environment(loader=BaseLoader())
+        
+        # New: Initialize LlamaIndex query engines
+        self.llamaindex_engines = {}
         
         print("🔧 Prompt engine components initialized")
     
     async def run_prompt(self, prompt_file: str) -> Dict[str, Any]:
         """Run a YAML prompt configuration end-to-end"""
-        
         try:
-            # 1. Load and validate YAML configuration
             print(f"📄 Loading prompt configuration: {prompt_file}")
             config = self._load_yaml_config(prompt_file)
-            
-            # 2. Validate configuration
+
             print("🔍 Validating configuration...")
             validation = self.template_analyzer.validate_template(config)
             if not validation['valid']:
                 return {'success': False, 'error': f"Configuration errors: {validation['errors']}"}
-            
             if validation['warnings']:
                 for warning in validation['warnings']:
                     print(f"⚠️ {warning}")
-            
-            # 3. Process input files
-            print("📁 Processing input files...")
-            input_data = await self._process_inputs(config.get('inputs', []))
-            
-            # 4. Load databases with auto-discovery
+
+            # --- Improved Input Handling ---
+            inputs_config = config.get('inputs', [])
+            if inputs_config:
+                print("\n📝 Required Inputs:")
+                for inp in inputs_config:
+                    req = 'required' if inp.get('required', False) else 'optional'
+                    desc = inp.get('description', '')
+                    print(f"- {inp['name']} ({inp['type']}, {req}): {desc}")
+            print()
+            input_data = await self._process_inputs(inputs_config)
+
             print("🗄️ Loading databases with auto-discovery...")
             databases = await self._load_databases_smart(config.get('databases', {}))
-            
-            # 5. Execute processing pipeline
+
+            # --- Build Unified Context ---
+            context = {
+                'inputs': input_data,
+                'databases': databases,
+                'database_schemas': {name: db.get_schema_info() for name, db in databases.items()},
+                'step_results': {},
+                'timestamp': datetime.utcnow().strftime('%Y%m%d_%H%M%S'),
+                'config': config
+            }
+
             print("🔄 Executing processing pipeline...")
             pipeline_results = await self._execute_pipeline(
                 config.get('processing_steps', []),
-                input_data,
-                databases
+                context
             )
-            
-            # 6. Generate outputs
+            context['step_results'] = pipeline_results
+
             print("📤 Generating outputs...")
             output_files = await self._generate_outputs(
                 config.get('outputs', []),
-                pipeline_results,
-                input_data,
-                config
+                context
             )
-            
+
             return {
                 'success': True,
                 'pipeline_results': pipeline_results,
                 'output_files': output_files
             }
-            
         except Exception as e:
             print(f"❌ Error running prompt: {e}")
             import traceback
@@ -113,59 +127,63 @@ class PromptEngine:
         return config
     
     async def _process_inputs(self, inputs_config: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Process input files and parameters"""
-        
+        """Process input files and parameters (extended types and validation)"""
         input_data = {}
-        
         for input_spec in inputs_config:
             input_name = input_spec['name']
             input_type = input_spec['type']
             required = input_spec.get('required', False)
-            
+            desc = input_spec.get('description', '')
+            default = input_spec.get('default', None)
+            value = None
             if input_type == 'file':
-                # Get file from user
-                file_path = input(f"📁 Enter path for {input_name} ({input_spec.get('description', '')}): ").strip().strip('"\'')
-                
+                file_path = input(f"📁 Enter path for {input_name} ({desc}): ").strip().strip('"\'')
                 if not file_path and required:
                     raise ValueError(f"Required input '{input_name}' not provided")
-                
                 if file_path and Path(file_path).exists():
                     file_data = self.file_processor.process_file(file_path)
                     input_data[input_name] = file_data
                     print(f"✅ Processed {input_name}: {len(file_data['content'])} characters")
                 elif required:
                     raise FileNotFoundError(f"Input file not found: {file_path}")
-            
             elif input_type == 'text':
-                default = input_spec.get('default', '')
                 value = input(f"📝 Enter {input_name} (default: {default}): ").strip() or default
                 input_data[input_name] = value
-            
             elif input_type == 'option':
                 options = input_spec.get('options', [])
-                default = input_spec.get('default', options[0] if options else '')
                 print(f"📋 Select {input_name}:")
                 for i, option in enumerate(options, 1):
                     print(f"  {i}. {option}")
-                
                 choice = input(f"Enter choice (1-{len(options)}, default: {default}): ").strip()
                 if choice and choice.isdigit():
                     choice_idx = int(choice) - 1
                     if 0 <= choice_idx < len(options):
-                        input_data[input_name] = options[choice_idx]
+                        value = options[choice_idx]
                     else:
-                        input_data[input_name] = default
+                        value = default
                 else:
-                    input_data[input_name] = default
-            
+                    value = default
+                input_data[input_name] = value
             elif input_type == 'number':
-                default = input_spec.get('default', 0)
                 value = input(f"🔢 Enter {input_name} (default: {default}): ").strip()
                 try:
-                    input_data[input_name] = int(value) if value else default
-                except ValueError:
-                    input_data[input_name] = default
-        
+                    if value:
+                        input_data[input_name] = float(value)
+                    elif default is not None:
+                        input_data[input_name] = float(default)
+                    else:
+                        input_data[input_name] = 0.0
+                except (ValueError, TypeError):
+                    input_data[input_name] = float(default) if default is not None else 0.0
+            elif input_type == 'boolean':
+                value = input(f"[y/n] {input_name} (default: {default}): ").strip().lower()
+                if value in ['y', 'yes', 'true', '1']:
+                    input_data[input_name] = True
+                elif value in ['n', 'no', 'false', '0']:
+                    input_data[input_name] = False
+                else:
+                    input_data[input_name] = bool(default)
+            # Extend here for more types (date, list, etc.)
         return input_data
     
     async def _load_databases_smart(self, database_config: Dict[str, str]) -> Dict[str, SmartDatabaseWrapper]:
@@ -188,92 +206,66 @@ class PromptEngine:
             available_functions = len(self.function_registry.get_available_functions(db_name))
             print(f"✅ {db_name}: {available_functions} functions auto-discovered")
         
+        # NEW: Store for LlamaIndex access
+        self._last_loaded_databases = smart_databases
+        
         return smart_databases
     
-    async def _execute_pipeline(self, 
-                               steps: List[Dict[str, Any]], 
-                               input_data: Dict[str, Any], 
-                               databases: Dict[str, SmartDatabaseWrapper]) -> Dict[str, Any]:
-        """Execute the processing pipeline"""
-        
+    async def _execute_pipeline(self, steps: List[Dict[str, Any]], context: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute the processing pipeline with unified context passing"""
         results = {}
-        
-        # Create template context
-        context = {
-            **input_data,
-            'databases': databases,
-            'timestamp': datetime.utcnow().strftime('%Y%m%d_%H%M%S')
-        }
-        
         for step in steps:
             step_name = step['name']
             prompt_template = step['prompt_template']
             dependencies = step.get('dependencies', [])
             timeout = step.get('timeout', 120)
-            
             print(f"⚙️ Executing step: {step_name}")
-            
-            # Check dependencies
+
+            # Add dependencies to context
             for dep in dependencies:
                 if dep not in results:
                     raise ValueError(f"Step '{step_name}' depends on '{dep}' which hasn't been executed")
             
-            # Add previous results to context
+            # Build step context
+            step_context = context.copy()
+            step_context['step_results'] = results.copy()
             for dep in dependencies:
-                context[dep] = results[dep]
+                step_context[dep] = results[dep]
 
-            # CHUNKED LLM STEP (example for recommend_meters)
-            if step_name == "recommend_meters":
-                # Get clauses from previous step result
-                extract_clauses_result = results.get('extract_clauses', {})
-                parsed = extract_clauses_result.get('parsed_result', {})
-                context['clauses'] = parsed.get('clauses', [])
-                # Get meters (you may want to limit or filter here)
-                context['meters'] = databases['meters'].query("SELECT model_name, series_name, selection_blurb FROM Meters LIMIT 10")
-                chunked_result = await self._execute_chunked_llm_step(
-                    step, context, chunk_key="clauses", chunk_size=5, meters_key="meters"
-                )
-                results[step_name] = chunked_result
-                print(f"✅ Step '{step_name}' completed (chunked)")
+            # LlamaIndex step detection (by convention) - MOVE THIS BEFORE TEMPLATE RENDERING
+            if step_name.startswith("llamaindex_"):
+                db_path = context['databases']['meters'].db_path
+                llamaindex_engine = self.get_llamaindex_engine(db_path)
+                # Render the prompt as the natural language query
+                template = self.jinja_env.from_string(prompt_template)
+                nl_query = template.render(**step_context)
+                print(f"🦙 LlamaIndex NL Query: {nl_query}")
+                result = await llamaindex_engine.query(nl_query)
+                results[step_name] = {"llamaindex_result": result}
+                print(f"✅ Step '{step_name}' completed (LlamaIndex)")
                 continue
 
-            # Normal (non-chunked) step
-            # Render template
-            try:
-                template = self.jinja_env.from_string(prompt_template)
-                rendered_prompt = template.render(**context)
-                
-                print(f"📝 Rendered prompt ({len(rendered_prompt)} chars)")
-                
-                # Execute with LLM
-                step_result = await self.llm_processor.process_prompt(rendered_prompt, timeout)
-                results[step_name] = step_result
-                
-                print(f"✅ Step '{step_name}' completed")
-                
-            except Exception as e:
-                print(f"❌ Step '{step_name}' failed: {e}")
-                raise
-        
+            # Render template with full context
+            template = self.jinja_env.from_string(prompt_template)
+            rendered_prompt = template.render(**step_context)
+            print(f"📝 Rendered prompt ({len(rendered_prompt)} chars)")
+            
+            # DEBUG: Print context keys/types and preview of rendered prompt
+            print(f"\n=== DEBUG: Step '{step_name}' context keys/types ===")
+            for k, v in step_context.items():
+                print(f"  {k}: {type(v)} (len={len(v) if hasattr(v, '__len__') else 'n/a'})")
+            print(f"\n=== DEBUG: Step '{step_name}' rendered prompt preview ===\n{rendered_prompt[:2000]}\n--- END PREVIEW ---\n")
+            
+            # Execute with LLM
+            step_result = await self.llm_processor.process_prompt(rendered_prompt, timeout)
+            results[step_name] = step_result
+            print(f"✅ Step '{step_name}' completed")
+
         return results
     
-    async def _generate_outputs(self, 
-                              outputs_config: List[Dict[str, Any]], 
-                              pipeline_results: Dict[str, Any],
-                              input_data: Dict[str, Any],
-                              config: Dict[str, Any]) -> List[str]:
-        """Generate output files"""
-        
+    async def _generate_outputs(self, outputs_config: List[Dict[str, Any]], context: Dict[str, Any]) -> List[str]:
+        """Generate output files using unified context"""
         output_files = []
-        
-        # Create context for output rendering
-        context = {
-            **input_data,
-            **pipeline_results,
-            'timestamp': datetime.utcnow().strftime('%Y%m%d_%H%M%S'),
-            'config': config
-        }
-        
         for output_spec in outputs_config:
             output_type = output_spec['type']
             filename_template = output_spec['filename']
@@ -297,9 +289,8 @@ class PromptEngine:
             
             # Generate content based on type
             if output_type == 'json':
-                data = output_spec.get('data', pipeline_results)
+                data = output_spec.get('data', context['step_results'])
                 if isinstance(data, str):
-                    # Data is a template string
                     data_template = self.jinja_env.from_string(data)
                     data = data_template.render(**context)
                     try:
@@ -307,16 +298,13 @@ class PromptEngine:
                     except:
                         pass
                 elif isinstance(data, dict):
-                    # Data is a structure with template values
                     data = self._render_template_dict(data, context)
-                
                 with open(output_path, 'w', encoding='utf-8') as f:
                     json.dump(data, f, indent=2, default=str)
             
             elif output_type == 'excel':
-                data = output_spec.get('data', pipeline_results)
+                data = output_spec.get('data', context['step_results'])
                 if isinstance(data, str):
-                    # Data is a template string
                     data_template = self.jinja_env.from_string(data)
                     data = data_template.render(**context)
                     try:
@@ -324,7 +312,6 @@ class PromptEngine:
                     except:
                         pass
                 elif isinstance(data, dict):
-                    # Data is a structure with template values
                     data = self._render_template_dict(data, context)
                 
                 # Generate Excel file
@@ -340,8 +327,8 @@ class PromptEngine:
             elif output_type == 'custom_excel':
                 # Handle custom Excel generation with direct LLM processing
                 llm_step = output_spec.get('llm_step')
-                if llm_step and llm_step in pipeline_results:
-                    llm_result = pipeline_results[llm_step]
+                if llm_step and llm_step in context['step_results']:
+                    llm_result = context['step_results'][llm_step]
                     raw_response = llm_result.get('raw_response', '')
                     
                     # Try to extract JSON from raw response
@@ -368,7 +355,7 @@ class PromptEngine:
                     with open(template_file, 'r', encoding='utf-8') as f:
                         template_content = f.read()
                 else:
-                    template_content = output_spec.get('content', '# Results\\n\\n{{ pipeline_results | tojson(indent=2) }}')
+                    template_content = output_spec.get('content', '# Results\\n\\n{{ step_results | tojson(indent=2) }}')
                 
                 template = self.jinja_env.from_string(template_content)
                 content = template.render(**context)
@@ -377,16 +364,14 @@ class PromptEngine:
                     f.write(content)
             
             elif output_type == 'text':
-                content_template = output_spec.get('content', '{{ pipeline_results }}')
+                content_template = output_spec.get('content', '{{ step_results }}')
                 template = self.jinja_env.from_string(content_template)
                 content = template.render(**context)
-                
                 with open(output_path, 'w', encoding='utf-8') as f:
                     f.write(content)
             
             output_files.append(str(output_path))
             print(f"📄 Generated: {output_path}")
-        
         return output_files
     
     def _render_template_dict(self, data: Any, context: Dict[str, Any]) -> Any:
@@ -490,8 +475,8 @@ class PromptEngine:
                     pass
         
         print("❌ All JSON extraction methods failed")
-        # Return None to indicate failure - let the calling code handle fallback
-        return None
+        # Return empty dict to indicate failure - let the calling code handle fallback
+        return {}
     
     async def _execute_chunked_llm_step(
         self,
@@ -505,47 +490,76 @@ class PromptEngine:
         Execute an LLM step in chunks, aggregating results.
         - step: The step dict from YAML.
         - context: The current template context.
-        - chunk_key: The key in context to chunk (e.g., 'clauses').
+        - chunk_key: The key in context to chunk (e.g., 'clauses' or 'items').
         - chunk_size: Number of items per chunk.
-        - meters_key: The key for meters in context.
-        Returns: Aggregated result dictionary.
+        - meters_key: The key for meters in context, if needed.
+          If your step doesn't need 'meters', you can ignore or remove this.
+        - chunk_aggregator_key: The dict key to aggregate from each chunk.
+          Defaults to "recommendations" but can be overridden in your step config.
+        
+        Returns: Aggregated result dict of the form:
+          { <chunk_aggregator_key>: [...] }
         """
         prompt_template = step['prompt_template']
         timeout = step.get('timeout', 120)
-        all_items = context[chunk_key]
-        meters = context.get(meters_key)
-        aggregated_recommendations = []
+        all_items = context.get(chunk_key, [])
+        meters = context.get(meters_key, None)
+
+        # New: dynamic aggregator key
+        aggregator_key = step.get('chunk_aggregator_key', 'recommendations')
+        aggregated_items = []
 
         def chunk_list(lst, n):
             for i in range(0, len(lst), n):
                 yield lst[i:i + n]
 
         for chunk in chunk_list(all_items, chunk_size):
+            # Prepare chunk context
             chunk_context = context.copy()
             chunk_context[chunk_key] = chunk
             if meters is not None:
                 chunk_context[meters_key] = meters
+
+            # Render prompt
             template = self.jinja_env.from_string(prompt_template)
             rendered_prompt = template.render(**chunk_context)
             print(f"📝 [Chunked] Rendered prompt ({len(rendered_prompt)} chars, {len(chunk)} items)")
+
+            # Get chunk result
             chunk_result = await self.llm_processor.process_prompt(rendered_prompt, timeout)
-            # Expecting chunk_result to be a dict with 'recommendations' key
+
+            # Check if chunk_result is the correct structure
             if isinstance(chunk_result, dict):
-                # If recommendations are present at the top level
-                if 'recommendations' in chunk_result:
-                    aggregated_recommendations.extend(chunk_result['recommendations'])
+                # 1. Direct aggregator key
+                if aggregator_key in chunk_result:
+                    aggregated_items.extend(chunk_result[aggregator_key])
                     continue
-                # If raw_response is present, try to parse it as JSON
+
+                # 2. If "raw_response" is present, try JSON parse
                 if 'raw_response' in chunk_result:
                     try:
                         parsed = json.loads(chunk_result['raw_response'])
-                        if 'recommendations' in parsed:
-                            aggregated_recommendations.extend(parsed['recommendations'])
+                        if aggregator_key in parsed:
+                            aggregated_items.extend(parsed[aggregator_key])
                             continue
                     except Exception as e:
                         print("⚠️ Could not parse raw_response as JSON:", e)
-                print("⚠️ Chunk result missing 'recommendations', skipping this chunk.")
+
+                print(f"⚠️ Chunk result missing '{aggregator_key}', skipping this chunk.")
             else:
                 print("⚠️ Chunk result is not a dict, skipping this chunk.")
 
-        return {"recommendations": aggregated_recommendations}
+        # Return the merged aggregator
+        return {aggregator_key: aggregated_items}
+
+    def get_llamaindex_engine(self, db_path):
+        if db_path not in self.llamaindex_engines:
+            # NEW: Find the smart wrapper for this database
+            smart_wrapper = None
+            for db_name, wrapper in self._last_loaded_databases.items():
+                if wrapper.db_path == db_path:
+                    smart_wrapper = wrapper
+                    break
+        
+            self.llamaindex_engines[db_path] = LlamaIndexQueryEngine(db_path, smart_wrapper=smart_wrapper)
+        return self.llamaindex_engines[db_path]

@@ -1,0 +1,188 @@
+================================================================================
+TENDER ANALYSIS REPORT - RELEVANT CLAUSE EXTRACTION ONLY
+================================================================================
+
+Analysis Date: 20250703_023953
+Source Document: ST Dynamo DC - PQM PM Spec.pdf
+Analysis Engine: Tender Clause Extraction Only
+
+================================================================================
+
+## RELEVANT CLAUSES EXTRACTED
+
+### Clause 6.1 - Power Quality Meter for High Voltage Input Side
+**Category:** Power Quality Measurement
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+6.1 The High voltage input side needs to be equipped with an advanced power quality meter, and the power meter or relay has a fault recording function for fault reset; the High voltage circuit breaker should have a remote-control function.
+
+**Key Specifications Identified:**
+- Fault recording function
+- Remote-control function
+
+### Clause 6.2 - Power Quality Meter for Low Voltage Input Side
+**Category:** Power Quality Measurement
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+6.2 A high-precision meter and power quality must be used on the low-voltage input side, and an automatic switching device must be installed on the low-voltage busbar connected to the two sections.
+
+**Key Specifications Identified:**
+- High-precision meter
+- Automatic switching device
+
+### Clause 7.0 - Power Quality Meter Specifications
+**Category:** Power Quality Measurement
+**Relevance Score:** 10
+
+**Complete Clause Text:**
+6.5 General Specification
+6.5.1 Class A Power Analyser
+6.5.2 Monitoring the quality in accordance with DIN EN 50160
+6.5.3 Measurement accuracy according to IEC62053-22 Cl 0.2S
+6.5.4 Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+6.5.5 Support IEC61850
+6.5.6 Comes with 8GB Internal Memory
+6.5.7 Build in Modbus TCP/IP communication
+6.5.8 SNTP Time sync available
+6.5.9 8 Digital Inputs (DI), 4 Relay Outputs (RO), 2 Digital Outputs (DO)
+6.5.10 Operating temperature -10°C to +55°C
+6.5.11 IP52 at front; IP30 at Side and Back
+6.5.12 Measured circuit breaker ON / OFF and TRIP status shall be linked to PQM for status monitoring
+
+**Key Specifications Identified:**
+- Class A Power Analyser
+- DIN EN 50160 compliance
+- IEC62053-22 Cl 0.2S accuracy
+- Modbus TCP/IP communication
+- SNTP Time sync
+- Digital Inputs (DI), Relay Outputs (RO), Digital Outputs (DO)
+- Operating temperature range: -10°C to +55°C
+- IP ratings: IP52 at front; IP30 at Side and Back
+
+### Clause 8.0 - Digital Power Meter Specifications
+**Category:** Power Measurement
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+Digital power meter record and indicate electrical parameters for electrical network, not only in the electricity transmission and power distribution system including bus-bar tap-off units for each IT racks (Branch Circuit Monitoring System), but also in the power consumption measurement and analysis. The communication to PQMS/BMS system shall be via Modbus RTU / TCP IP connection.
+The proposed meter shall comply with IEC62053 class 0.5S or compliance with SAC-SINGLAS certification with passed with accuracy class of 0.2 standard.
+
+**Key Specifications Identified:**
+- Digital power meter
+- Branch Circuit Monitoring System
+- Modbus RTU / TCP IP communication
+- IEC62053 class 0.5S or SAC-SINGLAS certification
+
+### Clause 8.1 - General Specification for Digital Power Meter
+**Category:** Power Measurement
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+8.1 General Specification
+8.1.1 Measurement accuracy according to IEC62053-22 Cl 0.5S
+8.1.2 Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+8.1.3 Harmonics up to 63rd order
+8.1.4 Memory Recording for energy, demand, max demand & max/min record
+8.1.5 Real time clock
+8.1.6 Build in Modbus RTU communication
+
+**Key Specifications Identified:**
+- Measurement accuracy according to IEC62053-22 Cl 0.5S
+- Instantaneous values, L-N voltage, L-L voltage, frequency, power, power factor, THDV, THDI
+- Harmonics up to 63rd order
+- Memory Recording for energy, demand, max demand & max/min record
+- Real time clock
+- Modbus RTU communication
+
+### Clause 8.2 - Accuracy Specifications for Digital Power Meter
+**Category:** Power Measurement
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+8.2 Accuracy
+8.2.1 Apparent power 0.5%
+8.2.2 Reactive power 1%
+8.2.3 Power factor 0.01
+8.2.4 Active energy IEC62053-22 Class 0.5S
+8.2.5 Active energy IEC 61557-12 Class 0.5
+8.2.6 THD 1%
+8.2.7 Voltage VL-N 0.2%
+8.2.8 Voltage VL-L 0.2%
+8.2.9 Current 0.2%
+8.2.10 Frequency 0.1%
+8.2.11 Active power 0.5%
+
+**Key Specifications Identified:**
+- Apparent power accuracy: 0.5%
+- Reactive power accuracy: 1%
+- Power factor accuracy: 0.01
+- Active energy IEC62053-22 Class 0.5S
+- Active energy IEC 61557-12 Class 0.5
+- THD accuracy: 1%
+- Voltage VL-N accuracy: 0.2%
+- Voltage VL-L accuracy: 0.2%
+- Current accuracy: 0.2%
+- Frequency accuracy: 0.1%
+- Active power accuracy: 0.5%
+
+### Clause 8.3 - Electromagnetic Emission Specifications for Digital Power Meter
+**Category:** Electromagnetic Compatibility
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+8.3 Electromagnetic Emission
+8.3.1 Electrostatic Discharge - IEC 61000-4-2
+8.3.2 Immunity to Radiated Fields - IEC 61000-4-3
+8.3.3 Immunity to Fast Transients - IEC 61000-4-4
+8.3.4 Immunity to Impulse Waves - IEC 61000-4-5
+8.3.5 Conducted Immunity - IEC 61000-4-6
+8.3.6 Immunity to Magnetic Fields - IEC 61000-4-8
+8.3.7 Immunity to Voltage Dips - IEC 61000-4-11
+8.3.8 Radiated Emissions - EN55011 Class A
+8.3.9 Conducted Emissions - EN55011 Class A
+8.3.10 Harmonics - IEC 61000-3-2
+
+**Key Specifications Identified:**
+- Electrostatic Discharge immunity: IEC 61000-4-2
+- Immunity to Radiated Fields: IEC 61000-4-3
+- Immunity to Fast Transients: IEC 61000-4-4
+- Immunity to Impulse Waves: IEC 61000-4-5
+- Conducted Immunity: IEC 61000-4-6
+- Immunity to Magnetic Fields: IEC 61000-4-8
+- Immunity to Voltage Dips: IEC 61000-4-11
+- Radiated Emissions: EN55011 Class A
+- Conducted Emissions: EN55011 Class A
+- Harmonics: IEC 61000-3-2
+
+### Clause 8.4 - Certifications for Digital Power Meter
+**Category:** Compliance
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+8.4 Certifications
+8.4.1 All the meter’s accuracy shall be comply with IEC62053-22 with 3rd party lab certifications
+
+**Key Specifications Identified:**
+- Accuracy compliance with IEC62053-22
+- Third-party lab certifications
+
+### Clause 9.2 - Electrical Power Monitoring System (EPMS) Specifications
+**Category:** Power Quality Measurement
+**Relevance Score:** 8
+
+**Complete Clause Text:**
+9.2.1 The High voltage input side needs to be equipped with an advanced power quality meter, and the power meter or relay has a fault recording function for fault reset; the High voltage circuit breaker should have a remote-control function.
+9.2.2 A high-precision meter and power quality must be used on the low-voltage input side, and an automatic switching device must be installed on the low-voltage busbar connected to the two sections.
+
+**Key Specifications Identified:**
+- Fault recording function
+- Remote-control function
+
+END OF EXTRACTION
+
+================================================================================
+
+END OF REPORT
+================================================================================

@@ -23,7 +23,7 @@ processing_steps:
         - full text of the clause or requirement
 
       DOCUMENT:
-      {{ document.content }}
+      {{ inputs.document.content }}
 
       Return JSON:
       {
@@ -42,34 +42,70 @@ processing_steps:
       Use the clause text to determine the requirements.
 
       CLAUSES:
-      {{ clauses | tojson(indent=2) }}
+      {{ step_results.extract_clauses.parsed_result.clauses | tojson(indent=2) }}
 
       AVAILABLE METERS:
-      {{ meters | tojson(indent=2) }}
+      {{ databases.meters.query("SELECT model_name, series_name, accuracy_class, communication_protocols, product_type, selection_blurb FROM Meters") | tojson(indent=2) }}
+
+      DATABASE SCHEMA:
+      {{ database_schemas.meters | tojson(indent=2) }}
 
       Your task:
-      - For each clause, recommend the 3 best meters and explain why.
-      - Return ONLY a valid JSON object with a top-level "recommendations" key as shown below.
-      - Do NOT return markdown, explanations, or any text outside the JSON.
+      - For each clause, recommend the 3 best meters (by model_name) and explain why.
+      - Return ONLY a valid JSON object as shown above. Do NOT return markdown, explanations, or any text outside the JSON. If no recommendations, return {"recommendations":[]}.
 
       Example output:
       {
         "recommendations": [
           {
             "clause_id": "3.1",
-            "top_meters": [
+            "top_items": [
               {
                 "model_name": "PM5560",
-                "series": "pm5000_series",
-                "justification": "This meter fits because..."
+                "series_name": "pm5000_series",
+                "justification": "This item fits because..."
               }
             ]
           }
         ]
       }
 
+  - name: "llamaindex_meter_query"
+    description: "Query meters using LlamaIndex natural language interface"
+    prompt_template: |
+      Find meters that meet the requirements for the following clauses:
+      
+      {% for clause in step_results.parse_any_tender_format.parsed_result %}
+      Clause {{ clause.clause_id }} - {{ clause.clause_title }}:
+      {% for req in clause.key_requirements %}
+      - {{ req }}
+      {% endfor %}
+      
+      {% endfor %}
+      
+      Which meters in the database best match these specifications?
+    timeout: 120
+
 outputs:
-  - name: "quick_results"
+  - name: "debug_clauses"
     type: "json"
-    filename: "quick_analysis_{{ timestamp }}.json"
-    data: "{{ recommend_meters.parsed_result }}"
+    filename: "debug_clauses_{{ timestamp }}.json"
+    data: "{{ step_results.extract_clauses | tojson(indent=2) }}"
+  - name: "meter_recommendations_txt"
+    type: "text"
+    filename: "meter_recommendations_{{ timestamp }}.txt"
+    content: |
+      Meter Recommendations
+      ====================
+
+      {% for rec in step_results.recommend_meters.parsed_result.recommendations %}
+      Clause {{ rec.clause_id }}:
+      {% for item in rec.top_items %}
+        - Model: {{ item.model_name }} ({{ item.series_name }})
+          Justification: {{ item.justification }}
+      {% endfor %}
+      {% endfor %}
+  - name: "debug_recommend_meters"
+    type: "json"
+    filename: "debug_recommend_meters_{{ timestamp }}.json"
+    data: "{{ step_results.recommend_meters | tojson(indent=2) }}"

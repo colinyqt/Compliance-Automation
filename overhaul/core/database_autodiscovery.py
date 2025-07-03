@@ -1,4 +1,3 @@
-# core/database_autodiscovery.py
 import sqlite3
 import os
 from typing import Dict, List, Any, Optional
@@ -48,7 +47,7 @@ class DatabaseAutoDiscovery:
                     table_info = self._analyze_table(cursor, table_name)
                     tables[table_name] = table_info
                     
-                    # Detect relationships
+                    # Detect explicit foreign key relationships
                     for fk in table_info.foreign_keys:
                         relationships.append({
                             'from_table': table_name,
@@ -57,19 +56,37 @@ class DatabaseAutoDiscovery:
                             'to_column': fk['referenced_column']
                         })
                 
+                # Detect implicit relationships based on naming conventions
+                implicit_relationships = self._detect_implicit_relationships(tables)
+                print(f"🔍 Detected {len(implicit_relationships)} implicit relationships")
+                for rel in implicit_relationships:
+                    print(f"   {rel['from_table']}.{rel['from_column']} -> {rel['to_table']}.{rel['to_column']}")
+                
+                relationships.extend(implicit_relationships)
+                
+                # Remove duplicate relationships
+                seen = set()
+                unique_relationships = []
+                for rel in relationships:
+                    key = (rel['from_table'], rel['from_column'], rel['to_table'], rel['to_column'])
+                    if key not in seen:
+                        seen.add(key)
+                        unique_relationships.append(rel)
+                
                 # Generate smart queries based on discovered schema
-                suggested_queries = self._generate_smart_queries(tables, relationships)
+                suggested_queries = self._generate_smart_queries(tables, unique_relationships)
                 
                 schema = DatabaseSchema(
                     path=db_path,
                     tables=tables,
-                    relationships=relationships,
+                    relationships=unique_relationships,
                     suggested_queries=suggested_queries
                 )
                 
                 self.discovered_schemas[db_path] = schema
                 
                 print(f"✅ Discovered {len(tables)} tables with {len(relationships)} relationships")
+                print(f"✅ Generated {len(suggested_queries)} smart functions")
                 return schema
                 
         except Exception as e:
@@ -84,7 +101,7 @@ class DatabaseAutoDiscovery:
         columns_info = cursor.fetchall()
         
         columns = [col[1] for col in columns_info]
-        primary_key = next((col[1] for col in columns_info if col[5] == 1), 'id')
+        primary_key = next((col[1] for col in columns_info if col[5] == 1), None)
         
         # Get foreign key information
         cursor.execute(f"PRAGMA foreign_key_list({table_name})")
@@ -105,10 +122,60 @@ class DatabaseAutoDiscovery:
         return TableInfo(
             name=table_name,
             columns=columns,
-            primary_key=primary_key,
+            primary_key=primary_key or "",
             foreign_keys=foreign_keys,
             row_count=row_count
         )
+    def _detect_implicit_relationships(self, tables: Dict[str, TableInfo]) -> List[Dict]:
+        """Dynamically detect implicit relationships based on naming conventions and data patterns"""
+        relationships = []
+        
+        # Get all table names and their primary keys
+        table_primary_keys = {name: info.primary_key for name, info in tables.items()}
+        
+        for table_name, table_info in tables.items():
+            for column in table_info.columns:
+                # Pattern 1: column_name_id -> table_name.id (exact match)
+                if column.endswith('_id') and column != table_info.primary_key:
+                    potential_table = column[:-3]  # Remove '_id' suffix
+                    if potential_table in tables:
+                        relationships.append({
+                            'from_table': table_name,
+                            'from_column': column,
+                            'to_table': potential_table,
+                            'to_column': tables[potential_table].primary_key
+                        })
+                    else:
+                        # Pattern 2: Try singular/plural variations
+                        # Try singular form (e.g., meter_id -> Meter)
+                        if potential_table in tables:
+                            relationships.append({
+                                'from_table': table_name,
+                                'from_column': column,
+                                'to_table': potential_table,
+                                'to_column': tables[potential_table].primary_key
+                            })
+                        else:
+                            # Try plural form (e.g., meter_id -> Meters)
+                            potential_table_plural = potential_table + 's'
+                            if potential_table_plural in tables:
+                                relationships.append({
+                                    'from_table': table_name,
+                                    'from_column': column,
+                                    'to_table': potential_table_plural,
+                                    'to_column': tables[potential_table_plural].primary_key
+                                })
+                
+                # Pattern 3: column_name -> table_name.column_name (for direct matches)
+                elif column in tables and column != table_name:
+                    relationships.append({
+                        'from_table': table_name,
+                        'from_column': column,
+                        'to_table': column,
+                        'to_column': tables[column].primary_key
+                    })
+        
+        return relationships
     
     def _generate_smart_queries(self, tables: Dict[str, TableInfo], relationships: List[Dict]) -> Dict[str, str]:
         """Generate intelligent queries based on discovered schema"""
@@ -119,18 +186,47 @@ class DatabaseAutoDiscovery:
             base_name = table_name.lower()
             
             # Basic queries
-            queries[f"get_all_{base_name}"] = f"SELECT * FROM {table_name} ORDER BY {table_info.primary_key}"
+            if table_info.primary_key and table_info.primary_key in table_info.columns:
+                queries[f"get_all_{base_name}"] = f"SELECT * FROM {table_name} ORDER BY {table_info.primary_key}"
+            else:
+                queries[f"get_all_{base_name}"] = f"SELECT * FROM {table_name}"
             
-            # Search by common patterns
-            if 'name' in table_info.columns:
-                queries[f"get_{base_name}_by_name"] = f"SELECT * FROM {table_name} WHERE name = :name"
-                queries[f"search_{base_name}_by_name"] = f"SELECT * FROM {table_name} WHERE name LIKE :pattern"
+            # Search by common patterns for any column ending with 'name'
+            name_columns = [col for col in table_info.columns if col.endswith('name')]
+            for name_col in name_columns:
+                queries[f"get_{base_name}_by_{name_col}"] = f"SELECT * FROM {table_name} WHERE {name_col} = :{name_col}"
+                queries[f"search_{base_name}_by_{name_col}"] = f"SELECT * FROM {table_name} WHERE {name_col} LIKE :pattern"
             
-            if 'model_name' in table_info.columns:
-                queries[f"get_{base_name}_by_model"] = f"SELECT * FROM {table_name} WHERE model_name = :model_name"
+            # Search by any ID column
+            id_columns = [col for col in table_info.columns if col.endswith('id') and col != table_info.primary_key]
+            for id_col in id_columns:
+                queries[f"get_{base_name}_by_{id_col}"] = f"SELECT * FROM {table_name} WHERE {id_col} = :{id_col}"
             
-            if 'series_name' in table_info.columns:
-                queries[f"get_{base_name}_by_series"] = f"SELECT * FROM {table_name} WHERE series_name = :series_name"
+            # Search by any category-like column
+            category_columns = [col for col in table_info.columns if any(keyword in col.lower() for keyword in ['type', 'category', 'class', 'group', 'series'])]
+            for cat_col in category_columns:
+                queries[f"get_{base_name}_by_{cat_col}"] = f"SELECT * FROM {table_name} WHERE {cat_col} = :{cat_col}"
+        
+        # Generate relationship-aware queries
+        for rel in relationships:
+            from_table = rel['from_table']
+            to_table = rel['to_table']
+            from_col = rel['from_column']
+            to_col = rel['to_column']
+            
+            # Join queries
+            queries[f"get_{from_table}_with_{to_table}"] = f"""
+                SELECT {from_table}.*, {to_table}.* 
+                FROM {from_table} 
+                LEFT JOIN {to_table} ON {from_table}.{from_col} = {to_table}.{to_col}
+            """
+            
+            # Reverse join queries
+            queries[f"get_{to_table}_with_{from_table}"] = f"""
+                SELECT {to_table}.*, {from_table}.* 
+                FROM {to_table} 
+                LEFT JOIN {from_table} ON {to_table}.{to_col} = {from_table}.{from_col}
+            """
         
         return queries
 
@@ -141,8 +237,17 @@ class SmartDatabaseWrapper:
         self.db_path = db_path
         self.schema = discovery_engine.discover_database(db_path)
         self.discovery_engine = discovery_engine
+        
+        print(f"🔧 SmartDatabaseWrapper created for {os.path.basename(db_path)}")
+        print(f"🔧 Schema has {len(self.schema.suggested_queries)} suggested queries")
     
-    def get_all(self, table_name: str = None) -> List[Dict]:
+    def get_available_functions(self) -> List[str]:
+        """Return list of all available database functions - CRITICAL METHOD"""
+        functions = list(self.schema.suggested_queries.keys())
+        print(f"🔧 get_available_functions() returning {len(functions)} functions: {functions}")
+        return functions
+    
+    def get_all(self, table_name: Optional[str] = None) -> List[Dict]:
         """Get all records from main table or specified table"""
         if not table_name:
             table_name = self._detect_main_table()
@@ -150,28 +255,36 @@ class SmartDatabaseWrapper:
         if not table_name or table_name not in self.schema.tables:
             return []
         
-        query = f"SELECT * FROM {table_name} ORDER BY {self.schema.tables[table_name].primary_key} LIMIT 100"
+        table_info = self.schema.tables[table_name]
+        if table_info.primary_key and table_info.primary_key in table_info.columns:
+            query = f"SELECT * FROM {table_name} ORDER BY {table_info.primary_key} LIMIT 100"
+        else:
+            query = f"SELECT * FROM {table_name} LIMIT 100"
         return self._execute_query(query)
     
-    def get_by_series(self, series_name: str) -> List[Dict]:
-        """Get records by series (auto-detects series column)"""
+    def get_by_category(self, category_column: str, category_value: str) -> List[Dict]:
+        """Get records by any category column (auto-detects available category columns)"""
         main_table = self._detect_main_table()
         
-        if main_table and 'series_name' in self.schema.tables[main_table].columns:
-            query = f"SELECT * FROM {main_table} WHERE series_name = ? LIMIT 50"
-            return self._execute_query(query, (series_name,))
+        if main_table and category_column in self.schema.tables[main_table].columns:
+            query = f"SELECT * FROM {main_table} WHERE {category_column} = ? LIMIT 50"
+            return self._execute_query(query, (category_value,))
         return []
     
-    def get_specifications(self, model_name: str) -> Dict:
-        """Get detailed specifications with related data"""
+    def get_detailed_record(self, record_id: Any, id_column: Optional[str] = None) -> Dict:
+        """Get detailed record with all related data using discovered relationships"""
         main_table = self._detect_main_table()
         
         if not main_table:
             return {}
         
+        # Determine the ID column to use
+        if not id_column:
+            id_column = self.schema.tables[main_table].primary_key
+        
         # Start with basic query
-        query = f"SELECT * FROM {main_table} WHERE model_name = ? LIMIT 1"
-        results = self._execute_query(query, (model_name,))
+        query = f"SELECT * FROM {main_table} WHERE {id_column} = ? LIMIT 1"
+        results = self._execute_query(query, (record_id,))
         
         if not results:
             return {}
@@ -179,32 +292,42 @@ class SmartDatabaseWrapper:
         base_result = results[0]
         
         # Add related data from foreign key relationships
-        meter_id = base_result.get('id')
-        if meter_id:
-            # Get related specifications
+        record_id_value = base_result.get(id_column)
+        if record_id_value:
+            # Get related data
             for rel in self.schema.relationships:
                 if rel['from_table'] == main_table:
                     related_table = rel['to_table']
                     related_query = f"SELECT * FROM {related_table} WHERE {rel['to_column']} = ?"
-                    related_data = self._execute_query(related_query, (meter_id,))
+                    related_data = self._execute_query(related_query, (record_id_value,))
                     
                     if related_data:
                         base_result[f"{related_table.lower()}_data"] = related_data
         
         return base_result
     
-    def get_series_summary(self) -> List[Dict]:
-        """Get summary of available series"""
+    def get_category_summary(self, category_column: str) -> List[Dict]:
+        """Get summary of any category column (auto-detects available category columns)"""
         main_table = self._detect_main_table()
         
-        if main_table and 'series_name' in self.schema.tables[main_table].columns:
-            query = f"""
-                SELECT series_name, COUNT(*) as model_count,
-                       GROUP_CONCAT(model_name, ', ') as sample_models
-                FROM {main_table}
-                GROUP BY series_name
-                ORDER BY series_name
-            """
+        if main_table and category_column in self.schema.tables[main_table].columns:
+            table_info = self.schema.tables[main_table]
+            pk = table_info.primary_key if table_info.primary_key and table_info.primary_key in table_info.columns else None
+            if pk:
+                query = f"""
+                    SELECT {category_column}, COUNT(*) as count,
+                           GROUP_CONCAT({pk}, ', ') as sample_ids
+                    FROM {main_table}
+                    GROUP BY {category_column}
+                    ORDER BY {category_column}
+                """
+            else:
+                query = f"""
+                    SELECT {category_column}, COUNT(*) as count
+                    FROM {main_table}
+                    GROUP BY {category_column}
+                    ORDER BY {category_column}
+                """
             return self._execute_query(query)
         return []
     
@@ -232,10 +355,154 @@ class SmartDatabaseWrapper:
         
         return self.get_all()
     
-    def _detect_main_table(self) -> str:
+    # GENERIC SCHEMA-AWARE METHODS (work with ANY database)
+    def get_all_with_related_data(self, table_name: Optional[str] = None) -> List[Dict]:
+        """Get all records from a table with all related data using discovered schema"""
+        if not table_name:
+            table_name = self._detect_main_table()
+        
+        if not table_name or table_name not in self.schema.tables:
+            return []
+        
+        table_info = self.schema.tables[table_name]
+        if table_info.primary_key and table_info.primary_key in table_info.columns:
+            base_query = f"SELECT * FROM {table_name} ORDER BY {table_info.primary_key} LIMIT 100"
+        else:
+            base_query = f"SELECT * FROM {table_name} LIMIT 100"
+        base_data = self._execute_query(base_query)
+        
+        # If no relationships exist, just return the base data
+        if not self.schema.relationships:
+            return base_data
+        
+        # Try to build comprehensive query with relationships
+        try:
+            select_parts = [f"{table_name}.*"]
+            join_parts = []
+            
+            for rel in self.schema.relationships:
+                if rel['from_table'] == table_name:
+                    related_table = rel['to_table']
+                    select_parts.append(f"{related_table}.*")
+                    join_parts.append(f"LEFT JOIN {related_table} ON {table_name}.{rel['from_column']} = {related_table}.{rel['to_column']}")
+                elif rel['to_table'] == table_name:
+                    related_table = rel['from_table']
+                    select_parts.append(f"{related_table}.*")
+                    join_parts.append(f"LEFT JOIN {related_table} ON {table_name}.{rel['to_column']} = {related_table}.{rel['from_column']}")
+            
+            if join_parts:
+                query = f"""
+                    SELECT {', '.join(select_parts)}
+                    FROM {table_name}
+                    {' '.join(join_parts)}
+                    ORDER BY {table_name}.{table_info.primary_key}
+                    LIMIT 100
+                """
+                return self._execute_query(query)
+            else:
+                return base_data
+                
+        except Exception as e:
+            print(f"⚠️ Relationship query failed, falling back to base data: {e}")
+            return base_data
+    
+    def get_table_data(self, table_name: str, limit: int = 100) -> List[Dict]:
+        """Get data from any table by name"""
+        if table_name not in self.schema.tables:
+            return []
+        
+        table_info = self.schema.tables[table_name]
+        if table_info.primary_key and table_info.primary_key in table_info.columns:
+            query = f"SELECT * FROM {table_name} ORDER BY {table_info.primary_key} LIMIT {limit}"
+        else:
+            query = f"SELECT * FROM {table_name} LIMIT {limit}"
+        return self._execute_query(query)
+    
+    def get_related_data(self, table_name: str, record_id: Any, id_column: str = 'id') -> Dict[str, List[Dict]]:
+        """Get all related data for a specific record"""
+        if table_name not in self.schema.tables:
+            return {}
+        
+        related_data = {}
+        
+        for rel in self.schema.relationships:
+            if rel['from_table'] == table_name:
+                related_table = rel['to_table']
+                related_query = f"SELECT * FROM {related_table} WHERE {rel['to_column']} = ?"
+                data = self._execute_query(related_query, (record_id,))
+                if data:
+                    related_data[related_table] = data
+            elif rel['to_table'] == table_name:
+                related_table = rel['from_table']
+                related_query = f"SELECT * FROM {related_table} WHERE {rel['from_column']} = ?"
+                data = self._execute_query(related_query, (record_id,))
+                if data:
+                    related_data[related_table] = data
+        
+        return related_data
+    
+    def find_tables_by_keyword(self, keyword: str) -> List[str]:
+        """Find tables that contain a keyword in their name"""
+        keyword_lower = keyword.lower()
+        return [table_name for table_name in self.schema.tables if keyword_lower in table_name.lower()]
+    
+    def get_tables_with_column(self, column_name: str) -> List[str]:
+        """Find all tables that have a specific column"""
+        matching_tables = []
+        for table_name, table_info in self.schema.tables.items():
+            if column_name in table_info.columns:
+                matching_tables.append(table_name)
+        return matching_tables
+    
+    def get_table_summary(self, table_name: str) -> Dict[str, Any]:
+        """Get summary information about a table"""
+        if table_name not in self.schema.tables:
+            return {}
+        
+        table_info = self.schema.tables[table_name]
+        
+        # Get sample data
+        sample_query = f"SELECT * FROM {table_name} LIMIT 3"
+        sample_data = self._execute_query(sample_query)
+        
+        return {
+            'name': table_name,
+            'columns': table_info.columns,
+            'primary_key': table_info.primary_key,
+            'row_count': table_info.row_count,
+            'foreign_keys': table_info.foreign_keys,
+            'sample_data': sample_data
+        }
+    
+    def get_schema_info(self) -> Dict[str, Any]:
+        """Get comprehensive schema information for LLM context"""
+        main_table = self._detect_main_table()
+        return {
+            'tables': {
+                name: {
+                    'columns': info.columns,
+                    'primary_key': info.primary_key,
+                    'row_count': info.row_count,
+                    'foreign_keys': info.foreign_keys
+                }
+                for name, info in self.schema.tables.items()
+            },
+            'relationships': self.schema.relationships,
+            'suggested_queries': self.schema.suggested_queries,
+            'main_table': main_table or ""
+        }
+    
+    def execute_suggested_query(self, query_name: str, params: Optional[Dict[str, Any]] = None) -> List[Dict]:
+        """Execute one of the auto-generated suggested queries"""
+        if query_name not in self.schema.suggested_queries:
+            return []
+        query = self.schema.suggested_queries[query_name]
+        return self._execute_query(query, params or {})
+    
+    def _detect_main_table(self) -> Optional[str]:
         """Auto-detect the main table (usually has most rows or central relationships)"""
         if not self.schema.tables:
-            return ""
+            return None
         
         # Heuristics for main table detection
         candidates = []
@@ -251,22 +518,32 @@ class SmartDatabaseWrapper:
             score += references * 10
             
             # Higher score for common main table names
-            if table_name.lower() in ['meters', 'products', 'items', 'main']:
+            if table_name.lower() in ['meters', 'products', 'items', 'main', 'data', 'records']:
                 score += 50
             
             candidates.append((table_name, score))
         
         if candidates:
             return max(candidates, key=lambda x: x[1])[0]
-        return ""
+        return None
     
-    def _execute_query(self, query: str, params: tuple = ()) -> List[Dict]:
+    def _execute_query(self, query: str, params: Any = None) -> List[Dict]:
         """Execute query and return results as dictionaries"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 conn.row_factory = sqlite3.Row
                 cursor = conn.cursor()
-                cursor.execute(query, params)
+                
+                if isinstance(params, dict):
+                    # Named parameters
+                    cursor.execute(query, params)
+                elif isinstance(params, (tuple, list)):
+                    # Positional parameters
+                    cursor.execute(query, params)
+                else:
+                    # No parameters
+                    cursor.execute(query)
+                    
                 return [dict(row) for row in cursor.fetchall()]
         except Exception as e:
             print(f"❌ Query failed: {e}")
@@ -274,86 +551,4 @@ class SmartDatabaseWrapper:
 
     def query(self, sql, params=None):
         """Run a raw SQL query and return results as a list of dicts."""
-        with sqlite3.connect(self.db_path) as conn:
-            conn.row_factory = sqlite3.Row
-            cursor = conn.cursor()
-            if params:
-                cursor.execute(sql, params)
-            else:
-                cursor.execute(sql)
-            return [dict(row) for row in cursor.fetchall()]
-
-class AutoDiscoveryDatabase:
-    def __init__(self, db_path):
-        self.db_path = db_path
-        self.schema = self._discover_schema()
-    
-    def _discover_schema(self):
-        """Automatically discover database structure"""
-        schema = {}
-        try:
-            with sqlite3.connect(self.db_path) as conn:
-                cursor = conn.cursor()
-                
-                # Get all tables
-                cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
-                tables = [row[0] for row in cursor.fetchall()]
-                
-                for table in tables:
-                    # Get columns for each table
-                    cursor.execute(f"PRAGMA table_info({table})")
-                    columns = [row[1] for row in cursor.fetchall()]
-                    
-                    # Get sample data
-                    cursor.execute(f"SELECT * FROM {table} LIMIT 3")
-                    sample_data = [dict(zip(columns, row)) for row in cursor.fetchall()]
-                    
-                    schema[table] = {
-                        'columns': columns,
-                        'sample_data': sample_data,
-                        'row_count': self._get_table_count(cursor, table)
-                    }
-                    
-        except Exception as e:
-            print(f"Schema discovery failed: {e}")
-        
-        return schema
-    
-    def _get_table_count(self, cursor, table):
-        cursor.execute(f"SELECT COUNT(*) FROM {table}")
-        return cursor.fetchone()[0]
-    
-    def query(self, sql, params=None):
-        """Generic query method"""
-        try:
-            with sqlite3.connect(self.db_path) as conn:
-                conn.row_factory = sqlite3.Row
-                cursor = conn.cursor()
-                if params:
-                    cursor.execute(sql, params)
-                else:
-                    cursor.execute(sql)
-                return [dict(row) for row in cursor.fetchall()]
-        except Exception as e:
-            print(f"Query failed: {e}")
-            return []
-    
-    def get_table_summary(self, table_name):
-        """Get summary of any table"""
-        if table_name not in self.schema:
-            return {}
-        
-        return {
-            'total_rows': self.schema[table_name]['row_count'],
-            'columns': self.schema[table_name]['columns'],
-            'sample_data': self.schema[table_name]['sample_data']
-        }
-    # In your pipeline setup
-databases = {
-    'meters': AutoDiscoveryDatabase('C:\\Users\\cyqt2\\Database\\testing.db')
-}
-
-# The YAML template will now have access to:
-# - databases.meters.schema (auto-discovered structure)
-# - databases.meters.query() (generic SQL queries)
-# - databases.meters.get_table_summary() (table summaries)
+        return self._execute_query(sql, params)

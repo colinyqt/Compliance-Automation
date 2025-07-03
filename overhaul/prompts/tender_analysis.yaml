@@ -1,5 +1,5 @@
 name: "Tender Clause Extraction Only"
-description: "Extract only the relevant meter specification clauses from the tender document."
+description: "Extract relevant meter specification clauses from the tender document."
 
 inputs:
   - name: "tender_document"
@@ -18,17 +18,25 @@ processing_steps:
       1. Focus ONLY on clauses that name a specific device (e.g. "Digital Power Analyzer", "Multi-Function Meter", "DMMD")
       2. Exclude general requirement clauses (e.g. "General", "Testing") and component clauses (e.g. "Current Transformer", "Wiring"), unless they are a sub-section of a specific device clause.
       3. For each relevant clause, provide the COMPLETE text—no truncation.
-      4. Format your response as clear, structured text (not JSON).
+      4. Do not add or invent any clauses that are not in the document.
+      5. Format your response as clear, structured text (not JSON).
+      6. When extracting, always use the clause number and title exactly as shown in the document. Do not invent or infer numbers or titles.
+      7. If the clause number or title is unclear, copy the entire clause header as-is.
 
-      RELEVANCE CRITERIA - A clause must contain at least one of:
-      - Voltage/Current measurement specifications
-      - Accuracy requirements or standards
-      - Communication protocols
-      - Power measurement capabilities
-      - Environmental ratings or EMC requirements
+      RELEVANCE CRITERIA - Only include clauses that are specifically about electrical meters, power meters, PQMs, or metering devices. 
+      A relevant clause must:
+      - Explicitly mention a meter or metering device in the clause title or text (e.g. "Power Meter", "Multi-Function Meter", "PQM", "Digital Power Meter", etc.)
+      - AND contain at least one of:
+        - Voltage/Current measurement specifications
+        - Accuracy requirements or standards
+        - Communication protocols
+        - Power measurement capabilities
+        - Environmental ratings or EMC requirements
+
+      Exclude clauses that are only about data communication, EMS, or general system requirements unless they are directly specifying requirements for a meter.
 
       DOCUMENT CONTENT:
-      {{ tender_document.content }}
+      {{ inputs.tender_document.content }}
 
       FORMAT YOUR RESPONSE EXACTLY LIKE THIS:
 
@@ -48,22 +56,41 @@ processing_steps:
 
       END OF EXTRACTION
     timeout: 300
+  - name: "identify_clause_headers"
+    description: "Identify all clause headers and their positions"
+    prompt_template: |
+      You are an expert at reading technical documents.
+      Scan the following document and extract a list of all clause headers, their exact text, and their position (character offset or line number).
+      Recognize any clause header pattern, including but not limited to:
+      - 'Clause 1.20.X - [Title]'
+      - '1.20.X [Title]'
+      - 'X.0 [Title]'
+      - '[number].[number] [Title]'
+      - '[number].[number].[number] [Title]'
+      Return a JSON array like:
+      [
+        {"clause_number": "1.20.4", "title": "Multi-Function Electronic Meters", "start_line": 12, "header_text": "Clause 1.20.4 - Multi-Function Electronic Meters"},
+        ...
+      ]
+      DOCUMENT:
+      {{ inputs.tender_document.content | truncate(8000) }}
+    timeout: 180
 
 outputs:
   - type: "text"
-    filename: "{{ tender_document.basename }}_relevant_clauses_{{ timestamp }}.txt"
+    filename: "{{ inputs.tender_document.basename }}_relevant_clauses_{{ timestamp }}.txt"
     content: |
       ================================================================================
       TENDER ANALYSIS REPORT - RELEVANT CLAUSE EXTRACTION ONLY
       ================================================================================
 
       Analysis Date: {{ timestamp }}
-      Source Document: {{ tender_document.name }}
+      Source Document: {{ inputs.tender_document.name }}
       Analysis Engine: {{ config.name }}
 
       ================================================================================
 
-      {{ extract_relevant_clauses.raw_response }}
+      {{ step_results.extract_relevant_clauses.raw_response }}
 
       ================================================================================
 

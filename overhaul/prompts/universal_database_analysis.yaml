@@ -1,0 +1,106 @@
+name: "Universal Database Analysis"
+description: "Analyze ANY database structure and provide insights - completely dynamic and schema-agnostic"
+version: "1.0"
+
+inputs:
+  - name: "analysis_goal"
+    type: "text"
+    required: false
+    default: "Provide a comprehensive overview of the database structure and data"
+    description: "What specific analysis or insights you want from the database"
+
+databases:
+  main_db: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "analyze_database_structure"
+    description: "Analyze the database schema and provide structural insights"
+    prompt_template: |
+      You are a database analysis expert. Analyze the provided database structure and provide comprehensive insights.
+
+      ANALYSIS GOAL:
+      {{ inputs.analysis_goal }}
+
+      DATABASE SCHEMA:
+      {{ database_schemas.main_db | tojson(indent=2) }}
+
+      MAIN TABLE DATA (Sample):
+      {{ databases.main_db.get_all() | tojson(indent=2) }}
+
+      ALL TABLES WITH SAMPLE DATA:
+      {% for table_name in database_schemas.main_db.tables.keys() %}
+      {{ table_name }}:
+      {{ databases.main_db.get_table_data(table_name, 3) | tojson(indent=2) }}
+      {% endfor %}
+
+      TASK: Provide a comprehensive analysis of this database including:
+      1. Database structure overview
+      2. Table relationships and dependencies
+      3. Data patterns and insights
+      4. Potential use cases
+      5. Recommendations for optimization
+
+      Return your analysis in a structured format.
+    timeout: 300
+
+  - name: "generate_data_insights"
+    description: "Generate specific insights from the data"
+    dependencies: ["analyze_database_structure"]
+    prompt_template: |
+      Based on the database analysis, generate specific data insights and patterns.
+
+      DATABASE SCHEMA:
+      {{ database_schemas.main_db | tojson(indent=2) }}
+
+      COMPLETE DATA WITH RELATIONSHIPS:
+      {{ databases.main_db.get_all_with_related_data() | tojson(indent=2) }}
+
+      PREVIOUS ANALYSIS:
+      {{ step_results.analyze_database_structure.raw_response }}
+
+      TASK: Generate specific insights including:
+      1. Key data patterns
+      2. Statistical summaries
+      3. Business intelligence insights
+      4. Data quality observations
+      5. Recommendations for data usage
+
+      Focus on actionable insights that could be valuable for decision-making.
+    timeout: 240
+
+outputs:
+  - type: "text"
+    filename: "universal_database_analysis_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      UNIVERSAL DATABASE ANALYSIS REPORT
+      ================================================================================
+      
+      Generated: {{ timestamp }}
+      Analysis Goal: {{ inputs.analysis_goal }}
+      Database: {{ database_schemas.main_db.path }}
+      
+      ================================================================================
+      DATABASE STRUCTURE ANALYSIS
+      ================================================================================
+      
+      {{ step_results.analyze_database_structure.raw_response }}
+      
+      ================================================================================
+      DATA INSIGHTS
+      ================================================================================
+      
+      {{ step_results.generate_data_insights.raw_response }}
+      
+      ================================================================================
+      SCHEMA SUMMARY
+      ================================================================================
+      
+      Tables: {{ database_schemas.main_db.tables | length }}
+      Relationships: {{ database_schemas.main_db.relationships | length }}
+      Main Table: {{ database_schemas.main_db.main_table }}
+      Total Records: {{ database_schemas.main_db.tables[database_schemas.main_db.main_table].row_count if database_schemas.main_db.main_table and database_schemas.main_db.main_table in database_schemas.main_db.tables else 'Unknown' }}
+      
+      ================================================================================
+      END OF UNIVERSAL DATABASE ANALYSIS
+      ================================================================================ 

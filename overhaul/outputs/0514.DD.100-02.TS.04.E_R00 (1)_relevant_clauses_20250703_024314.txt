@@ -1,0 +1,259 @@
+================================================================================
+TENDER ANALYSIS REPORT - RELEVANT CLAUSE EXTRACTION ONLY
+================================================================================
+
+Analysis Date: 20250703_024314
+Source Document: 0514.DD.100-02.TS.04.E_R00 (1).pdf
+Analysis Engine: Tender Clause Extraction Only
+
+================================================================================
+
+## RELEVANT CLAUSES EXTRACTED
+
+### Clause 1.1 - Purpose
+**Category:** General
+**Relevance Score:** 8
+
+**Complete Clause Text:**
+1. The purpose of the document is to outline the general requirements, performance, design criteria, testing & commissioning requirement for Electrical Monitoring System (EMS).    
+
+**Key Specifications Identified:**
+- Document outlines general requirements for EMS.
+- Purpose is to provide a comprehensive guide for EMS.
+
+### Clause 2.1 - Overview
+**Category:** Requirements
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+2.1 Overview 
+
+1. EMS – a fully redundant energy management system collecting electrical energy, power,  
+voltage, current, frequency, power factor and waveform data from electrical meters to 
+provide energy and power reporting, alarm and event recording. 
+ 
+2. Shall be utilizing Programmable Logic Controller (PLC) based control and monitoring 
+system. 
+ 
+3. The data shall be scanned at no more than 60 seconds intervals and shall be made 
+available  as close to real-time as reasonably practical within the constraints of the 
+systems. 
+
+**Key Specifications Identified:**
+- EMS is fully redundant.
+- Uses PLC-based control and monitoring system.
+- Data collection every 60 seconds with real-time availability.
+
+### Clause 2.2 - Design Criteria
+**Category:** Requirements
+**Relevance Score:** 9
+
+**Complete Clause Text:**
+2.2 Design Criteria 
+
+1. High Availability 
+ 
+a. The EMS shall be fully redundant from servers and networks. 
+ 
+b. EMS network to run on a secure, resilient, managed infrastructure, with no single point 
+of failure. 
+ 
+c. All elements, hardware and software shall be configured in a concurrently maintainable 
+arrangement. 
+ 
+d. The system architecture shall be based on industrial grade redundant hardware for 
+Controllers, Input/Output (I/O) communication modules and power supplies thereby 
+providing high degree of up-time and concurrent maintainability.   
+ 
+e. Server redundancy shall also allow the maintenance and patching of systems without 
+losing visibility or data. Upon detection of failure of the primary server, the secondary 
+server shall assume control of data collection, alarm functions, applications, and allow 
+user access within 10 seconds for controllers and within 60 seconds for high level 
+interface. Primary server and secondary server shall operate in hot-standby mode, 
+alarm shall be raised when there is any failure in the primary and secondary server or 
+component.  
+ 
+f. In the event of hardware failure for the primary controller or I/O communication 
+controller module, the proposed system will automatically switch to secondary 
+controller in less than 10 milli-seconds without need for any human intervention.   
+ 
+g. The failure of any one part of each BMS, PMS, EMS system, controller, server or 
+network component shall not cause failure of the particular system or the other 
+systems. 
+ 
+h. Non-redundant components such as I/O modules shall be hot swappable to reduce 
+the Mean Time to Repair (MTTR). The I/O module electronics shall be replaced 
+without removing the field or internal cables and software re-downloads 
+
+**Key Specifications Identified:**
+- EMS is fully redundant from servers and networks.
+- High availability through concurrent maintainability.
+- Automatic switching of controllers in less than 10 milliseconds.
+
+### Clause 2.3 - System Components
+**Category:** Requirements
+**Relevance Score:** 8
+
+**Complete Clause Text:**
+2.3 System Components 
+
+1. Utilize industry standards such as OPC UA technology, Modbus TCP/IP, BACnet IP, 
+IEC61850, etc   
+ 
+2. Support interfacing to Client system 
+ 
+3. One Rack mount Engineering and Operator Workstation. 
+ 
+4. Operator work station (OWS) provide the operator interface to the EMS with a window to 
+the System Graphics, System Objects, Faceplates, Alarm and Event, Historical Data, 
+Trends and Reports.   
+ 
+5. EWS is configured to access the system through the system configuration software. 
+Typically, they are used to configure all aspects of the system including the following:   
+ 
+• System Graphics   
+• History   
+ 
+6. I/O for all systems must be addressable by the associated PLCs or controllers. 
+ 
+7. All PLC, control panels and network panels shall incorporate network access to enable 
+portable workstation to be connected and address all elements of the EMS systems.  
+ 
+8. All PLC, control and network panels shall have a single-phase socket outlet.  
+ 
+9. All I/O provision shall include 25% spare capacity.  
+ 
+10. All terminal blocks for I/O shall be knife disconnect type.   
+
+**Key Specifications Identified:**
+- Use of industry standards like OPC UA, Modbus TCP/IP.
+- Rack mount Engineering and Operator Workstation.
+- Network access for portable workstations.
+
+### Clause 3.1 - Factory Testing
+**Category:** Testing & Commissioning
+**Relevance Score:** 7
+
+**Complete Clause Text:**
+3.1 Factory Testing 
+
+1. The complete EMS system shall be subject to 100% factory testing procedures at the 
+vendors works.  
+ 
+2. All equipment including outstations, controllers, networking, IO, servers and workstations 
+shall be connected in the intended configuration to be used on site, with suitable lengths 
+of fibre-optic cable to simulate the site communication links.  
+ 
+3. Every input and output shall be tested, including spares, using hard-wired test boxes. 
+Analogue inputs shall be injected through the entire range using a current injection set.  
+ 
+4. All communications links, PLCs, servers, switches and power supplies shall be tested for 
+redundancy and to demonstrate the correct detection and alarming of failures.  
+ 
+5. Application software shall be exhaustively tested to cover every conceivable situation. 
+Prior to testing, the logic flow diagrams and ladder diagrams must have been approved 
+by the Employers Representative.  
+ 
+6. The vendor shall provide a method statement outlining both the works and site testing 
+procedures. The method statement must be provided 2 weeks in advance of the test date 
+to enable the engineer to review and comment on the method statement.  
+
+**Key Specifications Identified:**
+- Factory testing at vendors' works.
+- Testing all equipment, including spares.
+- Testing communications links for redundancy.
+
+### Clause 3.2 - Site Testing
+**Category:** Testing & Commissioning
+**Relevance Score:** 7
+
+**Complete Clause Text:**
+3.2 Site Testing 
+
+1. Prior to the site testing of any item of equipment the EMS functionality shall have be 
+thoroughly tested and proven with the equipment contractor including all HMI graphics, 
+alarming and trending.  
+ 
+2. For the duration of each equipment site testing the EMS contractor shall provide a laptop 
+within the room the site testing is being undertaken with view only capability of the EMS 
+for the equipment being tested. This laptop shall be used by the commissioning manager 
+to verify that the EMS is operating correctly for each and every item of equipment.  
+ 
+3. In addition to the above a separate EMS site testing shall be undertaken with the EMS 
+system 100% complete both in terms of hardware and software.  
+ 
+4. All communications links, PLCs, servers, switches and power supplies shall be tested for 
+redundancy and to demonstrate the correct monitoring and alarming of failures. All 
+interfaces that have not already been tested by the equipment site testing’s shall be 
+individually tested.  
+ 
+5. A demonstration shall be provided for the automatic generation custom reports to the 
+employer’s requirements.  
+
+**Key Specifications Identified:**
+- Site testing before equipment installation.
+- EMS contractor providing a laptop during testing.
+- Testing all communications links and interfaces.
+
+### Clause 4 - EMS Point List
+**Category:** Monitoring Points
+**Relevance Score:** 6
+
+**Complete Clause Text:**
+ELECTRICAL SYSTEM  
+Monitoring Points 
+Schedule System  LOW LEVEL     HIGH LEV EL Display 
+Value Alarm Send  
+SMS Waveform 
+Trigger Alarm Threshold  DI DO AI AO DI DO AI AO Comms 
+Digital Power Meter         
+L-N Voltage AN  EMS       X  
+Modbus TCP/IP  X X X   
+L-N Voltage BN  EMS       X  X X X   
+L-N Voltage CN  EMS       X  X X X   
+L-N Voltage Average  EMS       X  X     
+L-L Voltages AB  EMS       X  X X X   
+L-L Voltages BC  EMS       X  X X X   
+L-L Voltages CA  EMS       X  X X X   
+L-L Voltages Average  EMS       X  X     
+Current Phase A  EMS       X  X X X   
+Current Phase B  EMS       X  X X X   
+Current Phase C  EMS       X  X X X   
+Current Phase Average  EMS       X  X     
+Phase kW A  EMS       X  X X X   
+Phase kW B  EMS       X  X X X   
+Phase kW C  EMS       X  X X X   
+Phase kW Total  EMS       X  X     
+Phase kVAR A  EMS       X  X     
+Phase kVAR B  EMS       X  X     
+Phase kVAR C  EMS       X  X     
+Total KVAR EMS       X  X     
+Phase kVA A  EMS       X  X     
+Phase kVA B  EMS       X  X     
+Phase kVA C  EMS       X  X     
+Phase kVA Total  EMS       X  X     
+PF Phase A EMS       X  X     
+PF Phase B EMS       X  X     
+PF Phase C EMS       X  X     
+PF Total EMS       X  X     
+Frequency EMS       X  X X X   
+THD, Current Phase A  EMS       X  X     
+THD, Current Phase B  EMS       X  X     
+THD, Current Phase C  EMS       X  X     
+THD, Voltage Phase A-N  EMS       X  X X X   
+THD, Voltage Phase B-N  EMS       X  X X X   
+THD, Voltage Phase C-N  EMS       X  X X X   
+kWH EMS       X  X     
+Common Alarm  EMS       X   X X   
+Communica Ɵons Failure EMS     X     X X   
+
+**Key Specifications Identified:**
+- Monitoring points for voltage, current, power, frequency.
+- Alarm thresholds and event logging.
+
+END OF EXTRACTION
+
+================================================================================
+
+END OF REPORT
+================================================================================

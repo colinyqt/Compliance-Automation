@@ -1,0 +1,84 @@
+name: "LlamaIndex Meter Query Debug"
+description: "Debug LlamaIndex queries against meter database"
+
+inputs:
+  - name: "simple_query"
+    type: "text"
+    required: false
+    description: "Simple test query"
+    default: "Find meters with voltage measurement capabilities"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "check_meter_data"
+    description: "Check what meters exist using database functions"
+    prompt_template: |
+      Use the available database functions to get actual data:
+      
+      Call these functions to show real data from the database:
+      - get_all_meters() to list meters
+      - get_measurement_types() to show measurement types  
+      - get_communication_protocols() to show protocols
+      - get_accuracy_values() to show accuracy data
+      
+      Execute these functions and return the actual results, not example SQL.
+
+  - name: "llamaindex_simple_test"
+    description: "Test simple LlamaIndex query"
+    prompt_template: |
+      {{ inputs.simple_query }}
+    timeout: 180
+
+  - name: "llamaindex_requirements_search"
+    description: "Search for meters meeting tender requirements"
+    prompt_template: |
+      Find power meters in the database that have:
+      - Voltage measurement with 0.5% accuracy or better
+      - RS485 or Modbus communication support
+      - Power quality analysis features
+      
+      List specific meter models that match these criteria.
+    timeout: 180
+
+outputs:
+  - type: "text"
+    filename: "llamaindex_simple_debug_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      SIMPLE LLAMAINDEX DEBUG
+      ================================================================================
+      
+      Simple Query: {{ inputs.simple_query }}
+      
+      ================================================================================
+      DATABASE CONTENT CHECK RESULTS
+      ================================================================================
+      {{ step_results.check_meter_data.raw_response }}
+      
+      ================================================================================
+      LLAMAINDEX SIMPLE TEST
+      ================================================================================
+      {% if step_results.llamaindex_simple_test %}
+      Result: {{ step_results.llamaindex_simple_test.llamaindex_result }}
+      {% else %}
+      Result: LlamaIndex step did not execute or failed
+      {% endif %}
+      
+      ================================================================================
+      REQUIREMENTS SEARCH
+      ================================================================================
+      {% if step_results.llamaindex_requirements_search %}
+      {{ step_results.llamaindex_requirements_search.llamaindex_result }}
+      {% else %}
+      Requirements search did not execute or failed
+      {% endif %}
+      
+      ================================================================================
+      DEBUG INFO
+      ================================================================================
+      
+      Available step results: {{ step_results.keys() | list }}
+      
+      ================================================================================

@@ -1,0 +1,44 @@
+name: "LlamaIndex Data Check"
+description: "Use only LlamaIndex to check what data exists"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "llamaindex_count_all_data"
+    description: "Count data in all tables"
+    prompt_template: |
+      Count how many rows are in each table:
+      - How many rows in Meters table?
+      - How many rows in Measurements table?
+      - How many rows in CommunicationProtocols table?
+      - How many rows in MeasurementAccuracy table?
+    timeout: 180
+
+  - name: "llamaindex_show_sample_data"
+    description: "Show sample data from main tables"
+    prompt_template: |
+      Show me sample data:
+      - Show 3 product names from Meters table
+      - Show 5 different measurement types from Measurements table
+      - Show 5 different protocols from CommunicationProtocols table
+      - Show 5 different accuracy values from MeasurementAccuracy table
+    timeout: 180
+
+outputs:
+  - type: "text"
+    filename: "llamaindex_data_check_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      LLAMAINDEX DATA CHECK RESULTS
+      ================================================================================
+      
+      ROW COUNTS:
+      {{ step_results.llamaindex_count_all_data.llamaindex_result }}
+      
+      ================================================================================
+      
+      SAMPLE DATA:
+      {{ step_results.llamaindex_show_sample_data.llamaindex_result }}
+      
+      ================================================================================

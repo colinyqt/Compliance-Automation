@@ -1,0 +1,40 @@
+name: "Real Meter Search"
+description: "Search for meters using actual database values"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "search_by_accuracy"
+    description: "Find meters with specific accuracy"
+    prompt_template: |
+      Find meters with accuracy containing "0.5" or better accuracy:
+      
+      Look in MeasurementAccuracy table for accuracy values containing "0.5" and return the corresponding meter product names.
+    timeout: 120
+
+  - name: "search_by_protocol"
+    description: "Find meters with RS485 or Modbus"
+    prompt_template: |
+      Find meters that support RS485 or Modbus communication:
+      
+      Look in CommunicationProtocols table for protocol containing "RS485" or "Modbus" and return the corresponding meter product names.
+    timeout: 120
+
+outputs:
+  - type: "text"
+    filename: "real_meter_search_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      REAL METER SEARCH RESULTS
+      ================================================================================
+      
+      METERS WITH 0.5% ACCURACY:
+      {{ step_results.search_by_accuracy.llamaindex_result }}
+      
+      ================================================================================
+      
+      METERS WITH RS485/MODBUS:
+      {{ step_results.search_by_protocol.llamaindex_result }}
+      
+      ================================================================================

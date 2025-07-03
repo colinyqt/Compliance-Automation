@@ -1,0 +1,40 @@
+name: "Force Execution Test"
+description: "Force LlamaIndex to actually execute queries"
+
+databases:
+  meters: 'C:\Users\cyqt2\Database\overhaul\databases\meters.db'
+
+processing_steps:
+  - name: "llamaindex_execute_count"
+    description: "Execute count query and return actual results"
+    prompt_template: |
+      Execute this SQL query and return the actual numeric result: SELECT COUNT(*) FROM Meters;
+      
+      Do not explain the query. Just run it and give me the number.
+    timeout: 120
+
+  - name: "llamaindex_execute_names"
+    description: "Execute query and return actual data"
+    prompt_template: |
+      Execute this SQL query and return the actual product names: SELECT product_name FROM Meters LIMIT 3;
+      
+      Do not give examples. Execute the query and show me the real data from the database.
+    timeout: 120
+
+outputs:
+  - type: "text"
+    filename: "force_execution_test_{{ timestamp }}.txt"
+    content: |
+      ================================================================================
+      FORCED EXECUTION TEST
+      ================================================================================
+      
+      COUNT RESULT:
+      {{ step_results.llamaindex_execute_count.llamaindex_result }}
+      
+      ================================================================================
+      
+      ACTUAL METER NAMES:
+      {{ step_results.llamaindex_execute_names.llamaindex_result }}
+      
+      ================================================================================
